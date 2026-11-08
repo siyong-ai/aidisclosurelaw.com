@@ -29,6 +29,27 @@ const OG_BASE = (process.env.OG_BASE || BASE).replace(/\/+$/, '');
 const SITE_NAME = 'AI Disclosure Law';
 const TODAY = '2026-11-08';
 
+/* Analytics. Google Tag Manager container; tags are configured in the GTM UI,
+   so nothing here changes when a new tag is added. Set to '' to build without
+   analytics (e.g. a preview deploy that should not pollute the property). */
+const GTM_ID = process.env.GTM_ID ?? 'GTM-KFDL8GKN';
+
+const GTM_HEAD = GTM_ID
+  ? `<link rel="preconnect" href="https://www.googletagmanager.com">
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');</script>`
+  : '';
+
+const GTM_BODY = GTM_ID
+  ? `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`
+  : '';
+
+/* Applied at write time so every page gets it, including the 404 and any page
+   added later that forgets to ask. */
+const injectGtm = (html) =>
+  GTM_ID
+    ? html.replace('</head>', `${GTM_HEAD}\n</head>`).replace(/(<body[^>]*>)/, `$1\n${GTM_BODY}`)
+    : html;
+
 /* ------------------------------------------------------------------ utils */
 
 const esc = (s) =>
@@ -954,18 +975,18 @@ fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 for (const page of pages) {
   const dir = path.join(OUT, page.url.replace(/^\/|\/$/g, ''));
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, 'index.html'), pageShell(page), 'utf8');
+  fs.writeFileSync(path.join(dir, 'index.html'), injectGtm(pageShell(page)), 'utf8');
   // markdown twin for AI crawlers
   fs.copyFileSync(page.file, path.join(dir, 'index.md'));
 }
 
 // home
-fs.writeFileSync(path.join(OUT, 'index.html'), homeHtml(), 'utf8');
+fs.writeFileSync(path.join(OUT, 'index.html'), injectGtm(homeHtml()), 'utf8');
 
 // 404 — Vercel serves this automatically for unmatched paths
 fs.writeFileSync(
   path.join(OUT, '404.html'),
-  `<!doctype html>
+  injectGtm(`<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -990,7 +1011,7 @@ fs.writeFileSync(
   <p style="margin-top:12px;font-size:14px"><a href="/" style="color:var(--muted);text-decoration:none">Back to the homepage</a></p>
 </main>
 </body>
-</html>`,
+</html>`),
   'utf8'
 );
 
