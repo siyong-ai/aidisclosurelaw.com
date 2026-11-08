@@ -35,15 +35,15 @@ Last verified **November 8, 2026**. This table is the one thing to check before 
 | CA | AB 2355 | Jan 1, 2025 | Political committees | $5,000/violation |
 | CA | Elec. Code §20010 | In force to Dec 31, 2030 | Anyone distributing manipulated candidate media within 60 days of an election | Damages + fees |
 | TX | [TRAIGA (HB 149)](/texas/traiga/) | Jan 1, 2026 | Government entities + health care providers | $200,000/uncurable violation |
-| IL | HB 3773 | Jan 1, 2026 | Employers with 1+ IL employees | IHRA remedies |
+| IL | [HB 3773](/illinois/hb-3773/) | Jan 1, 2026 | Employers with 1+ IL employees | IHRA remedies |
 | IL | AIVIA (820 ILCS 42) | Jan 1, 2020 | Employers using AI on recorded interviews | None specified (BIPA exposure) |
 | IL | HB 1806 | Aug 1, 2025 | Anyone offering therapy | Licensing enforcement |
-| UT | Code ch. 77 (SB 149 line) | May 1, 2024; current text May 7, 2025 | GenAI in consumer transactions; licensed occupations | $2,500/violation |
+| UT | [Code ch. 77](/utah/) | May 1, 2024; current text May 7, 2025 | GenAI in consumer transactions; licensed occupations | $2,500/violation |
 | UT | HB 452 (ch. 72a) | May 7, 2025 | Mental health chatbots | $2,500/violation |
-| ME | 10 M.R.S. §1500-DD | Sep 24, 2025 | Anyone using a chatbot in consumer trade | Maine UTPA |
-| ME | 21-A §1014(5-C) | Jul 29, 2026 | Campaigns required to file with ethics commission | 500% of ad spend |
+| ME | [10 M.R.S. §1500-DD](/maine/chatbot-disclosure/) | Sep 24, 2025 | Anyone using a chatbot in consumer trade | Maine UTPA |
+| ME | 21-A §1014(5-C) (political ads) | Jul 29, 2026 | Campaigns required to file with ethics commission | 500% of ad spend |
 | ME | 10 M.R.S. §1500-EE | Jul 29, 2026 | Anyone offering therapy | Board discipline |
-| NY | S8420 / A8887 | Jun 9, 2026 | Advertisers using synthetic performers | $1,000 / $5,000 |
+| NY | [S8420 / A8887](/new-york/synthetic-performer/) | Jun 9, 2026 | Advertisers using synthetic performers | $1,000 / $5,000 |
 | NY | GBL §349-A | Nov 10, 2025 | Businesses using personal data in algorithmic pricing | See statute |
 | NY | GBL art. 47 | 2025 | AI companion operators | $15,000/day |
 
@@ -104,6 +104,6 @@ For scope, Colorado from January 1, 2027 — every deployer, every covered domai
 
 ---
 
-**Start here:** [Colorado](/colorado/) · [California SB 942](/california/sb-942/) · [Texas TRAIGA](/texas/traiga/) · [Colorado vs Texas](/compare/colorado-vs-texas/)
+**Start here:** [Illinois HB 3773](/illinois/hb-3773/) · [Colorado](/colorado/) · [California SB 942](/california/sb-942/) · [Texas TRAIGA](/texas/traiga/) · [Utah](/utah/) · [Maine](/maine/chatbot-disclosure/) · [New York](/new-york/synthetic-performer/)
 
 *Last verified November 8, 2026. General information, not legal advice. This table is updated as laws change; if you spot an error, the official source on each state page controls.*

@@ -818,7 +818,186 @@ No. Both are attorney-general-only statutes, each with a 60-day cure period.
 *Last verified November 8, 2026. General information, not legal advice.*
 
 
+<!-- https://aidisclosurelaw.com/illinois/hb-3773/ -->
+# Illinois HB 3773: The AI Notice Duty With No Rules Behind It
+
+> **Short answer.** Signed August 9, 2024, in force since **January 1, 2026**. It creates two separate civil rights violations under the Illinois Human Rights Act: using AI in a covered employment decision **in a way that has a discriminatory effect**, and **failing to notify** people that you used AI for those purposes. The second one is absolute — a model with perfectly even outcomes still violates the Act if nobody was told it was running. The Illinois Department of Human Rights proposed rules defining the notice on **May 15, 2026** and withdrew them on **June 2, 2026**. As of November 2026 they have not been refiled, so the duty is live and its definition is not.
+
+That gap is the whole story of this law, and it is why the page is structured the way it is: what binds today, what the dead draft would have required, and how to build something defensible between the two.
+
+---
+
+## The two violations, kept separate
+
+The operative language sits at **775 ILCS 5/2-102(L)**, inside the Act's list of civil rights violations.
+
+| | What it prohibits | What the regulator has to prove |
+|---|---|---|
+| **(L)(1)** | Using AI that **has the effect** of discriminating against employees or applicants on a protected basis in recruitment, hiring, promotion, renewal, training or apprenticeship selection, discharge, discipline, tenure, or terms and conditions of employment | That the tool's output produced a discriminatory effect. Intent is irrelevant. |
+| **(L)(1), second sentence** | Using **ZIP code as a proxy** for a protected class in those decisions | That the variable was used. Nothing else. |
+| **(L)(2)** | **Failing to provide notice** that AI is being used for any of those purposes | That no notice was given. Nothing else. |
+
+Most compliance writing about employment AI is organised around bias auditing, because New York City's Local Law 144 and California's FEHA regulations put the audit at the centre. Illinois did something structurally different: it put an **unconditional transparency obligation** next to an effects-based prohibition.
+
+That difference matters in a courtroom. On (L)(1) you can defend the tool — show the validation study, the adverse-impact ratio, the human override rate. On (L)(2) the only defence is that notice was given. Either the notice exists or the violation is complete.
+
+---
+
+## "AI" here is a function, not a product category
+
+Section 2-101 now defines artificial intelligence as a machine-based system that, for explicit or implicit objectives, **infers from the input it receives how to generate outputs** — predictions, content, recommendations, or decisions — that can influence physical or virtual environments, and states that the term includes generative AI.
+
+Read that literally and it does not require machine learning, a neural network, or the system being the sole or even primary basis for a decision. It requires only that the output be **capable of influencing** one.
+
+Practical consequence: an inventory built from the tools your organisation labels "AI" will miss most of your exposure. What falls in on a functional reading:
+
+- Resume ranking and match scoring inside an applicant tracking system
+- Keyword screening that produces a recommendation rather than just a search result
+- Chatbot-driven pre-screening and scheduling that sorts candidates
+- Video interview analytics and transcript scoring
+- Performance dashboards that feed discipline or promotion decisions
+- Any embedded "smart" feature in a platform you already license
+
+The safe inventory question is not "is this an AI tool" but "does this system output something a human uses to make this decision".
+
+---
+
+## Who is covered
+
+The IHRA's employer definition does the work, and it is broad: generally any employer with **one or more employees in Illinois for 20 or more weeks** in the current or preceding calendar year. There is no revenue threshold, no headcount exemption, and no carve-out for employers headquartered elsewhere — if you have an Illinois employee, the Act reaches the decision.
+
+The duties protect **employees and applicants**, not customers. Illinois has a separate consumer-facing disclosure regime; this law is a workplace statute.
+
+---
+
+## The rule that was withdrawn, and why it still matters
+
+IDHR published proposed rules (**Subpart J**) in the Illinois Register on **May 15, 2026**, scheduled a hearing, then **postponed rulemaking on June 2, 2026**. No refiling date has been announced. The draft therefore carries **no legal force**.
+
+It is still the most useful document in the state, because it is the regulator's own description of what it was prepared to accept. It previews the compliance lift:
+
+| Question | What the withdrawn draft would have required |
+|---|---|
+| When is notice given to employees? | **Annually**, plus within **30 days** of adopting a new or substantially updated AI system or process |
+| When is notice given to candidates? | In the **job posting** or notice for the position |
+| Where does it appear? | Multiple channels: handbook or policy, workplace posting, intranet or public website with a prominent link, and job postings |
+| What must it say? | The tool or vendor, the employment decision affected, the purpose, categories of personal information processed, positions covered, a contact for questions, accommodation information, and required statutory language |
+| In what form? | Plain language, available in commonly spoken workforce languages, reasonably accessible to individuals with disabilities |
+| How long are records kept? | **Four years** after the AI use |
+
+Treat every row as **design guidance, not a legal requirement**. The mistake to avoid is publishing a notice and then telling your board it complies with IDHR rules — there are no IDHR rules. The accurate statement is that it follows the withdrawn draft, which is currently the only published indication of what the Department expects.
+
+---
+
+## A notice that survives either reading
+
+You cannot wait for the rules, because the duty is already enforceable and back-dated to January 1, 2026. You also cannot guess the final format. What you can do is satisfy the statutory floor — clear notice, delivered, documented — while matching the draft closely enough that a final rule is unlikely to invalidate it.
+
+Eight elements that satisfy both:
+
+1. **Name the system and the vendor**, in words a warehouse employee understands, not the procurement SKU.
+2. **Name the decisions it feeds** — screening in, not "talent acquisition optimisation".
+3. **Say what data it looks at**, including whether it derives inferences or scores.
+4. **Say what the human does** with the output. This is the element that most distinguishes a real notice from a disclaimer.
+5. **Give a contact and an accommodation path**, with a named role rather than a generic inbox.
+6. **Publish it in the channels people actually use** — handbook, intranet, physical posting, and the job requisition.
+7. **Translate it** into the languages your workforce actually reads, and check screen-reader access.
+8. **Record delivery** with a date, a version, and the population it went to. Four years.
+
+Point 8 is where most programs fail. The violation is failure to notify, so the evidence you will need is proof of delivery to a specific population on a specific date — not the existence of a policy document on a shared drive.
+
+---
+
+## Penalties and enforcement
+
+| Item | Detail |
+|---|---|
+| Forum | IDHR charge process; administrative or circuit court |
+| Theory | A civil rights violation under the IHRA, not a consumer-protection violation |
+| Remedies | Those the IHRA provides — actual damages, attorney's fees, injunctive and equitable relief, and the civil penalties the Act authorises |
+| Private right of action | Yes, through the IHRA's charge-and-review process |
+| Cure period | None announced for the notice duty |
+| Per-day fine | **None.** Illinois did not build a California-style daily penalty into this provision |
+
+Enforcement volume so far is low, which is normal for a first year and is not evidence of tolerance. The exposure is more likely to arrive attached to a discrimination charge — a complainant alleging (L)(1) effect, and discovery producing the fact that no (L)(2) notice ever went out.
+
+---
+
+## Timeline
+
+| Date | Event |
+|---|---|
+| Aug 9, 2024 | Signed; becomes Public Act 103-0804 |
+| Jan 1, 2026 | Both duties operative |
+| May 15, 2026 | IDHR publishes proposed Subpart J rules |
+| Jun 2, 2026 | IDHR postpones rulemaking; draft withdrawn |
+| Nov 8, 2026 | No refiling; duties enforceable, definitions still absent |
+
+---
+
+## Implementation checklist
+
+- [ ] Inventory by function, not by product label: every system whose output a human uses in a covered decision
+- [ ] For each, write one sentence on what the human would do without it
+- [ ] Retire or reconfigure any feature that uses ZIP code as an input to a covered decision
+- [ ] Draft the notice to the eight elements above, not to the shortest possible text
+- [ ] Put it in the handbook, the intranet, the physical posting, and every job requisition
+- [ ] Translate it into your workforce's actual languages and test it with a screen reader
+- [ ] Log delivery by population and date; set retention to four years
+- [ ] Re-issue annually and within 30 days of adding or materially changing a system
+- [ ] Diarise the day IDHR refiles — the draft is likely to move, and the notice will need to move with it
+
+---
+
+## Frequently asked questions
+
+**Is HB 3773 in effect?**
+Yes. Both duties have applied since January 1, 2026. What is missing is the rulemaking that was supposed to define the notice, not the duty itself.
+
+**Did IDHR withdraw the AI notice rules?**
+Yes. Proposed Subpart J was published May 15, 2026 and postponed June 2, 2026. As of November 8, 2026 there is no refiling date and no effective rule.
+
+**What happens if we use AI but never told employees?**
+That is a standalone civil rights violation under 775 ILCS 5/2-102(L)(2). The state does not need to show the tool discriminated against anyone, or that anyone was harmed.
+
+**Do we have to notify job applicants, or only current employees?**
+Both. The statute covers recruitment and hiring decisions, so applicants are within scope, and the withdrawn draft expected candidate notice to appear in the job posting.
+
+**Does a vendor's tool count as "our" AI use?**
+Yes. The duty sits with the employer that uses the output in a decision. Buying the system rather than building it changes nothing about the notice obligation.
+
+**Can we just say "we use AI in hiring" in the handbook?**
+It would be a notice, and technically it would satisfy the statutory floor. It would not satisfy the withdrawn draft, and it would not survive the question a regulator actually asks: which tool, for which decision, and what did the human do with it.
+
+**Is there a fine per violation?**
+No per-day or per-violation fine is written into this provision. Remedies run through the IHRA — damages, fees, equitable relief, and the penalties the Act authorises elsewhere.
+
+---
+
+**Related:** [Which state AI disclosure laws are in force](/in-effect/) · [Colorado SB 26-189: pre-use notice and 30-day explanations](/colorado/sb-26-189/) · [New York's synthetic performer ad rule](/new-york/synthetic-performer/)
+
+*Last verified November 8, 2026. General information, not legal advice. Confirm against Public Act 103-0804 and check whether IDHR has refiled Subpart J before relying on any notice format.*
+
+
 <!-- https://aidisclosurelaw.com/in-effect/ -->
+---
+slug: /in-effect/
+title: "Which State AI Disclosure Laws Are in Effect Right Now"
+meta_description: "A dated table of every state AI disclosure and transparency law: in force, not yet in force, or barred by a court. Updated November 8, 2026."
+h1: "Which State AI Disclosure Laws Are in Effect Right Now"
+one_liner: "As of November 8, 2026, six states have AI disclosure or transparency duties that can be enforced today: California, Texas, Illinois, Utah, Maine, and New York. Colorado's duties start January 1, 2027. Two California election laws are barred by court order."
+status: "Tracker"
+last_verified: "2026-11-08"
+primary_keyword: "state ai disclosure laws in effect"
+secondary_keywords:
+  - "which states require ai disclosure"
+  - "ai disclosure law by state"
+  - "state ai law tracker"
+sources:
+  - label: "See individual state pages for official sources"
+    url: "/"
+---
+
 # Which State AI Disclosure Laws Are in Effect Right Now
 
 > **Short answer.** Six states can enforce an AI disclosure or transparency duty against you today: **California, Texas, Illinois, Utah, Maine, and New York**. **Colorado** starts January 1, 2027. Two California election-AI laws — AB 2839 and AB 2655 — are barred by court order and cannot be enforced.
@@ -838,15 +1017,15 @@ Last verified **November 8, 2026**. This table is the one thing to check before 
 | CA | AB 2355 | Jan 1, 2025 | Political committees | $5,000/violation |
 | CA | Elec. Code §20010 | In force to Dec 31, 2030 | Anyone distributing manipulated candidate media within 60 days of an election | Damages + fees |
 | TX | [TRAIGA (HB 149)](/texas/traiga/) | Jan 1, 2026 | Government entities + health care providers | $200,000/uncurable violation |
-| IL | HB 3773 | Jan 1, 2026 | Employers with 1+ IL employees | IHRA remedies |
+| IL | [HB 3773](/illinois/hb-3773/) | Jan 1, 2026 | Employers with 1+ IL employees | IHRA remedies |
 | IL | AIVIA (820 ILCS 42) | Jan 1, 2020 | Employers using AI on recorded interviews | None specified (BIPA exposure) |
 | IL | HB 1806 | Aug 1, 2025 | Anyone offering therapy | Licensing enforcement |
-| UT | Code ch. 77 (SB 149 line) | May 1, 2024; current text May 7, 2025 | GenAI in consumer transactions; licensed occupations | $2,500/violation |
+| UT | [Code ch. 77](/utah/) | May 1, 2024; current text May 7, 2025 | GenAI in consumer transactions; licensed occupations | $2,500/violation |
 | UT | HB 452 (ch. 72a) | May 7, 2025 | Mental health chatbots | $2,500/violation |
-| ME | 10 M.R.S. §1500-DD | Sep 24, 2025 | Anyone using a chatbot in consumer trade | Maine UTPA |
-| ME | 21-A §1014(5-C) | Jul 29, 2026 | Campaigns required to file with ethics commission | 500% of ad spend |
+| ME | [10 M.R.S. §1500-DD](/maine/chatbot-disclosure/) | Sep 24, 2025 | Anyone using a chatbot in consumer trade | Maine UTPA |
+| ME | 21-A §1014(5-C) (political ads) | Jul 29, 2026 | Campaigns required to file with ethics commission | 500% of ad spend |
 | ME | 10 M.R.S. §1500-EE | Jul 29, 2026 | Anyone offering therapy | Board discipline |
-| NY | S8420 / A8887 | Jun 9, 2026 | Advertisers using synthetic performers | $1,000 / $5,000 |
+| NY | [S8420 / A8887](/new-york/synthetic-performer/) | Jun 9, 2026 | Advertisers using synthetic performers | $1,000 / $5,000 |
 | NY | GBL §349-A | Nov 10, 2025 | Businesses using personal data in algorithmic pricing | See statute |
 | NY | GBL art. 47 | 2025 | AI companion operators | $15,000/day |
 
@@ -907,9 +1086,308 @@ For scope, Colorado from January 1, 2027 — every deployer, every covered domai
 
 ---
 
-**Start here:** [Colorado](/colorado/) · [California SB 942](/california/sb-942/) · [Texas TRAIGA](/texas/traiga/) · [Colorado vs Texas](/compare/colorado-vs-texas/)
+**Start here:** [Illinois HB 3773](/illinois/hb-3773/) · [Colorado](/colorado/) · [California SB 942](/california/sb-942/) · [Texas TRAIGA](/texas/traiga/) · [Utah](/utah/) · [Maine](/maine/chatbot-disclosure/) · [New York](/new-york/synthetic-performer/)
 
 *Last verified November 8, 2026. General information, not legal advice. This table is updated as laws change; if you spot an error, the official source on each state page controls.*
+
+
+<!-- https://aidisclosurelaw.com/maine/chatbot-disclosure/ -->
+# Maine's Chatbot Disclosure Law: No Threshold, No Intent, No Excuses
+
+> **Short answer.** Since **September 24, 2025**, **10 M.R.S. §1500-DD** bars using an AI chatbot — or any other computer technology — to engage in trade or commerce with a consumer in a way that may mislead or deceive a reasonable consumer into believing they are dealing with a **human being**, unless the consumer is notified **clearly and conspicuously** that they are not. No employee threshold. No revenue test. No intent element. No exception for a bot that discloses only after being asked. A violation is a violation of the **Maine Unfair Trade Practices Act**, enforceable by the Attorney General.
+
+Two citation traps sit on top of that: the section was **reallocated from §1500-Y**, and a separate synthetic-media rule for political advertising lives at **21-A §1014(5-C)** and took effect July 29, 2026.
+
+---
+
+## The citation changed, and half the internet missed it
+
+The chatbot rule was enacted as **LD 1727**, signed June 12, 2025, as **P.L. 2025, ch. 294**. It was originally codified at **§1500-Y**.
+
+The Revisor of Statutes then reallocated it. The operative citation is now **10 M.R.S. §1500-DD**, and the published text carries the line "*(REALLOCATED FROM TITLE 10, SECTION 1500-Y)*" at the top.
+
+What that means in practice:
+
+- A policy document or vendor questionnaire citing **§1500-Y** is citing a section that no longer exists under that number.
+- Guidance written before late 2025 will often cite §1500-Y **and** describe a weaker duty than the one in force.
+- If you are citing a Maine chapter number for this rule, note that the reallocation also carries a revisor's reference to **RR 2025, c. 1, Pt. A, §16** — the statutory basis for the move.
+
+This is the same failure mode as Utah's §13-2-12: a real law, an obsolete citation, and a corpus of articles that never got updated.
+
+---
+
+## What the statute actually says
+
+Two elements, and both are broader than the equivalent text in other states.
+
+| Element | Language and effect |
+|---|---|
+| **The technology** | "Artificial intelligence chatbot" means a software application, web interface, or computer program that **simulates human conversation and interaction through textual or aural communications** — and the prohibition reaches "any other computer technology" beyond chatbots |
+| **The conduct** | Engaging in trade or commerce with a consumer **in a manner that may mislead or deceive a reasonable consumer** into believing the consumer is engaging with a human being |
+| **The escape** | The consumer is notified **in a clear and conspicuous manner** that they are **not** engaging with a human being |
+| **The consequence** | A violation **is** a violation of the Maine Unfair Trade Practices Act |
+
+Three details do the work:
+
+**"May mislead" is not "does mislead."** The standard is the capacity to mislead a reasonable consumer, not proof that one was misled. An unnamed assistant with a human name and a friendly avatar is the paradigm case.
+
+**There is no threshold of any kind.** No employee count, no revenue figure, no volume of chats. A two-person business with a website widget is covered on the same terms as a bank.
+
+**No intent requirement.** You do not have to have set out to deceive anyone. The design decision is the violation.
+
+---
+
+## Why geo-targeting is the wrong answer
+
+The natural instinct is to disclose only to visitors in Maine. Two problems:
+
+1. **You usually cannot know.** The state of a visitor is an inference from IP, and a VPN, a corporate proxy, or a mobile carrier makes it wrong. A disclosure that fires on a misread location is worse than none.
+2. **The cost of over-disclosure is close to zero.** A line of text telling everyone they are talking to a bot does not measurably hurt conversion on support or transactional flows, and it eliminates the question entirely.
+
+The businesses that get this wrong are not the ones that decided to deceive. They are the ones that shipped a bot with a human persona — a name, a face, a typing indicator, "Hi, I'm Alex!" — and never asked whether Alex was a disclosure problem.
+
+---
+
+## What "clear and conspicuous" looks like in practice
+
+The statute does not define the format. It does define the failure: a consumer who could reasonably believe a human is on the other end. Test your implementation against these:
+
+| Question | Why it decides the case |
+|---|---|
+| Does the notice appear **before** the first exchange, not after? | A disclosure delivered at message four lets the first three mislead |
+| Is it **visible without scrolling or expanding**? | A footnote below the fold is not conspicuous |
+| Does it say **"not a human"**, not just "AI-powered"? | "Powered by AI" describes the software; the statute is about who the consumer thinks they are talking to |
+| Does it survive the **handoff**? | Human agent → bot is the most common failure. The persona returns; the disclosure does not |
+| Does it follow the conversation **out of the widget**? | SMS, email, WhatsApp, and voice all need their own notice |
+| Does the voice agent **say it out loud** at the start? | "Textual or aural" is explicit in the definition |
+| Does the **human name and avatar** contradict it? | A confident human persona next to a small disclosure line is arguably still misleading |
+
+That last row is the one that ends arguments. Maine's standard is what a reasonable consumer takes away, not what the footer says.
+
+---
+
+## Penalties
+
+| Item | Detail |
+|---|---|
+| Enforcer | Maine Attorney General |
+| Vehicle | Maine Unfair Trade Practices Act, 5 M.R.S. §205-A et seq. |
+| Civil penalty | Set by the UTPA's general penalty provision (5 M.R.S. §209), which authorises civil penalties per violation |
+| Other relief | Injunctive relief, restitution, and the Attorney General's costs |
+| Private right of action | Under the UTPA, not under §1500-DD itself |
+| Chatbot-specific fine | **None.** Maine attached the duty to an existing statute rather than creating a new penalty |
+
+Attaching the rule to the UTPA rather than writing a bespoke AI penalty is deliberate, and it has a practical consequence: you are measured against decades of unfair-and-deceptive-practice precedent about what a reasonable consumer understands, not against a new and narrow AI test.
+
+---
+
+## The other Maine rule: synthetic media in political ads
+
+Different chapter, different audience, and it took effect later. **21-A M.R.S. §1014(5-C)**, enacted as **LD 517** (**P.L. 2025, ch. 593**), signed March 23, 2026, and in force **July 29, 2026**.
+
+If a political communication that already requires a campaign-finance disclosure contains synthetic media of a candidate, it must also carry the words:
+
+> THIS COMMUNICATION CONTAINS AUDIO, VIDEO AND/OR IMAGES THAT HAVE BEEN MANIPULATED OR ALTERED
+
+Details that matter:
+
+- **Synthetic media** means an image, audio, or video of a candidate that, in a manner likely to deceive a reasonable person, depicts them saying or doing something they did not, or has been manipulated to give a materially different impression. **Satire, parody, and technical clarity edits are excluded.**
+- **The penalty is different from the rest of the section**: up to **500% of the expenditure** on the offending communication, against 100% for other disclosure violations in the same section.
+- **Broadcasters and newspapers** are liable only if they publish with **actual knowledge** that the communication contains synthetic media.
+
+This one binds campaigns and committees, not ordinary businesses. It is included because the citation gets confused with §1500-DD constantly, and because the two were enacted a year apart under different public laws.
+
+---
+
+## Implementation checklist
+
+- [ ] Replace every internal reference to **§1500-Y** with **§1500-DD**
+- [ ] List every conversational surface: website widget, in-app chat, SMS, WhatsApp, voice IVR, email auto-responders
+- [ ] For each, ask the statute's question: could a reasonable consumer think a human is replying?
+- [ ] Put the notice **before** the first exchange, visible without scrolling, saying **not a human**
+- [ ] Retire or rename human personas that contradict the notice — the avatar is part of the disclosure analysis
+- [ ] Write the handoff rule: every bot-to-human and human-to-bot transition re-states the notice
+- [ ] Add the notice to outbound channels separately; the widget text does not travel
+- [ ] For voice agents, script the spoken disclosure into the opening, before any substantive answer
+- [ ] If you run political advertising in Maine, keep the §1014(5-C) wording and the 500% exposure separate from this checklist
+
+---
+
+## Frequently asked questions
+
+**Is the Maine chatbot law in force?**
+Yes, since September 24, 2025.
+
+**Is it 10 M.R.S. §1500-Y or §1500-DD?**
+§1500-DD. The section was originally codified at §1500-Y and reallocated by the Revisor of Statutes; the current published text notes the move at the top.
+
+**Does the law apply to small businesses?**
+Yes. There is no employee or revenue threshold of any kind. Any business using a chatbot in trade or commerce with a Maine consumer is covered.
+
+**Do we have to disclose if the customer never asks?**
+Yes. Unlike Utah, Maine's duty is proactive: the notice must be clear and conspicuous before the consumer could be misled, not on request.
+
+**What if our bot only handles order status?**
+The test is whether a reasonable consumer could believe they are dealing with a human. A bot that says "I'm the automated order assistant" is fine. One that says "Hi, this is Alex from support" is the fact pattern the statute was written for.
+
+**What is the penalty?**
+A violation of §1500-DD is a violation of the Maine Unfair Trade Practices Act, enforced by the Attorney General through the UTPA's civil penalty and injunctive provisions. Maine did not create a chatbot-specific fine.
+
+**Does the political advertising rule apply to businesses?**
+No. 21-A §1014(5-C) binds political communications that already require a campaign-finance disclosure, and it carries a 500% penalty on the expenditure. Ordinary commercial chatbots are governed by §1500-DD.
+
+---
+
+**Related:** [Which state AI disclosure laws are in force](/in-effect/) · [Utah chapter 77: reactive vs proactive disclosure](/utah/) · [Illinois HB 3773 notice duty](/illinois/hb-3773/)
+
+*Last verified November 8, 2026. General information, not legal advice. Confirm against the current text of 10 M.R.S. §1500-DD on the Maine Legislature site — the reallocation means older citations point elsewhere.*
+
+
+<!-- https://aidisclosurelaw.com/new-york/synthetic-performer/ -->
+# New York Requires Ads to Disclose AI-Generated Humans
+
+> **Short answer.** **S8420-A / A8887-B**, signed **December 11, 2025** as Chapter 617, in force since **June 9, 2026**, amends **General Business Law §296-b**. If a **visual or audiovisual advertisement** for property or services, in any medium, distributed to a consumer in New York, features a **synthetic performer** — a digitally created human who is not any identifiable real person — the person who produced or created the ad must **conspicuously disclose** that fact, when they have **actual knowledge** of it. Penalties are **$1,000** for a first violation and **$5,000** for each subsequent one, enforced by the Attorney General.
+
+New York is the first state to make the **mere presence** of an AI-generated human in an ad a disclosure trigger, independent of whether the ad is misleading. That is a different regulatory theory from every deepfake law that came before it.
+
+---
+
+## The test is the person, not the picture
+
+Most advertising disclosure rules ask whether the **content** is misleading. This one asks whether a **person in the frame is real**.
+
+| The ad contains | Disclosure required? |
+|---|---|
+| An AI-generated human holding the product, looking like a model | **Yes** |
+| A real actor, background replaced with AI | No — the human is real |
+| A product-only shot, AI-generated set | No — no human likeness |
+| A real actor, voice translated by AI | No — translation exemption |
+| An AI-generated human in a promo for a film or game, used as in the work | No — expressive-work exemption |
+| Audio-only ad with an AI-generated voice | No — audio-only ads are excluded |
+| A synthetic influencer posting organic-feeling content for a brand | Likely yes, if it is an advertisement reaching New York |
+
+The definition: a **synthetic performer** is a digital asset created, reproduced, or modified by computer using generative AI or a software algorithm, intended to create the impression of an audiovisual and/or visual performance by a human performer **who is not recognizable as any identifiable natural performer**.
+
+The last clause matters. A digital replica of a specific real person is a **right of publicity** problem, not this one. This statute is about the human who is nobody — the AI model, the AI spokesperson, the fabricated presenter.
+
+---
+
+## Why e-commerce is the exposure, not the brand campaign
+
+A national brand shoot with an AI presenter is a one-off decision with a legal review attached. A marketplace with 40,000 listings is a different problem, because the practice arrived quietly:
+
+- AI-generated lifestyle models holding products, replacing photography for cost reasons
+- Synthetic presenters in UGC-style video ads, bought in volume from agencies
+- AI avatars narrating product tours
+- Localised ad creative where the model was regenerated per market
+
+Every one of those is an advertisement featuring a synthetic performer, distributed to a New York audience by default — because no digital campaign can reliably exclude New York, and nobody wants to.
+
+The practical audit is therefore **listing-level and creative-level**, not campaign-level. The question to put to the team is not "did we use AI in this campaign" but "is there a human in this asset, and is that human real".
+
+---
+
+## "Actual knowledge" is in the statute, and it is not a loophole
+
+The duty attaches when the advertiser **has actual knowledge** that the ad contains a synthetic performer.
+
+Read carefully, this is narrower than strict liability and narrower than it first appears — but it is not a defence you want to rely on. Actual knowledge is established by ordinary business records: the vendor invoice that says "AI-generated model", the prompt log, the Creative team's Slack thread, the asset filename. In an organisation that knowingly commissions AI models, knowledge is not seriously contestable.
+
+Where the standard genuinely helps is the **unknowing** case: an agency delivers a shoot and does not disclose that some frames were generated, or a licensed stock library supplies synthetic people without labelling them. The fix is contractual — warranty and indemnity in the production agreement — not a compliance memo.
+
+---
+
+## What "conspicuous" has to mean
+
+The statute requires conspicuous disclosure and does not prescribe wording or placement. Enforcement will be fact-specific, so design to the plainest reading: a viewer who is not looking for a disclaimer should still register it.
+
+| Format | What survives scrutiny | What does not |
+|---|---|---|
+| Video | On-screen text for the duration of the synthetic performer's appearance, legible at mobile size | A 1-second flash at the end |
+| Static image ad | Text on the creative, contrasting, readable at thumbnail size | A caption below the platform's "sponsored" label |
+| Social video | Disclosure in the creative itself | Reliance on the platform's own "AI-generated" toggle |
+| Carousel / stories | On each frame containing the performer | First frame only |
+
+The platform labelling point is the one teams push back on. Instagram, TikTok, and YouTube all offer AI-content labels, and it is tempting to treat them as compliance. They are not: they are platform policies, applied inconsistently, and visible in different places from the ad. The obligation in §296-b sits with the person who produced the ad.
+
+---
+
+## Who is not liable
+
+The statute deliberately spares the distribution layer. Newspapers, magazines, television networks, streaming services, cable systems, billboard companies, and transit advertisers are **not liable** for publishing or disseminating a non-compliant ad.
+
+That concentrates liability on two parties: the **advertiser**, and the **agency or production company** that created the work. Which is why the second-order effect of this law is contractual — production agreements now need to allocate who warrants that no synthetic performer is present, and who pays if one is.
+
+---
+
+## Penalties
+
+| Item | Detail |
+|---|---|
+| Enforcer | New York Attorney General |
+| First violation | **$1,000** |
+| Each subsequent violation | **$5,000** |
+| Private right of action | Not created by this section |
+| Media outlets / platforms | Exempt from liability for running the ad |
+| Other law unaffected | Civil Rights Law §§50, 50-f, 51, and §230 of the Communications Act are expressly preserved |
+
+The penalty amounts are small relative to a national campaign, which is the wrong way to read them. The Attorney General picks test cases, and the second-order cost — re-shooting a catalogue, pulling live listings, restating agency agreements — is where the money is.
+
+---
+
+## The companion law, effective the same day
+
+Governor Hochul signed **S8391 / A8882** at the same time, expanding the **post-mortem right of publicity** under **Civil Rights Law §50-f**. Heirs or executors must consent before a deceased person's name, image, or likeness — including a vocal or visual **digital replica** — is used commercially.
+
+That one took effect **immediately on December 11, 2025**, six months before the advertising disclosure rule. It applies to estates and to anyone producing digital replicas of identifiable people, and it is a separate exposure from §296-b.
+
+Together the two laws cover both halves of the problem: the **identifiable** person (publicity rights, consent, estates) and the **unidentifiable** one (disclosure).
+
+---
+
+## Implementation checklist
+
+- [ ] Classify every live creative: is there a human in frame, and is that human real
+- [ ] For each synthetic performer, add a conspicuous on-creative disclosure for the full duration of their appearance
+- [ ] Audit product listings and marketplace imagery, not just campaign assets — set a date to finish
+- [ ] Do not rely on platform AI labels as the disclosure
+- [ ] Put a warranty into production and agency agreements: no synthetic performer without disclosure, with indemnity
+- [ ] Require vendors to label synthetic assets at delivery, in the filename and the metadata
+- [ ] Add an AI-performer check to the creative approval gate, before trafficking
+- [ ] Train media buyers: any placement that can reach New York is in scope, including programmatic
+- [ ] Separately review digital replicas of identifiable people under Civil Rights Law §50-f
+- [ ] Diary the first enforcement actions; the Attorney General has not yet issued format guidance
+
+---
+
+## Frequently asked questions
+
+**Is the New York synthetic performer law in effect?**
+Yes, since June 9, 2026. Signed December 11, 2025.
+
+**Does it apply to companies outside New York?**
+Yes. It reaches any advertisement distributed to a New York audience, wherever the advertiser is located. For digital campaigns that effectively means everywhere.
+
+**What exactly is a synthetic performer?**
+A digital asset created, reproduced, or modified by computer with generative AI or a software algorithm, intended to look like a human performer who is not any identifiable real person. AI models, AI spokespeople, and fabricated influencers qualify.
+
+**Do we need to disclose if we use AI to retouch a real model?**
+No. The trigger is a human who is not real. Enhancing an image of a real person, or replacing a background, does not create a synthetic performer.
+
+**What about audio ads?**
+Excluded. The statute covers visual and audiovisual advertising, and audio-only ads are exempt.
+
+**Are the platforms liable if our ad is missing the disclosure?**
+No. Media outlets and ad platforms that publish or run the ad are exempt. Liability sits with the advertiser and the producer or creator of the ad.
+
+**What is the penalty?**
+$1,000 for the first violation, $5,000 for each subsequent violation, enforced by the New York Attorney General.
+
+---
+
+**Related:** [Which state AI disclosure laws are in force](/in-effect/) · [Illinois HB 3773: the employer notice duty](/illinois/hb-3773/) · [Maine's chatbot disclosure rule](/maine/chatbot-disclosure/)
+
+*Last verified November 8, 2026. General information, not legal advice. Confirm against GBL §296-b as amended and the bill text of S8420-A before relying on an exemption.*
 
 
 <!-- https://aidisclosurelaw.com/texas/traiga/ -->
@@ -1029,3 +1507,142 @@ Yes. Texas preempts local government AI regulation, so TRAIGA is the statewide b
 **Related:** [Colorado SB 26-189: the disclosure law that does reach private companies](/colorado/sb-26-189/) · [Colorado vs Texas compared](/compare/colorado-vs-texas/) · [Which state laws are in effect now](/in-effect/)
 
 *Last verified November 8, 2026. General information, not legal advice. Confirm against the enrolled bill text and Texas AG guidance.*
+
+
+<!-- https://aidisclosurelaw.com/utah/ -->
+# Utah's AI Disclosure Law Now Lives in Code Chapter 77
+
+> **Short answer.** Utah's generative AI disclosure duty is in **Utah Code Title 13, Chapter 77**, in force since **May 7, 2025**. The original 2024 home for it — **§13-2-12** — was repealed by SB 226 and no longer exists. Chapter 77 sets two triggers: a **reactive** duty to disclose when a consumer in a consumer transaction clearly and unambiguously asks whether they are talking to AI, and a **proactive** duty for people in **licensed occupations** using generative AI in a **high-risk interaction** — verbal at the start of a verbal interaction, written before a written one. Violations are deceptive acts enforced by the Division of Consumer Protection: up to **$2,500** per violation administratively, up to **$5,000** per violation of an order.
+
+---
+
+## Why so many articles cite a dead section
+
+SB 149 (2024) put the disclosure duty in **§13-2-12**. In 2025, SB 226 repealed that section and re-enacted a revised, narrower duty as its own chapter, **Title 13, Chapter 77**, "Generative Artificial Intelligence — Consumer Disclosures and Enforcement", effective **May 7, 2025**.
+
+Two things went stale at once, and both are common online:
+
+1. **The citation.** §13-2-12 is repealed. Compliance records, vendor questionnaires, and internal policies that cite it are pointing at nothing.
+2. **The obligation.** The original law expected broad proactive disclosure of AI use. SB 226 narrowed the general-consumer duty to **disclosure on request only**, and confined proactive disclosure to licensed occupations in high-risk interactions.
+
+Chapter 72 still exists — it holds the Office of Artificial Intelligence Policy and the AI Learning Laboratory — and it is scheduled to sunset on **July 1, 2027**. That sunset does not, on its face, repeal the Chapter 77 disclosure duties. Do not let a vendor tell you Utah's rule disappears in 2027; that is the policy office, not the disclosure statute.
+
+---
+
+## Two triggers, two very different duties
+
+| | General consumer | Licensed occupation |
+|---|---|---|
+| **Provision** | §13-77-103(1) | §13-77-103(2)–(3) |
+| **Who** | Any "supplier" using generative AI to interact with an individual in connection with a consumer transaction | An individual providing services in a **regulated occupation** — one requiring a licence or state certification from the Department of Commerce |
+| **Trigger** | The individual **clearly and unambiguously asks** whether they are interacting with AI rather than a human | The interaction is a **high-risk AI interaction** — no request needed |
+| **Timing** | When asked | **Verbally at the start** of a verbal interaction; **in writing before** a written interaction |
+| **Standard** | Truthful answer; never state that AI is a human | Prominent disclosure, up front |
+
+### What makes an interaction "high risk"
+
+Two elements, both required:
+
+- Generative AI interactions involving **sensitive personal information** — health, financial, or biometric data
+- **Personalised recommendations, advice, or information** that a person could reasonably rely on for a significant personal decision, including financial, legal, medical, or mental-health advice
+
+That definition is narrower than it looks. Most retail chatbots, support bots, and marketing assistants never reach it. A licensed financial adviser's AI assistant discussing a client's retirement accounts does.
+
+### What counts as generative AI
+
+Chapter 77 covers AI trained on data, designed to simulate human conversation through text, audio, or visual communication, and generating **non-scripted, human-like output** with limited or no human oversight. A purely scripted or menu-driven bot sits outside the definition — which is why the definition of what you are running is the first question to answer, not the last.
+
+---
+
+## The safe harbour worth designing around
+
+§13-77-104 gives you something unusual for an AI statute: a **practical way to stop worrying about the trigger**.
+
+A person is not subject to enforcement for a §13-77-103 violation if the generative AI **clearly and conspicuously discloses at the outset, and throughout the interaction**, that it is generative AI, that it is not human, or that it is an AI assistant.
+
+Note the "and throughout". A banner at the top of the chat that disappears after the first message is not this. Persistent identification — in the header, in each message block, in the voice preamble — is.
+
+Practically: if you make the always-on disclosure, the reactive duty and the high-risk duty both stop mattering, because you have already disclosed. The reason to still separate them is the **non-disclosure case** — the vendor integration, the voice agent, the embedded assistant inside a partner's product.
+
+---
+
+## Penalties and enforcement
+
+| Item | Detail |
+|---|---|
+| Regulator | Division of Consumer Protection, Utah Department of Commerce |
+| Theory | A deceptive act or practice under the Consumer Sales Practices Act |
+| Administrative fine | Up to **$2,500** per violation |
+| Civil penalty | Up to **$5,000** per violation of an administrative or court order |
+| Other remedies | Injunctive relief, disgorgement of profits, the Division's fees and costs |
+| Criminal exposure | None |
+| "The model did it" | **Not a defence.** Chapter 77 states generative AI is not a defence where the AI made the statement, took the act, or was used in furtherance of the violation |
+
+Per-violation structure means exposure scales with conversation volume, not with company size. A single deployment answering thousands of consumer chats weekly is a different risk profile from one human-supervised agent.
+
+---
+
+## The question nobody has answered: does this reach hiring?
+
+Utah's chapter is a **consumer protection** statute, not an employment one, and it says nothing about job applicants.
+
+The honest analysis:
+
+- The proactive duty is limited to **regulated occupations**. Recruiting and HR are not licensed occupations in Utah, so §13-77-103(2) is very unlikely to reach an ordinary hiring process on its own terms.
+- The reactive duty turns on whether a job application is a **consumer transaction**. Chapter 77 borrows that definition from the Utah Consumer Sales Practices Act (§13-11-3), which describes a sale, lease, or transfer of goods or services to a person for personal, family, or household purposes. An application is not obviously a purchase by the applicant.
+- No Division of Consumer Protection guidance applies the chapter to hiring.
+
+If you want the risk gone rather than analysed, the safe harbour solves it: disclose that the interviewer or screener is AI, persistently. A hiring chatbot that says what it is has no disclosure question left to argue about.
+
+---
+
+## Mental-health chatbots are a separate, heavier track
+
+If the product is a mental-health chatbot offered to Utah users, Chapter 77 is not your main obligation. **Title 13, Chapter 72a** (from HB 452, 2025) requires disclosure that the chatbot is artificial intelligence and not human:
+
+- **Before** features are accessed
+- At the beginning of an interaction **after a seven-day gap**
+- Whenever a Utah user asks or prompts about whether AI is being used
+
+It also restricts selling or sharing a user's chatbot input and individually identifiable health information. Different chapter, different regulator posture, and a disclosure schedule that no generic chatbot banner satisfies.
+
+---
+
+## Implementation checklist
+
+- [ ] Replace every citation of §13-2-12 with Title 13, Chapter 77
+- [ ] Classify each conversational system: scripted (outside), generative (inside)
+- [ ] For each generative system, decide which tier it is in — general consumer, regulated occupation high-risk, or mental-health chatbot
+- [ ] Test whether the bot answers "am I talking to a human" truthfully in its own words, and how it handles indirect phrasings
+- [ ] Either build the always-on safe-harbour disclosure, or build the per-tier trigger logic — not neither
+- [ ] Make the disclosure persistent, not a first-message banner
+- [ ] If you serve licensed professionals, put the disclosure in writing *before* the written interaction begins, and script it into the verbal opening
+- [ ] Re-check the text each general session; chapter 77 has already been amended once and chapter 72 sunsets July 1, 2027
+
+---
+
+## Frequently asked questions
+
+**Is Utah Code §13-2-12 still law?**
+No. SB 226 (2025) repealed it and re-enacted the disclosure duty as Title 13, Chapter 77, effective May 7, 2025. Anything citing §13-2-12 for a current obligation is out of date.
+
+**Does Utah require AI disclosure even if the customer does not ask?**
+Only for individuals in a licensed occupation making a high-risk AI interaction, and for mental-health chatbots under chapter 72a. For ordinary consumer interactions the duty is reactive: you disclose when the person clearly and unambiguously asks.
+
+**What is a high-risk AI interaction?**
+Generative AI that involves sensitive personal information — health, financial, or biometric — and produces personalised recommendations or advice a person could reasonably rely on for a significant decision, including financial, legal, medical, or mental-health matters.
+
+**Is there a safe harbour?**
+Yes. Persistent, conspicuous disclosure at the outset and throughout that the system is generative AI and not human removes the enforcement exposure under §13-77-104.
+
+**Does the July 2027 sunset kill the disclosure duty?**
+No. The sunset applies to chapter 72, which houses the Office of Artificial Intelligence Policy and the learning laboratory. Chapter 77 is separate and is not repealed by that date.
+
+**Does this apply to a hiring chatbot?**
+Unresolved. The proactive duty is limited to licensed occupations, and whether a job application is a "consumer transaction" has not been decided. Disclose persistently and the question stops mattering.
+
+---
+
+**Related:** [Which state AI disclosure laws are in force](/in-effect/) · [Maine's chatbot disclosure rule](/maine/chatbot-disclosure/) · [Illinois HB 3773 notice duty](/illinois/hb-3773/)
+
+*Last verified November 8, 2026. General information, not legal advice. Confirm against the current chapter text on le.utah.gov — the chapter has already been amended once.*

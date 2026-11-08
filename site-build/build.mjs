@@ -350,15 +350,23 @@ const SEGMENT_LABELS = {
   'ab-2839': 'AB 2839',
   traiga: 'TRAIGA (HB 149)',
   'colorado-vs-texas': 'Colorado vs Texas',
+  illinois: 'Illinois',
+  utah: 'Utah',
+  maine: 'Maine',
+  'new-york': 'New York',
+  'hb-3773': 'HB 3773',
+  'chatbot-disclosure': 'Chatbot disclosure',
+  'synthetic-performer': 'Synthetic performer',
 };
 const label = (seg) => SEGMENT_LABELS[seg] || seg.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 
 const NAV = [
+  { label: 'In effect', url: '/in-effect/' },
   { label: 'Colorado', url: '/colorado/' },
   { label: 'California', url: '/california/sb-942/' },
   { label: 'Texas', url: '/texas/traiga/' },
+  { label: 'Illinois', url: '/illinois/hb-3773/' },
   { label: 'Compare', url: '/compare/colorado-vs-texas/' },
-  { label: 'In effect', url: '/in-effect/' },
 ];
 
 const LEGISLATION = {
@@ -396,6 +404,27 @@ const LEGISLATION = {
     date: '2025-09-29',
     name: 'Transparency in Frontier Artificial Intelligence Act',
     effective: '2026-01-01',
+  },
+  '/illinois/hb-3773/': {
+    identifier: 'HB 3773 (P.A. 103-0804)',
+    jurisdiction: 'US-IL',
+    date: '2024-08-09',
+    name: 'Illinois Human Rights Act AI amendments',
+    effective: '2026-01-01',
+  },
+  '/maine/chatbot-disclosure/': {
+    identifier: 'P.L. 2025, ch. 294 (10 M.R.S. 1500-DD)',
+    jurisdiction: 'US-ME',
+    date: '2025-06-12',
+    name: 'Maine AI chatbot disclosure requirement',
+    effective: '2025-09-24',
+  },
+  '/new-york/synthetic-performer/': {
+    identifier: 'S8420-A (Chapter 617 of 2025)',
+    jurisdiction: 'US-NY',
+    date: '2025-12-11',
+    name: 'New York AI synthetic performer disclosure law',
+    effective: '2026-06-09',
   },
   '/texas/traiga/': {
     identifier: 'HB 149',
@@ -812,14 +841,14 @@ function homeHtml() {
     .join('');
 
   const rows = [
-    ['California', 'SB 942 · AB 2013 · SB 53 · AB 2355', 'In force', 'ok'],
-    ['Texas', 'TRAIGA (HB 149)', 'In force', 'ok'],
-    ['Illinois', 'HB 3773 · AIVIA', 'In force', 'ok'],
-    ['Utah', 'Code ch. 77 · HB 452', 'In force', 'ok'],
-    ['Maine', '§1500-DD · 21-A §1014', 'In force', 'ok'],
-    ['New York', 'S8420 · GBL §349-A', 'In force', 'ok'],
-    ['Colorado', 'SB 26-189 (ADMT Act)', 'Jan 1, 2027', 'warn'],
-    ['California', 'AB 2839 · AB 2655', 'Barred by court', 'bad'],
+    ['California', 'SB 942 · AB 2013 · SB 53 · AB 2355', 'In force', 'ok', '/california/sb-942/'],
+    ['Texas', 'TRAIGA (HB 149)', 'In force', 'ok', '/texas/traiga/'],
+    ['Illinois', 'HB 3773 · AIVIA', 'In force', 'ok', '/illinois/hb-3773/'],
+    ['Utah', 'Code ch. 77 · HB 452', 'In force', 'ok', '/utah/'],
+    ['Maine', '§1500-DD · 21-A §1014', 'In force', 'ok', '/maine/chatbot-disclosure/'],
+    ['New York', 'S8420 · GBL §296-b', 'In force', 'ok', '/new-york/synthetic-performer/'],
+    ['Colorado', 'SB 26-189 (ADMT Act)', 'Jan 1, 2027', 'warn', '/colorado/'],
+    ['California', 'AB 2839 · AB 2655', 'Barred by court', 'bad', '/california/ab-2839/'],
   ];
 
   return `<!doctype html>
@@ -921,7 +950,7 @@ ${JSON.stringify(
       ${rows
         .map(
           (r) =>
-            `<tr><td><strong>${r[0]}</strong></td><td>${r[1]}</td><td><span class="pill ${r[3]}"><span class="dot ${r[3]}"></span>${r[2]}</span></td></tr>`
+            `<tr><td><a href="${r[4]}"><strong>${r[0]}</strong></a></td><td>${r[1]}</td><td><span class="pill ${r[3]}"><span class="dot ${r[3]}"></span>${r[2]}</span></td></tr>`
         )
         .join('')}
       </tbody>

@@ -359,6 +359,10 @@ a:hover {
     padding-block: 30px 64px;
   }
   .content {
+    /* Grid items default to min-width:auto, so one wide child can push the
+       column past the viewport and give the whole page a horizontal scroll. */
+    min-width: 0;
+    width: 100%;
     margin-inline: auto;
   }
   .toc {
