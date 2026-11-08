@@ -207,6 +207,29 @@ for (const path of ['/robots.txt', '/sitemap.xml', '/llms.txt', '/llms-full.txt'
   (r.status === 200 ? ok : bad)(path, `${r.status} ${r.size}B`);
 }
 
+/* A 200 on robots.txt says nothing about its content. Cloudflare can prepend a
+   managed block that Disallows every AI crawler while the file still looks
+   healthy by status and size, which silently voids the whole GEO layer. */
+{
+  const r = await bytes(`https://${DOMAIN}/robots.txt`);
+  const managed = r.text.includes('BEGIN Cloudflare Managed');
+  const authored = r.text.includes('# aidisclosurelaw.com');
+  const signal = (r.text.match(/Content-Signal:\s*([^\n]+)/i) || [])[1];
+  const disallow = (r.text.match(/^Disallow:\s*\/\s*$/gim) || []).length;
+  if (managed) {
+    bad(
+      'robots.txt body',
+      `Cloudflare is injecting a managed block${signal ? ` (${signal.trim()})` : ''}` +
+        `${disallow ? `, ${disallow} crawler(s) Disallowed` : ''} — origin file is being overridden`
+    );
+    notes.push('Cloudflare: AI Crawl Control → set Search/Agent/Training to Allow, then turn off Enable Bot Preference Sync');
+  } else if (authored) {
+    ok('robots.txt body', `served as authored${disallow ? `, ${disallow} Disallow line(s)` : ', no AI crawler blocked'}`);
+  } else {
+    warn('robots.txt body', 'does not contain the expected origin content');
+  }
+}
+
 head('7. Share card');
 const home = await bytes(`https://${DOMAIN}/`);
 const ogImage = (home.text.match(/<meta property="og:image" content="([^"]+)"/) || [])[1];
