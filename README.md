@@ -44,7 +44,13 @@ npm run build     # markdown -> site/
 npm run og        # regenerate social cards (needs Chrome/Edge; skips gracefully if absent)
 npm run assets    # og + build
 npm run dev       # build, then serve http://localhost:8788
+npm run check -- example.com   # live-domain audit; exits 1 on any blocking problem
 ```
+
+`npm run check` verifies nameservers, A/www records, MX and SPF, TLS chain and expiry, the redirect
+chain, the GEO files, and that `og:image` resolves. Run it after attaching a domain and after any DNS
+change: a proxy in front of Vercel fails as a TLS handshake error (525), not as a DNS error, so a
+green `dig` proves nothing.
 
 Set `CHROME_BIN` if Chrome is not in a standard location.
 

@@ -10,6 +10,7 @@
     "build": "node site-build/build.mjs",
     "og": "node site-build/make-og.mjs",
     "assets": "node site-build/make-og.mjs && node site-build/build.mjs",
-    "dev": "node site-build/build.mjs && node site-build/serve.mjs"
+    "dev": "node site-build/build.mjs && node site-build/serve.mjs",
+    "check": "node site-build/check-domain.mjs"
   }
 }
