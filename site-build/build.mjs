@@ -19,14 +19,13 @@ const OUT = path.join(ROOT, 'site');
    deployments must never claim canonical rank for the real site. */
 const BASE = (process.env.SITE_BASE || 'https://aidisclosurelaw.com').replace(/\/+$/, '');
 
-/* Absolute base for og:image. Social scrapers need a URL that resolves today.
-   On Vercel, VERCEL_PROJECT_PRODUCTION_URL is the current production host, so
-   a vercel.app deployment still yields a working share card before the custom
-   domain is attached. Override with OG_BASE if needed. */
-const OG_BASE = (
-  process.env.OG_BASE ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : BASE)
-).replace(/\/+$/, '');
+/* Absolute base for og:image. Social scrapers fetch this URL directly, so it has
+   to resolve at share time. It now follows BASE, i.e. the custom domain, because
+   the domain is attached and serving. The earlier VERCEL_PROJECT_PRODUCTION_URL
+   fallback existed only for the window before the domain was bound; keeping it
+   made every deployment inherit a stale *.vercel.app host in the card URL.
+   Override with OG_BASE if a deployment has to point somewhere else. */
+const OG_BASE = (process.env.OG_BASE || BASE).replace(/\/+$/, '');
 const SITE_NAME = 'AI Disclosure Law';
 const TODAY = '2026-11-08';
 
