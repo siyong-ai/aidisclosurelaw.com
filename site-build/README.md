@@ -5,8 +5,10 @@
 ## 命令
 
 ```bash
-node site-build/build.mjs     # 构建（会清空并重建 site/）
-node site-build/serve.mjs     # 本地预览 http://localhost:8788
+npm run build     # 构建（会清空并重建 site/）
+npm run og        # 重生成社交分享图与图标（需要本机有 Chrome/Edge，没有则跳过）
+npm run assets    # og + build
+npm run dev       # 构建后起本地预览 http://localhost:8788
 ```
 
 改文案 → 只动 `site-content/` 的 md，不要手改 `site/`（每次构建会覆盖）。
@@ -20,10 +22,14 @@ site-content/            源文件（写这个）
   ...
 site-build/
   build.mjs              解析 md + 套模板 + 生成 sitemap/robots/llms
+  make-og.mjs            用无头 Chrome 渲染 1200x630 分享图与 PNG 图标
   style.css              设计系统（全部样式）
   app.js                 主题切换、阅读进度、目录高亮、复制引用
   favicon.svg
+  og/                    生成的分享图（已提交，CI 不需要浏览器）
+  icons/                 生成的 favicon / apple-touch-icon
 site/                    产物（部署这个目录）
+vercel.json              构建命令、输出目录、缓存与安全响应头
 ```
 
 ## Front matter 字段
@@ -46,6 +52,7 @@ sources             # 数组，每项 label + url
 ## 已实现的 SEO
 
 - 每页独立 `title` / `meta description` / `canonical`
+- 每页独立的 1200×630 Open Graph 图（`og:image` + `twitter:image` + `ImageObject`）
 - `robots` 显式允许大片段与放大图（`max-snippet:-1`, `max-image-preview:large`）
 - Open Graph + Twitter Card 全套
 - JSON-LD `@graph`：`WebSite` + `Organization` + `Article` + `WebPage` + `BreadcrumbList` + `FAQPage`
@@ -80,12 +87,19 @@ sources             # 数组，每项 label + url
 
 ## 部署
 
-`site/` 是纯静态目录，直接丢到 Cloudflare Pages / Vercel / Netlify 即可，无需构建命令。
+推 GitHub，Vercel 导入即自动部署：`vercel.json` 已声明 `buildCommand: npm run build`、`outputDirectory: site`，无需在控制台改设置。
 
-上线后要做的一件事：把 `build.mjs` 顶部的 `BASE` 换成正式域名，否则 canonical、sitemap、llms.txt 里的链接全是旧域名。
+`BASE` 目前是 `https://aidisclosurelaw.com`，换域名时只改 `build.mjs` 顶部这一处，canonical / sitemap / llms.txt / OG 图 URL 会一起更新。
 
-## 已知待办
+## 换域名或加语言时的注意点
 
-- [ ] 加州各页 `sources` 里是 leginfo 首页级链接，需换成带具体 `bill_id` 的深链
-- [ ] `/in-effect/` 康涅狄格一行标了 Pending verification，核完 `cga.ct.gov` 的 PA 26-15 原文前不要上线该行
-- [ ] 站点尚无真实 favicon 位图与 OG 分享图（1200×630），社交分享会是纯文字卡
+- `BASE` 改一处即可，但已提交的 `og/*.png` 底部印着旧域名 → 必须重跑 `npm run og`。
+- 新增语言时不要复制目录，会让 canonical 互相冲突；应使用 `hreflang` 与独立路径前缀。
+
+## 待办
+
+- [x] 加州各页 `sources` 换成法典章节与判例 docket 深链
+- [x] `/in-effect/` 康涅狄格改为「不列并说明原因」，不再挂着未核实日期
+- [x] favicon 位图 + 1200×630 OG 分享图
+- [ ] 第二批页面：伊利诺伊 HB 3773、犹他、缅因 chatbot、纽约 synthetic performer
+- [ ] 缅因 LD 517 的章节号（P.L. 2025 ch. 593 还是 2026 ch. 593）核实后再发 `/maine/political-ads/`
