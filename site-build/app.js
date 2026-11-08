@@ -145,6 +145,57 @@
     });
   });
 
+  /* --------------------------------------------------------------- share */
+
+  var shareBtns = document.querySelectorAll('[data-share]');
+  Array.prototype.forEach.call(shareBtns, function (btn) {
+    btn.addEventListener('click', function () {
+      var flash = function (label) {
+        var old = btn.textContent;
+        btn.textContent = label;
+        btn.classList.add('done');
+        setTimeout(function () {
+          btn.textContent = old;
+          btn.classList.remove('done');
+        }, 1600);
+      };
+
+      var descEl = document.querySelector('meta[name="description"]');
+      var payload = {
+        title: document.title,
+        text: descEl ? descEl.content : '',
+        url: location.href,
+      };
+
+      if (navigator.share) {
+        navigator.share(payload).catch(function () {});
+        return;
+      }
+
+      // Desktop fallback: copy the URL the reader is actually on. Using
+      // location.href rather than canonical keeps the link working on preview
+      // and vercel.app deployments where the custom domain is not live yet.
+      var link = location.href;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(function () {
+          flash('Link copied');
+        }, function () {});
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = link;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+          flash('Link copied');
+        } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    });
+  });
+
   /* --------------------------------------------- open FAQ if deep-linked */
 
   if (location.hash) {

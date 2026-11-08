@@ -15,7 +15,18 @@ import path from 'node:path';
 const ROOT = process.cwd();
 const SRC = path.join(ROOT, 'site-content');
 const OUT = path.join(ROOT, 'site');
-const BASE = 'https://aidisclosurelaw.com';
+/* Canonical/SEO base. Fixed to the custom domain on purpose: preview
+   deployments must never claim canonical rank for the real site. */
+const BASE = (process.env.SITE_BASE || 'https://aidisclosurelaw.com').replace(/\/+$/, '');
+
+/* Absolute base for og:image. Social scrapers need a URL that resolves today.
+   On Vercel, VERCEL_PROJECT_PRODUCTION_URL is the current production host, so
+   a vercel.app deployment still yields a working share card before the custom
+   domain is attached. Override with OG_BASE if needed. */
+const OG_BASE = (
+  process.env.OG_BASE ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : BASE)
+).replace(/\/+$/, '');
 const SITE_NAME = 'AI Disclosure Law';
 const TODAY = '2026-11-08';
 
@@ -478,7 +489,7 @@ function jsonLd(page) {
       ? {
           image: {
             '@type': 'ImageObject',
-            url: `${BASE}/assets/og/${ogName(url)}.png`,
+            url: `${OG_BASE}/assets/og/${ogName(url)}.png`,
             width: 1200,
             height: 630,
             caption: fm.h1 || fm.title,
@@ -597,7 +608,7 @@ function sourcesHtml(page) {
     '</ol>' +
     `<p class="cite"><button class="copy" data-copy="${esc(
       `${SITE_NAME}. "${stripMd(page.fm.h1 || page.fm.title)}." ${BASE}${page.url} (last verified ${TODAY}).`
-    )}">Copy citation</button></p></section>`
+    )}">Copy citation</button><button class="copy" data-share type="button">Share page</button></p></section>`
   );
 }
 
@@ -607,7 +618,7 @@ const ogFile = (url) => path.join(ROOT, 'site-build', 'og', `${ogName(url)}.png`
 
 function ogTags(url, title) {
   if (!fs.existsSync(ogFile(url))) return '';
-  const src = `${BASE}/assets/og/${ogName(url)}.png`;
+  const src = `${OG_BASE}/assets/og/${ogName(url)}.png`;
   return [
     `<meta property="og:image" content="${src}">`,
     `<meta property="og:image:type" content="image/png">`,
@@ -935,7 +946,10 @@ ${JSON.stringify(
 
 /* ------------------------------------------------------------------- write */
 
-fs.rmSync(OUT, { recursive: true, force: true });
+/* Overwrite in place instead of wiping the tree. The build only writes files it
+   owns, and a recursive delete on the output directory is a foot-gun: it can
+   take out a directory that is not entirely generated. Stale output from a
+   page that was removed or renamed has to be deleted by hand. */
 fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 // pages
 for (const page of pages) {
