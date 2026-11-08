@@ -1,0 +1,1031 @@
+# AI Disclosure Law — full text
+
+Last verified 2026-11-08. Source: https://aidisclosurelaw.com
+
+
+
+<!-- https://aidisclosurelaw.com/california/ab-2013/ -->
+# California AB 2013: Training Data Disclosure Requirements
+
+> **Short answer.** AB 2013, the Generative AI Training Data Transparency Act, has required since **January 1, 2026** that developers of publicly available generative AI systems publish a **high-level summary of their training data** on their website. It applies to systems first released or substantially updated on or after **January 1, 2022**. The statute names **no enforcement agency and no penalty** — which is not the same as having no consequence.
+
+---
+
+## Who has to publish
+
+Any developer that designs, codes, produces, or substantially modifies a generative AI system for public use in California.
+
+Two thresholds do the real work:
+
+- **System timing.** Covered systems are those first released or substantially updated **on or after January 1, 2022**. Older models that have not been substantially updated fall outside.
+- **Public availability.** Internal-only systems are not "made available to the public."
+
+**Exempt uses:** cybersecurity, national security, and aircraft operations.
+
+---
+
+## What the summary must disclose
+
+The statute enumerates the required categories. In practice these are the fields that get checked:
+
+| Field | What to write |
+|---|---|
+| Datasets used | A high-level summary of the datasets |
+| Sources and ownership | Where the data came from and who owns it |
+| How the data is used | Including how it relates to the system's purpose |
+| Data volume | A range or estimate is acceptable — a point value is not required |
+| Copyrighted, trademarked, or patented material | Whether the datasets include it |
+| Personal information | Whether the datasets contain CCPA-defined personal information |
+| Synthetic data | Whether AI-generated data was used in training |
+| Collection period | The time period over which data was collected |
+
+"High-level" is doing a lot of work. The statute does not require you to publish a dataset list, license-by-license. It requires an honest summary of composition. Companies that try to satisfy it with a single vague paragraph are the ones that attract attention.
+
+---
+
+## Timeline, including the litigation
+
+| Date | Event |
+|---|---|
+| September 28, 2024 | AB 2013 signed |
+| **January 1, 2026** | **Effective** |
+| March 4, 2026 | Court denies xAI's motion for a preliminary injunction. The court found xAI had shown "a distinct possibility" of success but not a likelihood. |
+| **November 18, 2026** | Ninth Circuit hears argument |
+
+The law is enforceable while the appeal proceeds. A denied preliminary injunction is not a stay, and it is not a ruling on the merits.
+
+---
+
+## Penalties: there are none, and that is the point
+
+AB 2013 does not specify an enforcement agency or a penalty amount. This creates two opposite mistakes:
+
+**Mistake one: "no penalty means no risk."** The disclosure is public and permanent on your own website. It is the first thing a copyright plaintiff, a journalist, or a state regulator reads. Publishing a summary that contradicts your own litigation position, or that later turns out to have omitted a category, converts a no-penalty filing into evidence in a different proceeding.
+
+**Mistake two: "we'll publish something generic."** A summary that names no sources and gives no volume range is not a good-faith "high-level summary" of composition. It is the fact pattern that invites a follow-up.
+
+The practical exposure is reputational and evidentiary, not statutory. Price the work accordingly — but do the work.
+
+---
+
+## Checklist
+
+- [ ] Confirm which of your models were first released or substantially updated on or after January 1, 2022
+- [ ] For each, assemble the eight fields above — sources, ownership, use, volume, IP content, personal information, synthetic data, collection period
+- [ ] Use ranges for volume; a defensible range beats a false precision
+- [ ] Route the draft through the same team that handles copyright and privacy positions, so the public summary and the legal position agree
+- [ ] Publish it somewhere durable and linkable, not buried in a blog post
+- [ ] Date the summary and note when it was last updated
+- [ ] Put a review trigger on any substantial model update, since that re-triggers the duty
+- [ ] Diary November 18, 2026, and again when the Ninth Circuit rules
+
+---
+
+## Frequently asked questions
+
+**Does AB 2013 apply to me if I fine-tune someone else's model?**
+"Substantially modifies" is the test, and the statute does not draw a bright line. Fine-tuning that changes capability materially is the risk zone. Document your reasoning either way.
+
+**Is a range acceptable for dataset size?**
+Yes. The statute expressly permits a range or an estimate.
+
+**Do I have to name every dataset?**
+No. It requires a high-level summary. It does not require a dataset-by-dataset inventory, but it does require the specified categories to be addressed honestly.
+
+**What happens if I don't comply?**
+The statute provides no penalty and no named enforcement agency. Exposure comes through other channels — litigation, regulatory attention, and the credibility of your own public disclosures.
+
+**Is this the same as SB 942?**
+No. AB 2013 is about disclosing **training data** on your website. SB 942 is about **watermarking output** and providing a detection tool. → [SB 942 explained](/california/sb-942/)
+
+---
+
+**Related:** [California SB 942: who it covers](/california/sb-942/) · [California SB 53: frontier models](/california/sb-53/) · [Which state laws are in effect now](/in-effect/)
+
+*Last verified November 8, 2026. General information, not legal advice. Litigation status changes; confirm the current docket before relying on this page.*
+
+
+<!-- https://aidisclosurelaw.com/california/ab-2839/ -->
+# Is California's AB 2839 Still Enforceable? No — Here Is What Still Applies
+
+> **Short answer.** **No.** AB 2839 was permanently enjoined on August 29, 2025 in *Kohls v. Bonta* for violating the First Amendment, and California did not appeal that judgment. AB 2655 was declared preempted by Section 230 on August 20, 2025, with a stipulated order barring enforcement against any interactive computer service provider. The election-AI disclosure rule California **can** still enforce is **Elections Code §20010**, which runs through December 31, 2030.
+
+If a guide is telling you how to comply with AB 2839, it is describing a law a federal court has barred the state from enforcing. Here is the actual state of play.
+
+---
+
+## What AB 2839 was, and what happened to it
+
+**What it did.** Signed September 17, 2024, AB 2839 banned the knowing distribution of "materially deceptive" AI-generated or digitally altered election content about candidates, election officials, and voting equipment, in the **120 days before** an election and up to **60 days after** for officials and equipment. It allowed satire and parody only if labeled, and gave candidates and elections officials a private right of action.
+
+**What happened.**
+
+| Date | Event |
+|---|---|
+| October 2, 2024 | Preliminary injunction issued — two weeks after signing |
+| August 29, 2025 | Summary judgment for the challengers; permanent injunction. The court held the law discriminates based on content, viewpoint, and speaker, and is not narrowly tailored. |
+| — | **California did not appeal this ruling.** |
+
+The court's reasoning is worth knowing because it tells you where the boundary is: the law punished speech only when it could harm a candidate's electoral prospects while leaving favorable deepfake portrayals untouched, and "counter-speech" — the subject publicly calling the content false — is a less restrictive alternative to prohibition.
+
+**Status: unenforceable, and not on appeal.**
+
+---
+
+## What AB 2655 was, and what happened to it
+
+**What it did.** The Defending Democracy from Deepfake Deception Act of 2024, codified at Elections Code §20510 et seq., required large online platforms — 1 million or more California users — to identify, label, or remove materially deceptive AI-generated election content during set windows around elections.
+
+**What happened.**
+
+| Date | Event |
+|---|---|
+| August 20, 2025 | Final judgment: preempted by Section 230 of the Communications Decency Act as applied to X and Rumble |
+| August 28, 2025 | Stipulated order bars the state from enforcing AB 2655 **in its entirety** against any provider of an interactive computer service |
+| September 19, 2025 | California appeals — Ninth Circuit **No. 25-6138** |
+| As of October 29, 2026 | Briefed, **no argument date on the Ninth Circuit calendar** |
+
+**Status: unenforceable against platforms, subject to a pending appeal.** The appeal does not stay the injunction.
+
+---
+
+## What California can still enforce
+
+Three rules survive, and only these three matter in practice.
+
+### 1. Elections Code §20010 — the one that works
+
+Anyone who distributes materially deceptive audio or visual media depicting a candidate within **60 days of an election** must include a clear disclosure that the content has been manipulated. Subdivision (c) lets the depicted candidate seek injunctive or other equitable relief plus general or special damages, with attorney's fees available to the prevailing party.
+
+**Sunset:** AB 686 (Chapter 334, Statutes of 2026, approved September 19, 2026) extended the section to remain in effect until **January 1, 2031** — that is, through December 31, 2030. A much narrower successor version becomes operative the same day, reverting to a pre-AI rule about superimposed candidate images with a different disclaimer.
+
+### 2. AB 2355 — political committee ads
+
+A political committee that creates, publishes, or distributes a campaign ad whose images, audio, or video were generated or substantially altered using AI must include a clear disclosure stating AI was used. It applies **only to committees defined under California law, not to individual citizens or individual creators**. Formatting rules differ for print, audio, and video. Penalties up to **$5,000 per violation**, enforced by the campaign-finance regulator.
+
+This narrow scope is why the 2026 Los Angeles mayoral race saw viral AI videos of a candidate go unlabeled — they were made by individual supporters, not committees.
+
+### 3. Elections Code §20010's own disclosure wording
+
+The required disclosure under §20010 is not the same as AB 2355's. If you are running a committee ad inside the 60-day window with manipulated candidate media, you may owe both.
+
+---
+
+## The practical question: what do I actually have to do?
+
+| If you are… | Your obligation today |
+|---|---|
+| A political committee running an ad with AI-generated content | Disclose under AB 2355. Up to $5,000 per violation. |
+| Anyone distributing manipulated candidate audio/video within 60 days of an election | Disclose under §20010. Candidate can sue for damages and fees. |
+| A platform hosting user content | No enforceable California duty. AB 2655 is barred; the appeal is pending. |
+| An individual poster or creator | AB 2355 does not apply to you. §20010 disclosure is the rule that reaches distribution. |
+| A campaign relying on AB 2839's prohibition | There is no prohibition to rely on. It is permanently enjoined. |
+
+---
+
+## Why this matters beyond California
+
+Two lessons transfer to every other state's election-AI law:
+
+**Bans fare badly; disclosure survives.** The laws that have held up are narrow disclosure rules tied to short pre-election windows with modest penalties and explicit satire carve-outs — Arizona's SB 1359 model. The laws that fell were broad prohibitions on "materially deceptive" content, which swept in protected commentary.
+
+**Section 230 is still a wall for platform duties.** AB 2655 was not struck down for being substantively wrong. It was preempted because it made platforms liable for user content. Any state law that puts the duty on the hosting platform faces the same argument.
+
+---
+
+## Frequently asked questions
+
+**Is AB 2839 currently enforceable?**
+No. It was permanently enjoined on August 29, 2025, and California did not appeal that judgment. It remains unenforceable absent a reversal that is not pending.
+
+**Is AB 2655 enforceable?**
+Not against interactive computer service providers. A stipulated order bars enforcement in its entirety against them. California's appeal is pending at the Ninth Circuit, No. 25-6138, with no argument date as of late October 2026.
+
+**What California election deepfake law is still in force?**
+Elections Code §20010 — the 60-day pre-election disclosure requirement for materially deceptive audio or visual media depicting a candidate — extended through December 31, 2030 by AB 686. AB 2355 also remains in force, but only for political committees.
+
+**Did AB 2839's injunction apply to everyone?**
+The permanent injunction was entered against the plaintiffs in *Kohls v. Bonta*. In practice the state has no path to enforcement, which is why the practical answer is "unenforceable."
+
+**Does AB 2355 apply to a viral video made by a supporter?**
+No. It applies to political committees as defined under California law. Individual creators are outside it.
+
+---
+
+**Related:** [California SB 942: the AI transparency law that is in force](/california/sb-942/) · [California SB 53: frontier model transparency](/california/sb-53/) · [Which state AI laws are in effect now](/in-effect/)
+
+*Last verified November 8, 2026. General information, not legal advice. Litigation status changes; check the Ninth Circuit docket before relying on this page.*
+
+
+<!-- https://aidisclosurelaw.com/california/sb-53/ -->
+# California SB 53: Transparency in Frontier Artificial Intelligence Act
+
+> **Short answer.** SB 53 took effect **January 1, 2026**. It is not a disclosure law about labeling AI content — it is a safety law about the largest models. A **frontier developer** that has trained or begun training a foundation model above **10^26 integer or floating-point operations** must publish a transparency report before deploying a new or substantially modified model, and report critical safety incidents to Cal OES **within 15 days** (**24 hours** if there is imminent risk of death or serious injury). A **large frontier developer** — over **$500 million** in annual gross revenue — must also publish a frontier AI framework and faces civil penalties up to **$1,000,000 per violation**.
+
+If you searched for "California AI disclosure law" and landed here, check the scope first. This almost certainly does not apply to your company. → [SB 942 is the labeling law](/california/sb-942/)
+
+---
+
+## Two tiers, defined by compute and revenue
+
+| Tier | Definition | Obligations |
+|---|---|---|
+| **Frontier developer** | Has trained, or begun training, a foundation model using more than 10^26 integer or floating-point operations | Transparency report before deployment; incident reporting; no false or misleading risk statements; whistleblower protections |
+| **Large frontier developer** | A frontier developer that, with affiliates, had annual gross revenues above $500,000,000 in the preceding calendar year | Everything above, plus a published frontier AI framework, catastrophic-risk assessment summaries submitted to OES, and expanded whistleblower procedures |
+
+The thresholds are deliberately defined by compute and revenue rather than by naming companies. Coverage expands and contracts automatically as organizations cross either line. That is what makes the law durable — and what makes "we're not a frontier lab" a claim you have to re-verify every year.
+
+---
+
+## What the transparency report must contain
+
+**Every frontier developer**, before deploying a new or substantially modified frontier model:
+
+- Website contact details
+- Release date
+- Supported languages
+- Output modalities
+- Intended uses
+- Any usage restrictions
+
+**Large frontier developers** must add:
+
+- A summary of the catastrophic-risk assessments performed on the model
+- The results of those assessments
+- Whether and how third-party evaluators were involved
+
+---
+
+## The frontier AI framework
+
+A large frontier developer must write, implement, and clearly publish a framework on its website describing how it identifies and manages catastrophic risk across the model lifecycle. It has to address:
+
+- Cybersecurity practices around **model weights**
+- The thresholds and methodology used to assess catastrophic risk
+- Mitigation strategies once a risk is identified
+- Use of **third-party evaluators**
+- Internal governance and accountability structure for these decisions
+
+Trade secrets and information that would create a security risk can be redacted — but the framework itself must be public.
+
+**It is not a one-time filing.** Developers must review it at least annually and publish any material modification **within 30 days**.
+
+That creates a running public record of how a lab's own stated thresholds and mitigations change over time. It is the most quotable artifact the law produces, and the most likely to be cited back at the company that wrote it.
+
+---
+
+## Incident reporting: the operative duty
+
+| Situation | Deadline | Recipient |
+|---|---|---|
+| Critical safety incident discovered | **15 days** | California Office of Emergency Services (Cal OES) |
+| Imminent risk of death or serious physical injury | **24 hours** | Appropriate law enforcement or public safety authority |
+
+This is the provision most likely to generate an actual enforcement record, because it is binary and time-stamped. Everything else in the law is a publication duty; this one is a clock.
+
+---
+
+## Also prohibited
+
+- Making **materially false or misleading statements** about the catastrophic risks of your models or how those risks are managed
+- Taking action against an employee for reporting serious safety risks or legal violations — including policies or contracts that attempt to stop them. Labor Code §1107.1 supplies the whistleblower protection.
+
+---
+
+## Penalties
+
+Civil penalty up to **$1,000,000 per violation** by a large frontier developer, enforced by the California Attorney General.
+
+---
+
+## Checklist
+
+- [ ] Compute your training run against the 10^26 FLOP threshold and document the calculation
+- [ ] Track revenue against the $500 million line annually, including affiliates
+- [ ] Draft the transparency report template so a new model release does not start from zero
+- [ ] Publish the frontier AI framework with each required element addressed by name
+- [ ] Put the framework on an annual review calendar and a 30-day modification publication clock
+- [ ] Build the 15-day and 24-hour incident paths, with named owners and an out-of-hours route
+- [ ] Review all public statements about catastrophic risk for anything you cannot support
+- [ ] Confirm whistleblower channels cannot be read as retaliatory, in policy or in contract
+- [ ] Diary the corresponding Illinois and New York laws — they are modeled on this one and differ in details
+
+---
+
+## Frequently asked questions
+
+**Does SB 53 apply to companies that fine-tune or deploy models?**
+No. It applies to developers that train, or begin training, a foundation model above the compute threshold. Deployers are outside it.
+
+**What is a "critical safety incident"?**
+The statute ties the term to catastrophic risk — harm at the scale of mass casualties or catastrophic economic damage. The 24-hour path applies where there is imminent risk of death or serious physical injury.
+
+**Is the framework a one-time publication?**
+No. It must be reviewed at least annually, and material modifications published within 30 days.
+
+**What is the maximum penalty?**
+Up to $1,000,000 per violation for a large frontier developer, enforced by the Attorney General.
+
+**How is this different from the EU AI Act?**
+SB 53 regulates catastrophic risk from the largest models. EU AI Act Article 50 regulates transparency toward users — deepfake disclosure and AI-generated text on matters of public interest. Different obligations, different populations. → [SB 942](/california/sb-942/) is closer to Article 50 in spirit.
+
+---
+
+**Related:** [California SB 942: watermarking and detection](/california/sb-942/) · [AB 2013: training data disclosure](/california/ab-2013/) · [Which state laws are in effect now](/in-effect/)
+
+*Illinois SB 315 is modeled on this law and adds mandatory annual independent third-party audits. It is not covered here yet.*
+
+*Last verified November 8, 2026. General information, not legal advice.*
+
+
+<!-- https://aidisclosurelaw.com/california/sb-942/ -->
+# California AI Transparency Act (SB 942 + AB 853): Who It Actually Covers
+
+> **Short answer.** SB 942, as amended by AB 853, requires **covered providers** — operators of a publicly accessible generative AI system with **more than 1,000,000 monthly visitors or users** available in California — to embed provenance data in AI-generated images, video, and audio and to offer a **free public detection tool**. Core duties became operative **August 2, 2026**. If you are a brand, agency, or ordinary business using AI tools, this law does **not** impose a labeling duty on you.
+
+That last sentence is where most coverage goes wrong. Read the scope section before you build a compliance program.
+
+---
+
+## Scope: the 1 million user threshold is the whole law
+
+A **covered provider** is a person that produces a publicly accessible generative AI system with more than one million monthly visitors or users and makes it available within California.
+
+Nationally, that captures a very small number of companies. It is a platform-level law, aimed at the model and tool providers — the Fireflys and DALL-Es — not at the companies that consume their output.
+
+**Excluded entirely:** products and services that provide exclusively non-user-generated video game, television, streaming, movie, or interactive experiences.
+
+---
+
+## The four duties
+
+### 1. Free public detection tool
+
+Covered providers must make available, at no cost, a tool that lets users assess whether covered media was created or altered by the provider's system. The tool must:
+
+- output **system-provenance data** without exposing personal-provenance data,
+- be publicly accessible, subject to reasonable security limitations,
+- support **uploads or links** to online content.
+
+### 2. Optional visible disclosure
+
+Providers must offer users the option to include a clear, conspicuous **manifest disclosure** identifying the content as AI-generated. This is user-facing and optional — not a mandate to label everything.
+
+### 3. Mandatory latent disclosure
+
+Covered providers must include a **latent disclosure** in AI-generated media that conveys provenance information, where technically feasible and reasonable. In practice this means C2PA-compatible provenance metadata embedded in the file.
+
+Note the asymmetry: the mandatory latent disclosure attaches to content the system **creates**. The detection tool and the optional label are triggered by content "created **or altered**" by the system — and "altered" is undefined in the statute.
+
+### 4. The 96-hour licensee rule
+
+If a covered provider learns that a third-party licensee modified its system to defeat the required disclosures, it must seek compliance or **revoke the license within 96 hours**. The licensee must stop using the system after revocation.
+
+---
+
+## Timeline: the date moved once, and two phases are still coming
+
+| Date | Event |
+|---|---|
+| September 19, 2024 | SB 942 signed as Chapter 291 |
+| October 13, 2025 | AB 853 signed — amends the chapter, adds duties for large online platforms, GenAI hosting platforms, and capture-device manufacturers |
+| **August 2, 2026** | **Core duties operative** — detection tool, latent disclosure, optional manifest disclosure. Delayed from January 1, 2026 by AB 853, to align with EU AI Act Article 50. |
+| January 1, 2027 | Large online platform and GenAI hosting platform provisions operative |
+| January 1, 2028 | Capture-device duties begin, for devices first produced for sale in California on or after that date |
+
+---
+
+## Penalties
+
+Civil penalties of **$5,000 per violation**, and **each day of noncompliance is a separate violation.** Enforcement by the California Attorney General, city attorneys, and county counsel. The statute also authorizes injunctive relief and attorney's fees for specified violations by third-party licensees.
+
+---
+
+## The advertiser gap nobody explains
+
+If you are a brand or agency, the honest answer is: this law gives you no direct obligation and no direct penalty. The latent metadata is embedded automatically by the platform. The consumer-facing visible label is optional. There is no provision penalizing a brand for omitting a label.
+
+That does not mean you are in the clear. Three things still reach you:
+
+- **The IAB's August 2026 transparency framework** treats a materiality-based disclosure decision as the advertiser's independent obligation, regardless of what platform tooling does or does not apply.
+- **EU AI Act Article 50** applies to advertisers as *deployers* of AI systems, from August 2, 2026, and requires deepfake disclosure. If you advertise into the EU, that is your binding rule, not SB 942.
+- **Sector rules and the FTC** on deceptive advertising continue to apply to the claim itself.
+
+And there is a real ambiguity: a brand that uses a covered tool to adjust lighting, swap a background, or enhance audio has technically "altered" content under the statute. Whether that triggers any obligation is unresolved. Document your materiality call per asset and you have a defensible position either way.
+
+---
+
+## Checklist
+
+**If you operate a covered provider:**
+- [ ] Confirm whether you cross 1,000,000 monthly California visitors or users — measure California, not global
+- [ ] Ship the free detection tool with upload and link support
+- [ ] Embed C2PA-compatible latent provenance in generated image, video, and audio
+- [ ] Offer the optional manifest disclosure in the product UI
+- [ ] Write the 96-hour licensee remediation-or-revocation procedure, with a clock and an owner
+- [ ] Put the 2027 hosting-platform provisions on the roadmap now
+
+**If you consume generative AI output:**
+- [ ] Stop describing SB 942 as a duty on your business
+- [ ] Adopt a per-asset materiality test for whether the AI involvement is disclosed
+- [ ] If you advertise into the EU, comply with Article 50 instead — the obligation is yours there
+- [ ] Keep the record of the call, not just the call
+
+---
+
+## Frequently asked questions
+
+**Does SB 942 require me to label AI-generated content?**
+Not unless you are a covered provider with over 1 million monthly California users. The visible label is optional for users of those systems; the latent metadata is mandatory for the provider.
+
+**When did SB 942 take effect?**
+Core duties became operative August 2, 2026. AB 853 delayed the date from January 1, 2026 to align with the EU AI Act. Two further phases start January 1, 2027 and January 1, 2028.
+
+**What is the penalty for non-compliance?**
+$5,000 per violation, with each day of noncompliance counted as a separate violation. The Attorney General, city attorneys, and county counsel can all enforce.
+
+**Does this apply to video games?**
+Products and services that exclusively provide non-user-generated video game, television, streaming, movie, or interactive experiences are excluded.
+
+**Is this the same as AB 2013?**
+No. AB 2013 is about disclosing training data on your website. SB 942 is about watermarking output and providing a detection tool. → [AB 2013 explained](/california/ab-2013/)
+
+---
+
+**Related:** [California AB 2013: training data disclosure](/california/ab-2013/) · [California SB 53: frontier model transparency](/california/sb-53/) · [Which laws are in effect right now](/in-effect/)
+
+*Last verified November 8, 2026. General information, not legal advice.*
+
+
+<!-- https://aidisclosurelaw.com/colorado/ -->
+# Colorado AI Law: What Is Actually in Effect in 2026
+
+> **Short answer.** Colorado's original AI Act (SB 24-205) **never took effect.** It was repealed and replaced on **May 14, 2026** — one month before its own delayed start date — by **SB 26-189**, the Automated Decision-Making Technology Act. That law keeps the short title "Colorado AI Act" but replaces the entire framework. Its duties start **January 1, 2027**.
+
+If you searched for the Colorado AI Act's effective date and found four different answers, this is why. The date changed twice, and then the law itself was replaced.
+
+---
+
+## The three errors almost every Colorado AI law page makes
+
+**1. It reports an effective date for a law that was repealed.**
+Dozens of pages still say "the Colorado AI Act takes effect June 30, 2026." That date was real when SB 25B-004 set it in August 2025. It stopped being relevant on May 14, 2026, when SB 26-189 repealed and reenacted the statute before the June 30 date arrived. The obligations in SB 24-205 — the duty of reasonable care, the mandatory impact assessments, the annual reviews — **were never operative for a single day.**
+
+**2. It describes obligations the new law deleted.**
+SB 26-189 removed:
+
+- the duty of reasonable care to prevent algorithmic discrimination,
+- mandatory pre-deployment impact assessments,
+- annual algorithmic discrimination reviews,
+- risk management programs,
+- the obligation to report discovered discrimination to the Attorney General within 90 days.
+
+If a guide asks you to budget for an impact assessment under Colorado law, it is describing a dead statute. Compliance programs built on the 2024 framework need to be reoriented, not extended.
+
+**3. It treats the "Colorado AI Act" as one law.**
+There are two more pieces you need to track: **HB 26-1263**, the Chatbot Safety Act, which passed the legislature on May 11, 2026 and is moving through the same rulemaking, and the Colorado Privacy Act's own automated decision-making rules, which overlap with SB 26-189 in places.
+
+---
+
+## Timeline: how the date moved three times
+
+| Date | Event | What it changed |
+|---|---|---|
+| May 17, 2024 | SB 24-205 signed | First comprehensive state AI consumer protection law in the US. Effective February 1, 2026. |
+| August 28, 2025 | SB 25B-004 signed | Moved the effective date from February 1, 2026 to **June 30, 2026**. |
+| May 14, 2026 | **SB 26-189 signed** | Repealed and reenacted SB 24-205 in full. New effective date: **January 1, 2027**. |
+| June 9, 2026 | AG publishes pre-rulemaking notice | Informal comment period on both SB 26-189 and HB 26-1263. |
+| July 13, 2026 | Informal comments close | Formal notice-and-comment rulemaking begins late summer 2026. |
+| January 1, 2027 | **Duties begin** | Disclosure and consumer-rights obligations apply. AG rules must be adopted by this date. |
+
+---
+
+## Is the Colorado AI Act in effect today?
+
+**No.** As of November 8, 2026, no Colorado AI disclosure obligation is enforceable. There are 54 days until the duties begin, and the Attorney General has not yet published final rules.
+
+Two things are happening in the meantime that matter to you:
+
+- **Rulemaking.** The AG must adopt rules implementing the post-adverse-outcome disclosure requirements and the human review process by January 1, 2027, and has discretionary rulemaking authority over the rest of the statute — including the power to define what "materially influence" means. That definition will decide whether your tool is covered.
+- **Chatbot rules.** HB 26-1263 adds age estimation, non-human disclosure, teen protections, suicide and self-harm response protocols, and an annual report to the AG. Its obligations are being written in the same rulemaking.
+
+---
+
+## What to do before January 1, 2027
+
+Work backwards from the disclosure duty, not the risk assessment you may have started in 2025.
+
+- [ ] **Inventory your decision tools and classify them.** SB 26-189 covers "automated decision-making technology," which is not limited to AI and can include systems older than any LLM. If a tool processes personal data to predict, classify, rank, score, or otherwise assist a decision about a person in a covered domain, it is in scope.
+- [ ] **Check the exclusions before you assume you are covered.** Scheduling, administrative routing, workflow management, tools that merely present information for human review, identity verification and other fraud-prevention uses, and spreadsheets that require human analysis are out.
+- [ ] **Write the pre-use notice.** It must be accessible to people with disabilities and to people with limited English proficiency. This is a design requirement, not a legal footnote.
+- [ ] **Build the 30-day adverse-outcome process.** It has to produce: a description of the decision and the role the technology played, instructions for requesting more information, and an explanation of the right to request personal data and meaningful human review.
+- [ ] **Stand up a human review workflow that can actually override the system.** The statute gives consumers the right to meaningful human review; a queue that rubber-stamps the model output is worse than no process at all.
+- [ ] **Fix your vendor contracts now.** Developers owe you technical documentation, and indemnification clauses that shift liability for Colorado anti-discrimination violations are **void as against public policy.**
+- [ ] **Set records retention to three years.** Both developers and deployers.
+
+---
+
+## What about the old SB 24-205 obligations?
+
+They are gone. Specifically:
+
+| SB 24-205 required | SB 26-189 status |
+|---|---|
+| Duty of reasonable care against algorithmic discrimination | Removed |
+| Pre-deployment impact assessment | Removed |
+| Annual impact assessment updates | Removed |
+| Written risk management policy and program | Removed |
+| Report discovered discrimination to AG within 90 days | Removed |
+| Public statement summarizing high-risk systems | Replaced by developer-to-deployer documentation |
+| Consumer notice before a consequential decision | **Kept, expanded** — now with a 30-day post-adverse-outcome disclosure |
+| Right to appeal and human review | **Kept** — now framed as data access, correction, and meaningful human review |
+
+Liability is now allocated between developers and deployers **based on relative fault**, and developer liability is generally limited to uses that were intended or marketed.
+
+---
+
+## Frequently asked questions
+
+**Is the Colorado AI Act in effect?**
+No. SB 26-189 was signed May 14, 2026 and takes effect January 1, 2027. The 2024 law it replaced never became operative.
+
+**When did the Colorado AI Act take effect?**
+It did not. The original date was February 1, 2026, moved to June 30, 2026 in August 2025, and then replaced entirely before either date arrived. The operative date for the current law is January 1, 2027.
+
+**What replaced the Colorado AI Act?**
+SB 26-189, the Automated Decision-Making Technology Act. It keeps the "Colorado AI Act" short title, so search results mix the two. If a page mentions impact assessments or a 90-day discrimination report, it is describing the repealed version.
+
+**Does SB 26-189 apply to my company?**
+It depends on whether you develop or deploy technology that processes Colorado residents' personal data to materially influence a consequential decision in education, employment, real estate, financial and lending services, insurance and access to benefits, health care, or essential government services and public benefits. There is no employee-count or revenue threshold. For employers, it reaches current Colorado employees and job applicants.
+
+**Is there a private right of action?**
+No. Enforcement rests exclusively with the Attorney General under the Colorado Consumer Protection Act. A violation is treated as a deceptive trade practice, and the AG must give a **60-day notice and cure period** before bringing an enforcement action through January 1, 2030.
+
+**What is the penalty?**
+Civil penalties run under the Colorado Consumer Protection Act. The repealed framework set $20,000 per violation; confirm the applicable amount against the current statute and AG rules before you rely on a number.
+
+---
+
+**Next:** [Colorado SB 26-189 explained in detail](/colorado/sb-26-189/) · [Colorado vs Texas: who actually has a disclosure duty](/compare/colorado-vs-texas/) · [Which state AI disclosure laws are in effect right now](/in-effect/)
+
+*Last verified November 8, 2026. This page is general information, not legal advice. Statutes change; confirm against the official text linked above and a qualified attorney in your state.*
+
+
+<!-- https://aidisclosurelaw.com/colorado/sb-26-189/ -->
+# Colorado SB 26-189: The Automated Decision-Making Technology Act
+
+> **Short answer.** Signed May 14, 2026, effective **January 1, 2027**. If you develop or deploy automated decision-making technology (ADMT) that **materially influences** a consequential decision about a Colorado resident, you owe them a **pre-use notice** and, within **30 calendar days of an adverse outcome**, a plain-language explanation plus the right to data access, correction, and **meaningful human review**. Records: 3 years. Enforced only by the Attorney General.
+
+It is the law Coloradans mean when they say "the Colorado AI Act." It is not the 2024 law. → [What happened to SB 24-205](/colorado/)
+
+---
+
+## What counts as ADMT
+
+The statute defines ADMT as technology that uses personal information and computation to **predict, classify, rank, score, or otherwise assist** in making a decision or determination about a person in a covered domain.
+
+Two things trip people up:
+
+**It is not limited to AI.** ADMT can include statistical models, rules engines, and scoring systems that predate current LLM tools. If your compliance inventory only lists "AI tools," it is incomplete.
+
+**"Materially influence" is not defined.** The Attorney General has discretionary rulemaking authority to clarify it. Until those rules land, the safest read is that a system materially influences a decision when a human would have decided differently without it. A tool that produces a recommendation the human always follows is in scope; a tool that surfaces background information for a human to weigh is closer to the exclusion.
+
+### Covered domains
+
+- Education enrollment and opportunities
+- Employment or employment opportunities
+- Real estate transactions
+- Financial and lending services
+- Insurance and access to benefits
+- Health care services
+- Essential government services and public benefits
+
+### Explicitly excluded
+
+- Certain cybersecurity and web tools
+- Spreadsheets that require human analysis
+- Tools that communicate with consumers
+- Tools that summarize information intended for future human review
+- Scheduling, administrative routing, and workflow management
+- Identity verification and other fraud-prevention activities
+
+---
+
+## Developer obligations: documentation you owe your deployers
+
+If the ADMT is marketed or advertised to materially influence a consequential decision, the developer must supply:
+
+| Item | What it has to contain |
+|---|---|
+| Intended uses | What the system is designed to do, **and known harmful uses** |
+| Training data | The categories of data used to train it |
+| Limitations | Known limitations, risks, and circumstances in which it should not be used |
+| Operating instructions | How the deployer should use it, monitor it, and conduct meaningful human review |
+| Deployer compliance support | Information the deployer reasonably needs to meet its own notice and disclosure duties |
+| Change notice | Notice of any changes to intended use, limitations, or risk |
+
+Both developers and deployers must **retain records for at least three years** demonstrating compliance.
+
+---
+
+## Deployer obligations: two notices, 30 days apart
+
+### 1. Before the decision
+
+Before using ADMT to materially influence a consequential decision, the deployer must notify the consumer that the decision uses ADMT. The notice must be **accessible to individuals with disabilities and to individuals with limited English proficiency** — build that into the template, not the remediation list.
+
+### 2. After an adverse outcome — within 30 calendar days
+
+The disclosure must contain:
+
+- A description of the consequential decision and **the role the ADMT played** in it
+- Instructions for requesting additional information about the ADMT
+- An explanation of the consumer's right to request their personal data and to obtain **meaningful human review** of the decision
+
+### 3. Consumer rights this creates
+
+- Request the personal data used in the decision
+- Correct factually incorrect data
+- Obtain meaningful human review of an adverse decision
+
+---
+
+## Carve-outs that may already cover you
+
+Two narrow safe paths exist, and both depend on other law doing the work:
+
+**Credit and education decisions.** If the decision involves access to credit or relates to education, and you are already subject to federal consumer notice or disclosure requirements, you are treated as compliant with this act's disclosure requirements.
+
+**Certain insurers.** Insurers already complying with Colorado insurance law are exempt from the act's requirements.
+
+Neither carve-out is a blanket exemption. Check whether your specific federal or insurance obligation covers the same disclosure, in the same timeframe, to the same person.
+
+---
+
+## Penalties and enforcement
+
+| Item | Detail |
+|---|---|
+| Enforcement | Colorado Attorney General, exclusive |
+| Legal theory | Deceptive trade practice under the Colorado Consumer Protection Act |
+| Cure period | **60 days' notice and cure** required before enforcement, through January 1, 2030 |
+| Private right of action | **None** |
+| Liability allocation | Between developer and deployer **based on relative fault**; developer liability generally limited to intended or marketed uses |
+| Indemnification | Clauses shifting liability for Colorado anti-discrimination violations are **void as against public policy** |
+
+That last row matters commercially. If your master services agreement has the vendor indemnifying you for discrimination claims arising from their model, that clause is unenforceable in Colorado for covered violations.
+
+---
+
+## Is it in force?
+
+Not yet. Signed May 14, 2026. Duties apply from **January 1, 2027**. The Attorney General must adopt rules on the post-adverse-outcome disclosure and the human review process by that same date; informal comments closed July 13, 2026, and formal rulemaking began in late summer 2026.
+
+---
+
+## Implementation checklist
+
+- [ ] Map every tool that touches a covered decision, not just the ones with "AI" in the name
+- [ ] For each, record which covered domain it sits in and what the human would do without it
+- [ ] Request the six documentation items from each vendor in writing
+- [ ] Draft the pre-use notice in accessible formats and in the languages your population actually reads
+- [ ] Build the 30-day clock into your adverse-action workflow — the trigger is the outcome date, not the appeal date
+- [ ] Define who performs human review, what they can change, and how the review is logged
+- [ ] Remove or renegotiate indemnification clauses that purport to shift anti-discrimination liability
+- [ ] Set retention to three years for both documentation and decision records
+- [ ] Re-read the AG rules when they publish, particularly the definition of "materially influence"
+
+---
+
+## Frequently asked questions
+
+**Does SB 26-189 apply to employers?**
+Yes. Employment is a covered domain, and the act reaches current Colorado employees and job applicants. Routine scheduling, administrative routing, and workflow management are excluded — but a tool that ranks candidates or flags employees for review is not.
+
+**What is the difference between a developer and a deployer?**
+A developer develops or substantially modifies the ADMT. A deployer uses it. The documentation duty sits with the developer, the notice and disclosure duties sit with the deployer, and fault is allocated between them.
+
+**Do we still need impact assessments?**
+No. SB 26-189 removed the mandatory impact assessment, the annual review, the risk management program, and the 90-day discrimination report. If your program was built around those, it needs reorienting rather than extending.
+
+**What if we only use an off-the-shelf LLM?**
+Most public and enterprise AI systems, including LLMs, fall within the definition when they materially influence a covered decision. But not every decision made with AI's help is covered — the test is the decision and the technology's role in it, not the product name.
+
+**Can a consumer sue us?**
+Not under this act. Enforcement is exclusively the Attorney General's, with a 60-day cure period.
+
+---
+
+**Related:** [Colorado AI law: what is actually in effect](/colorado/) · [Colorado vs Texas](/compare/colorado-vs-texas/) · [Texas TRAIGA: who must disclose AI](/texas/traiga/)
+
+*Last verified November 8, 2026. General information, not legal advice. Confirm against the enrolled bill text and the Attorney General's adopted rules.*
+
+
+<!-- https://aidisclosurelaw.com/compare/colorado-vs-texas/ -->
+# Colorado vs Texas AI Law: Disclosure Obligations Compared
+
+> **Short answer.** Colorado and Texas took opposite approaches to the same problem. **Colorado** tells you *how to decide* — notice before, explanation after, human review on request — and applies that to every business using automated decision-making technology in a covered domain, starting **January 1, 2027**. **Texas** tells you *what not to do* and puts the disclosure duty on government and health care only, in force since **January 1, 2026**.
+
+For most companies operating in both states, Colorado is the constraint you have to design for and Texas is the one you have to audit against.
+
+---
+
+## Side by side
+
+| | **Colorado — SB 26-189** | **Texas — TRAIGA (HB 149)** |
+|---|---|---|
+| **In force** | January 1, 2027 | January 1, 2026 |
+| **Legal model** | Disclosure-based procedural duties | Prohibitions plus narrow disclosure duties |
+| **Who must disclose** | Every developer and deployer of covered ADMT | Government entities and health care providers only |
+| **Trigger** | ADMT that **materially influences** a consequential decision | AI interacting with a consumer; AI used in health care service or treatment |
+| **Timing** | Before use; disclosure within **30 days** of an adverse outcome | Before or at the moment of interaction; by first date of service |
+| **Content** | Decision description, technology's role, how to request more info, right to data access and human review | Clear, conspicuous, plain-language statement that the user is interacting with AI |
+| **Covered domains** | Education, employment, real estate, financial and lending, insurance, health care, essential government services | All uses, but disclosure duty limited to government and health care |
+| **Intent requirement** | Not required for the disclosure duties | **Required** for the discrimination and manipulation prohibitions |
+| **Penalty** | Colorado Consumer Protection Act civil penalties | $10k–$12k curable; $80k–$200k uncurable; $2k–$40k per day continuing |
+| **Cure period** | 60 days | 60 days |
+| **Private right of action** | No | No |
+| **Local preemption** | Not a feature of the act | Yes — preempts local AI ordinances |
+| **Recordkeeping** | 3 years | Not specified in the disclosure provisions |
+
+---
+
+## The three differences that actually change what you build
+
+### 1. Who the duty falls on
+
+Texas's disclosure duty is a narrow public-sector obligation. If you are a private company in Texas, you do not owe anyone an AI disclosure under TRAIGA. Your exposure is the prohibition list, and those prohibitions mostly require **intent** — which means your evidence problem is design documents and marketing claims, not user-facing notices.
+
+Colorado inverts this. Every deployer is a disclosing party, in every covered domain, regardless of sector. An employer in Denver using a resume-ranking tool owes a notice and a 30-day adverse-outcome explanation. An employer in Austin using the same tool owes nothing under TRAIGA's disclosure provisions.
+
+**Practical consequence:** if you are building one compliance flow, build Colorado's. It satisfies the harder requirement and exceeds Texas's.
+
+### 2. Timing of the duty
+
+Texas is live now, but narrow. Colorado is broad, but not live yet — 54 days away as of this writing, with the Attorney General's rules still pending.
+
+That gap is where most companies will misallocate effort. The Texas deadline has passed, so it feels less urgent than it is; the Colorado deadline is close and the design work is heavier. Both need to be done, in that order of difficulty, not that order of date.
+
+### 3. How liability is allocated
+
+Colorado allocates fault between developer and deployer **based on relative fault**, and generally limits developer liability to uses that were intended or marketed. It also voids indemnification clauses that shift liability for Colorado anti-discrimination violations.
+
+Texas has no equivalent allocation scheme, because it has no equivalent duty on deployers. What it does have is a 60-day cure period that lets an organization correct a violation before penalties escalate from the curable band into the $80,000–$200,000 band.
+
+---
+
+## What both states have in common
+
+- **Both rely on attorney general enforcement.** No private right of action in either.
+- **Both provide a 60-day cure.** Use it — it is the difference between a letter and a penalty.
+- **Both are disclosure or prohibition laws, not risk-management laws.** Neither requires a bias audit. Neither requires an impact assessment. Those were in Colorado's repealed 2024 law and are gone.
+- **Both sit on top of federal law.** ECOA, FCRA, HIPAA, and FTC deception rules apply independently.
+
+---
+
+## If you operate in both: a work plan
+
+- [ ] Build the Colorado flow first — pre-use notice, 30-day adverse-outcome disclosure, data access and correction, human review
+- [ ] Use the same notice infrastructure to satisfy a Texas government or health care obligation if you have one
+- [ ] For Texas, run a separate prohibition audit: search design documents and marketing for intent language about discrimination, manipulation, or constitutionality
+- [ ] Remove or renegotiate indemnity clauses that purport to shift Colorado anti-discrimination liability
+- [ ] Set retention at 3 years globally, because Colorado requires it and it costs nothing to standardize
+- [ ] Put a rulemaking watch on both AGs — Colorado's "materially influence" definition and Texas's complaint portal will both reshape enforcement
+
+---
+
+## Frequently asked questions
+
+**Which state has the stricter AI law?**
+Colorado, for disclosure obligations. It reaches every deployer in covered domains and imposes procedural duties. Texas is stricter on penalties per violation for the prohibited conduct it does cover.
+
+**Does Texas require businesses to disclose AI use to customers?**
+No, unless you are a government entity or a health care provider. TRAIGA does not impose a general disclosure duty on private companies.
+
+**Is the Colorado AI Act in force yet?**
+No. SB 26-189 takes effect January 1, 2027. The 2024 law it replaced never became operative. → [Full explanation](/colorado/)
+
+**Do either of these laws require a bias audit?**
+No. Neither Colorado's current law nor TRAIGA requires a bias audit or impact assessment. Colorado's repealed 2024 framework did; that is gone.
+
+**Can an individual sue under either law?**
+No. Both are attorney-general-only statutes, each with a 60-day cure period.
+
+---
+
+**Related:** [Colorado AI law: what is in effect](/colorado/) · [Colorado SB 26-189 detail](/colorado/sb-26-189/) · [Texas TRAIGA detail](/texas/traiga/) · [All states in effect right now](/in-effect/)
+
+*Last verified November 8, 2026. General information, not legal advice.*
+
+
+<!-- https://aidisclosurelaw.com/in-effect/ -->
+# Which State AI Disclosure Laws Are in Effect Right Now
+
+> **Short answer.** Six states can enforce an AI disclosure or transparency duty against you today: **California, Texas, Illinois, Utah, Maine, and New York**. **Colorado** starts January 1, 2027. Two California election-AI laws — AB 2839 and AB 2655 — are barred by court order and cannot be enforced.
+
+Last verified **November 8, 2026**. This table is the one thing to check before you read any other page on this site.
+
+---
+
+## In force today
+
+| State | Law | In force since | Who it reaches | Max penalty |
+|---|---|---|---|---|
+| CA | [SB 942 + AB 853](/california/sb-942/) | Aug 2, 2026 | GenAI providers > 1M monthly CA users | $5,000/violation, per day |
+| CA | [AB 2013](/california/ab-2013/) | Jan 1, 2026 | Developers of public GenAI | None specified |
+| CA | [SB 53](/california/sb-53/) | Jan 1, 2026 | Frontier developers (> 10^26 FLOP) | $1,000,000/violation |
+| CA | SB 243 | Jan 1, 2026 | Companion chatbot platforms | See statute |
+| CA | AB 2355 | Jan 1, 2025 | Political committees | $5,000/violation |
+| CA | Elec. Code §20010 | In force to Dec 31, 2030 | Anyone distributing manipulated candidate media within 60 days of an election | Damages + fees |
+| TX | [TRAIGA (HB 149)](/texas/traiga/) | Jan 1, 2026 | Government entities + health care providers | $200,000/uncurable violation |
+| IL | HB 3773 | Jan 1, 2026 | Employers with 1+ IL employees | IHRA remedies |
+| IL | AIVIA (820 ILCS 42) | Jan 1, 2020 | Employers using AI on recorded interviews | None specified (BIPA exposure) |
+| IL | HB 1806 | Aug 1, 2025 | Anyone offering therapy | Licensing enforcement |
+| UT | Code ch. 77 (SB 149 line) | May 1, 2024; current text May 7, 2025 | GenAI in consumer transactions; licensed occupations | $2,500/violation |
+| UT | HB 452 (ch. 72a) | May 7, 2025 | Mental health chatbots | $2,500/violation |
+| ME | 10 M.R.S. §1500-DD | Sep 24, 2025 | Anyone using a chatbot in consumer trade | Maine UTPA |
+| ME | 21-A §1014(5-C) | Jul 29, 2026 | Campaigns required to file with ethics commission | 500% of ad spend |
+| ME | 10 M.R.S. §1500-EE | Jul 29, 2026 | Anyone offering therapy | Board discipline |
+| NY | S8420 / A8887 | Jun 9, 2026 | Advertisers using synthetic performers | $1,000 / $5,000 |
+| NY | GBL §349-A | Nov 10, 2025 | Businesses using personal data in algorithmic pricing | See statute |
+| NY | GBL art. 47 | 2025 | AI companion operators | $15,000/day |
+
+**Not listed: Connecticut.** SB 5 / PA 26-15 (signed May 2026) does contain disclosure duties with staggered dates, but they sit inside a 67-page omnibus act and we have not yet reconciled the session-law text against the secondary summaries. Rather than publish a date we have not read in the statute, we leave it out and add it when the public act text is verified. If you need Connecticut today, read PA 26-15 directly.
+
+---
+
+## Signed, not yet in force
+
+| State | Law | Starts | What changes |
+|---|---|---|---|
+| CO | [SB 26-189](/colorado/sb-26-189/) | **Jan 1, 2027** | Pre-use notice, 30-day adverse-outcome disclosure, human review |
+| CO | HB 26-1263 (Chatbot Safety) | Rules pending | Age estimation, non-human disclosure, suicide protocols |
+| NY | RAISE Act | Jan 1, 2027 (registration from Nov 2026) | Frontier developer registration, 72-hour incident reports |
+| NY | S9051B | Jan 1, 2027 | Age assurance for AI companions used by minors |
+| CA | SB 942 phase 2 | Jan 1, 2027 | Large online platforms + GenAI hosting platforms |
+| CA | CCPA ADMT rules | Jan 1, 2027 | Risk assessments, pre-use notices, opt-out for significant decisions |
+| CA | SB 947 | Jul 1, 2027 | No sole reliance on automated systems for discipline or termination ($500/violation) |
+| CA | SB 1119 ("Adam's Law") | Jul 1, 2027 | Child risk assessments for companion chatbots |
+| CA | SB 942 phase 3 | Jan 1, 2028 | Capture-device duties |
+
+---
+
+## Barred by court order — do not build compliance around these
+
+| Law | Status | Why |
+|---|---|---|
+| [CA AB 2839](/california/ab-2839/) | **Permanently enjoined** | First Amendment. Judgment Aug 29, 2025. California did not appeal this ruling. |
+| [CA AB 2655](/california/ab-2839/) | **Preempted by §230, barred against all platforms** | Judgment Aug 20, 2025; stipulated order Aug 28, 2025. Appeal pending, No. 25-6138, no argument date. |
+| CO SB 24-205 | **Repealed before taking effect** | Replaced by SB 26-189 on May 14, 2026. Never operative. |
+
+---
+
+## What this table is not
+
+It is not every AI law in the country. It covers **disclosure and transparency** obligations — the laws that require you to tell someone something — plus the prohibitions that travel with them. Bias-audit laws, procurement rules, and state-agency governance are tracked separately.
+
+It also does not cover the roughly 26 states with narrow **election deepfake** statutes. Those bind campaigns rather than businesses and are handled in a separate section.
+
+---
+
+## Frequently asked questions
+
+**How many states require AI disclosure?**
+Six states have enforceable disclosure or transparency duties as of November 2026. Colorado joins them on January 1, 2027. More than 26 additional states have narrow election-deepfake disclosure rules.
+
+**Is the Colorado AI Act in effect?**
+No. The 2024 law never became operative. The replacement, SB 26-189, starts January 1, 2027. → [Full explanation](/colorado/)
+
+**Can I rely on California's AB 2839 or AB 2655?**
+No. Both are barred by court order. Use Elections Code §20010 and AB 2355 instead. → [What still applies](/california/ab-2839/)
+
+**Do any of these require a bias audit?**
+Not among the disclosure laws. New York City's Local Law 144 requires one for automated employment decision tools; that is a city ordinance, not a state AI disclosure law.
+
+**What is the single strictest disclosure duty in the country right now?**
+For scope, Colorado from January 1, 2027 — every deployer, every covered domain, with a 30-day post-decision explanation.
+
+---
+
+**Start here:** [Colorado](/colorado/) · [California SB 942](/california/sb-942/) · [Texas TRAIGA](/texas/traiga/) · [Colorado vs Texas](/compare/colorado-vs-texas/)
+
+*Last verified November 8, 2026. General information, not legal advice. This table is updated as laws change; if you spot an error, the official source on each state page controls.*
+
+
+<!-- https://aidisclosurelaw.com/texas/traiga/ -->
+# Texas TRAIGA (HB 149): Who Actually Has to Disclose AI
+
+> **Short answer.** TRAIGA took effect **January 1, 2026**. The affirmative **disclosure** duties fall on two groups only: **government entities** using AI to interact with consumers, and **health care providers** using AI in connection with services or treatment. Private companies have **no general AI disclosure obligation** under TRAIGA. What reaches private companies is the prohibition list — behavioral manipulation, unlawful discrimination, CSAM and unlawful deepfakes, and infringement of constitutional rights.
+
+This distinction is the single most common error in TRAIGA coverage. Guides that tell every Texas business to add an "AI disclosure" to its website are describing a law that does not exist.
+
+---
+
+## The disclosure duty, precisely
+
+### Government entities
+
+An agency that makes available an AI system intended to interact with consumers must disclose, **before or at the time of the interaction**, that the consumer is interacting with an AI system.
+
+The disclosure must be **clear and conspicuous** and written in **plain language**. Not buried in a privacy policy, not a footnote in terms of service — at the point of interaction.
+
+### Health care providers
+
+A provider using AI in relation to health care services or treatment must give a clear and conspicuous disclosure to the recipient, or the recipient's personal representative, **not later than the date the service or treatment is first provided**.
+
+**Emergency exception:** where the situation is an emergency, the disclosure is due as soon as reasonably possible.
+
+### Who is not covered by the disclosure duty
+
+Private businesses, unless they are a government entity or a health care provider in the sense the act uses. Note also that "consumer" is defined as a Texas resident acting in an **individual or household context** — it expressly excludes individuals acting in a commercial or employment context. So an employer's AI-driven HR process is not a "consumer" interaction under this definition.
+
+---
+
+## The prohibitions, which do reach private companies
+
+| Prohibition | Who it binds | Intent required? |
+|---|---|---|
+| Manipulating behavior to incite self-harm, harm to others, or criminal activity | Any person | **Yes** — "intentionally aims to" |
+| Social scoring by government | Governmental entity | **Yes** |
+| Biometric capture without consent, infringing individual rights | Governmental entity | — |
+| Impairing US or Texas constitutional rights | Any person | **Yes** — "sole intent" |
+| Unlawful discrimination against a protected class | Any person | **Yes** — disparate impact alone is **not** sufficient |
+| CSAM, unlawful deepfakes, explicit conversations impersonating minors | Any person | **Yes** — "with the intent of" |
+
+The intent requirement is the deliberate design choice that separates Texas from Colorado. A model that produces a discriminatory *outcome* is not, by itself, a TRAIGA violation. That is a much narrower law than most summaries suggest — and it is why TRAIGA passed while broader bills did not.
+
+**Exemptions:** certain insurance entities and federally insured financial institutions are exempt, provided they comply with or are regulated by other applicable law.
+
+---
+
+## Penalties
+
+| Violation type | Civil penalty |
+|---|---|
+| Curable, or breach of a statement submitted to the AG | **$10,000 – $12,000** per violation |
+| Uncurable | **$80,000 – $200,000** per violation |
+| Continued violation | **$2,000 – $40,000 per day** the violation continues |
+
+Enforcement is exclusively the Attorney General's, who may issue civil investigative demands and seek injunctive relief, attorney's fees, court costs, and investigative expenses. The AG must give **60 days' notice and an opportunity to cure** before enforcement.
+
+**No private right of action.**
+
+---
+
+## Two things people miss
+
+**The AG complaint portal.** TRAIGA required the Attorney General to post an online consumer complaint mechanism by **September 1, 2026**. That is the intake channel that will generate the first enforcement matters. If your organization has a Texas consumer-facing AI product, watch what gets filed there.
+
+**Local ordinances are preempted.** Texas preempts local government AI ordinances. Companies should treat TRAIGA as a single statewide baseline rather than a patchwork of city rules — one of the few places in US AI law where you get uniformity.
+
+**Plus:** TRAIGA creates a regulatory sandbox and the Texas Artificial Intelligence Council, and requires state agencies to report on their AI use through the Sunset Advisory Commission and the Department of Information Resources.
+
+---
+
+## Checklist
+
+**If you are a government entity:**
+- [ ] Identify every consumer-facing system that could be characterized as AI
+- [ ] Put a clear, plain-language disclosure at the point of interaction — before or at the moment it starts
+- [ ] Verify the disclosure is visible on the first screen, not in a linked policy
+- [ ] Confirm no covered system escapes because it is "just a rules-based assistant"
+
+**If you are a health care provider:**
+- [ ] Map every AI use that touches services or treatment
+- [ ] Attach the disclosure to the intake workflow so it fires on the first date of service
+- [ ] Write the emergency path — the disclosure still has to happen, just later
+- [ ] Train staff on who delivers the disclosure and how it is documented
+
+**If you are a private company:**
+- [ ] Stop writing a TRAIGA disclosure duty into your compliance plan — the duty is not there
+- [ ] Audit for the prohibitions instead, starting with intent evidence: what did your design documents and marketing materials say the system was for?
+- [ ] Check whether you are an exempt insurer or federally insured financial institution, and document the basis
+- [ ] Prepare for a 60-day cure demand, since that is how enforcement will start
+
+---
+
+## Frequently asked questions
+
+**Does TRAIGA require private companies to disclose AI use?**
+No. The disclosure duty applies to government entities interacting with consumers and to health care providers. Private companies are subject to the prohibitions, not to a disclosure mandate.
+
+**When did TRAIGA take effect?**
+January 1, 2026. It was signed June 22, 2025.
+
+**Is disparate impact enough to violate TRAIGA?**
+No. The act expressly states that disparate impact alone is not sufficient to show intent to discriminate. Intent must be shown.
+
+**What is the maximum penalty?**
+$200,000 per uncurable violation, with continuing violations at $2,000 to $40,000 per day.
+
+**Can consumers sue under TRAIGA?**
+No. Enforcement is exclusively the Attorney General's, with a 60-day cure period.
+
+**Does TRAIGA override city AI ordinances?**
+Yes. Texas preempts local government AI regulation, so TRAIGA is the statewide baseline.
+
+---
+
+**Related:** [Colorado SB 26-189: the disclosure law that does reach private companies](/colorado/sb-26-189/) · [Colorado vs Texas compared](/compare/colorado-vs-texas/) · [Which state laws are in effect now](/in-effect/)
+
+*Last verified November 8, 2026. General information, not legal advice. Confirm against the enrolled bill text and Texas AG guidance.*

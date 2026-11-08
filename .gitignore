@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# vercel
+.vercel/
+
+# local preview / screenshots
+.shots/
+.chrome-shot/
+site-build/.og-tmp/
+
+# logs and scratch files
+*.log
+
+# research material — keyword lists, source data, scraper, agent memory.
+# Kept local; the public repo is the site only.
+.workbuddy/
+webcafe-scraper/
+site-content/00-说明与内链.md
+AI趋势预测与域名提前布局-*.md
+AI披露方向完整词表-*.md
+AI披露法-已立法州数据表-*.md
+选词清单-*.md
+
+# OS
+.DS_Store
+Thumbs.db

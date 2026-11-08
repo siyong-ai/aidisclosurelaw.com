@@ -1,0 +1,15 @@
+{
+  "name": "ai-disclosure-law",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dated, source-linked reference on US state AI disclosure and transparency obligations.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node site-build/build.mjs",
+    "og": "node site-build/make-og.mjs",
+    "assets": "node site-build/make-og.mjs && node site-build/build.mjs",
+    "dev": "node site-build/build.mjs && node site-build/serve.mjs"
+  }
+}
