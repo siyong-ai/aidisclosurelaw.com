@@ -1102,7 +1102,7 @@ const VERIFY_MIRROR_DIRS = ['texas'];
 const staticDir = path.join(ROOT, 'site-build', 'static');
 if (fs.existsSync(staticDir)) {
   for (const f of fs.readdirSync(staticDir)) {
-    if (!/\.html?$/i.test(f)) continue;
+    if (f.startsWith('.') || /^readme/i.test(f)) continue;
     fs.copyFileSync(path.join(staticDir, f), path.join(OUT, f));
     for (const d of VERIFY_MIRROR_DIRS) {
       const dir = path.join(OUT, d);
