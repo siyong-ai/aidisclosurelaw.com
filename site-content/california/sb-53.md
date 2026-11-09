@@ -1,7 +1,7 @@
 ---
 slug: /california/sb-53/
 title: "California SB 53: Frontier Model Transparency Requirements"
-meta_description: "SB 53 requires frontier developers to publish transparency reports and report critical safety incidents within 15 days. In force since January 1, 2026, up to $1 million per violation."
+meta_description: "SB 53 requires frontier developers to publish transparency reports and report critical safety incidents within 15 days. Up to $1 million per violation."
 h1: "California SB 53: Transparency in Frontier Artificial Intelligence Act"
 one_liner: "Since January 1, 2026, anyone training a model above 10^26 FLOPs must publish a transparency report before release and report critical safety incidents to Cal OES within 15 days. Large frontier developers — over $500 million in revenue — must also publish a safety framework and face up to $1 million per violation."
 status: "In force"

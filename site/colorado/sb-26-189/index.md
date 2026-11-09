@@ -1,7 +1,7 @@
 ---
 slug: /colorado/sb-26-189/
 title: "Colorado SB 26-189 (ADMT Act): Disclosure Rules Explained"
-meta_description: "SB 26-189 replaced the Colorado AI Act. From January 1, 2027, deployers must give pre-use notice and 30-day adverse-outcome disclosures. Full requirement breakdown."
+meta_description: "SB 26-189 replaced the Colorado AI Act. From January 1, 2027, deployers must give pre-use notice and 30-day adverse-outcome disclosures."
 h1: "Colorado SB 26-189: The Automated Decision-Making Technology Act"
 one_liner: "From January 1, 2027, if you use automated decision-making technology that materially influences a consequential decision about a Colorado resident, you must tell them before you use it and, within 30 days of an adverse outcome, explain what the technology did and how they can get a human to review it."
 status: "Signed, not yet in force"

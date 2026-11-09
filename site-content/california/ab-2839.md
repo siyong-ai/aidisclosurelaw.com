@@ -1,7 +1,7 @@
 ---
 slug: /california/ab-2839/
 title: "Is California's AB 2839 Still Enforceable? What the Court Ruled"
-meta_description: "AB 2839 and AB 2655 are both unenforceable after Kohls v. Bonta. What was struck down, what still applies, and the one election deepfake rule California can enforce through 2030."
+meta_description: "AB 2839 and AB 2655 are both unenforceable after Kohls v. Bonta. The one election deepfake rule California can still enforce runs through 2030."
 h1: "Is California's AB 2839 Still Enforceable? No — Here Is What Still Applies"
 one_liner: "AB 2839 was permanently enjoined in August 2025 as a First Amendment violation, and California did not appeal that ruling. AB 2655 was held preempted by Section 230 and is barred against every interactive computer service. The election-AI rule California can still enforce is Elections Code §20010."
 status: "Not enforceable"

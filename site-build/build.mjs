@@ -202,6 +202,13 @@ function renderMarkdown(md) {
       const id = uniq(slugify(stripMd(text)));
       if (level === 2) {
         section = text;
+        // The FAQ section heading is rendered by faqHtml() further down the
+        // page shell; emitting it here too produced a duplicate H2 site-wide.
+        if (/^frequently asked questions$/i.test(stripMd(text))) {
+          toc.push({ id: 'faq-h', text: stripMd(text) });
+          i++;
+          continue;
+        }
         toc.push({ id, text: stripMd(text) });
         out.push(
           `<h2 id="${id}"><a class="anchor" href="#${id}" aria-hidden="true">#</a>${inline(text)}</h2>`
@@ -366,10 +373,11 @@ const label = (seg) => SEGMENT_LABELS[seg] || seg.replace(/-/g, ' ').replace(/\b
 const NAV = [
   { label: 'In effect', url: '/in-effect/' },
   { label: 'Colorado', url: '/colorado/' },
-  { label: 'California', url: '/california/sb-942/' },
-  { label: 'Texas', url: '/texas/traiga/' },
-  { label: 'Illinois', url: '/illinois/hb-3773/' },
+  { label: 'California', url: '/california/' },
+  { label: 'Texas', url: '/texas/' },
+  { label: 'Illinois', url: '/illinois/' },
   { label: 'Compare', url: '/compare/colorado-vs-texas/' },
+  { label: 'About', url: '/about/' },
 ];
 
 const LEGISLATION = {
@@ -791,8 +799,12 @@ ${sourcesHtml(page)}
     <div class="footer-col">
       <h3>States</h3>
       <a href="/colorado/">Colorado</a>
-      <a href="/california/sb-942/">California</a>
-      <a href="/texas/traiga/">Texas</a>
+      <a href="/california/">California</a>
+      <a href="/texas/">Texas</a>
+      <a href="/illinois/">Illinois</a>
+      <a href="/utah/">Utah</a>
+      <a href="/maine/">Maine</a>
+      <a href="/new-york/">New York</a>
       <a href="/in-effect/">In effect now</a>
     </div>
     <div class="footer-col">
@@ -805,7 +817,8 @@ ${sourcesHtml(page)}
       <a href="/texas/traiga/">TX HB 149</a>
     </div>
     <div class="footer-col">
-      <h3>For machines</h3>
+      <h3>This site</h3>
+      <a href="/about/">About &amp; methodology</a>
       <a href="/llms.txt">llms.txt</a>
       <a href="/llms-full.txt">llms-full.txt</a>
       <a href="/sitemap.xml">sitemap.xml</a>
@@ -853,11 +866,11 @@ function homeHtml() {
 
   const rows = [
     ['California', 'SB 942 · AB 2013 · SB 53 · AB 2355', 'In force', 'ok', '/california/'],
-    ['Texas', 'TRAIGA (HB 149)', 'In force', 'ok', '/texas/traiga/'],
-    ['Illinois', 'HB 3773 · AIVIA', 'In force', 'ok', '/illinois/hb-3773/'],
+    ['Texas', 'TRAIGA (HB 149)', 'In force', 'ok', '/texas/'],
+    ['Illinois', 'HB 3773 · AIVIA', 'In force', 'ok', '/illinois/'],
     ['Utah', 'Code ch. 77 · HB 452', 'In force', 'ok', '/utah/'],
-    ['Maine', '§1500-DD · 21-A §1014', 'In force', 'ok', '/maine/chatbot-disclosure/'],
-    ['New York', 'S8420 · GBL §296-b', 'In force', 'ok', '/new-york/synthetic-performer/'],
+    ['Maine', '§1500-DD · 21-A §1014', 'In force', 'ok', '/maine/'],
+    ['New York', 'S8420 · GBL §296-b', 'In force', 'ok', '/new-york/'],
     ['Colorado', 'SB 26-189 (ADMT Act)', 'Jan 1, 2027', 'warn', '/colorado/'],
     ['California', 'AB 2839 · AB 2655', 'Barred by court', 'bad', '/california/ab-2839/'],
   ];
@@ -868,7 +881,7 @@ function homeHtml() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Disclosure Law — Which State AI Disclosure Laws Are In Effect</title>
-<meta name="description" content="AI disclosure law in the US, state by state: what is in force today, what starts January 1, 2027, and what a federal court has barred. Every page cites the enrolled bill and carries a verification date.">
+<meta name="description" content="AI disclosure law by state: what is in force now, what starts January 1, 2027, and what courts have barred — cited to the enrolled bill.">
 <link rel="canonical" href="${BASE}/">
 <meta name="robots" content="index,follow,max-snippet:-1">
 <meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
@@ -946,7 +959,7 @@ ${JSON.stringify(
       <a class="btn" href="/colorado/">Start with Colorado — its 2024 law never took effect</a>
     </div>
     <dl class="hero-stats">
-      <div><dt>States tracked</dt><dd>8</dd></div>
+      <div><dt>States tracked</dt><dd>7</dd></div>
       <div><dt>Statutes covered</dt><dd>24</dd></div>
       <div><dt>Barred by court</dt><dd>2</dd></div>
       <div><dt>Last verified</dt><dd>Nov 9, 2026</dd></div>
@@ -990,9 +1003,9 @@ ${JSON.stringify(
       <strong>AI Disclosure Law</strong>
       <p>Independent tracking of US state AI disclosure and transparency obligations, checked against official sources and dated on every page.</p>
     </div>
-    <div class="footer-col"><h3>States</h3><a href="/colorado/">Colorado</a><a href="/california/sb-942/">California</a><a href="/texas/traiga/">Texas</a><a href="/in-effect/">In effect now</a></div>
+    <div class="footer-col"><h3>States</h3><a href="/colorado/">Colorado</a><a href="/california/">California</a><a href="/texas/">Texas</a><a href="/illinois/">Illinois</a><a href="/utah/">Utah</a><a href="/maine/">Maine</a><a href="/new-york/">New York</a><a href="/in-effect/">In effect now</a></div>
     <div class="footer-col"><h3>Laws</h3><a href="/colorado/sb-26-189/">CO SB 26-189</a><a href="/california/sb-942/">CA SB 942</a><a href="/california/ab-2013/">CA AB 2013</a><a href="/california/sb-53/">CA SB 53</a><a href="/california/ab-2839/">CA AB 2839</a><a href="/texas/traiga/">TX HB 149</a></div>
-    <div class="footer-col"><h3>For machines</h3><a href="/llms.txt">llms.txt</a><a href="/llms-full.txt">llms-full.txt</a><a href="/sitemap.xml">sitemap.xml</a></div>
+    <div class="footer-col"><h3>This site</h3><a href="/about/">About &amp; methodology</a><a href="/llms.txt">llms.txt</a><a href="/llms-full.txt">llms-full.txt</a><a href="/sitemap.xml">sitemap.xml</a></div>
   </div>
   <div class="wrap footer-legal">
     <p>© ${new Date(TODAY).getFullYear()} AI Disclosure Law. Information only — not legal advice.</p>

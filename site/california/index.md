@@ -1,7 +1,7 @@
 ---
 slug: /california/
 title: "California AI Law (2026): The Four Laws That Actually Exist"
-meta_description: "California has no general AI law. Three narrow statutes are in force (SB 942, SB 53, AB 2013), two election-AI laws are barred by court order, and one Elections Code rule survives. Here is which one binds you."
+meta_description: "California has no general AI law: three narrow statutes in force (SB 942, SB 53, AB 2013), two election-AI laws barred by courts. Which one binds you?"
 h1: "California AI Law: Four Narrow Laws, No General Rule"
 one_liner: "California is the most-legislated and least-imposing AI state at once: three narrow, provider-side statutes are in force — SB 942, SB 53, and AB 2013 — none of which puts a disclosure duty on an ordinary business that merely uses AI. Two headline election-AI laws are unenforceable after federal court rulings, and the one election rule that survives predates all of them."
 status: "In force (provider-side laws only)"

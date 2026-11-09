@@ -4,6 +4,81 @@ Last verified 2026-11-09. Source: https://aidisclosurelaw.com
 
 
 
+<!-- https://aidisclosurelaw.com/about/ -->
+# About This Site: How Every Page Is Verified
+
+> **Short answer.** AI Disclosure Law is an independent, source-first reference on US state AI disclosure and transparency law. We are not a law firm and nothing here is legal advice. What we are is rigorous about the three things most coverage of this area gets wrong: the difference between a signing date and an effective date, the difference between a passed law and a dead one, and the difference between what a statute says and what a compliance vendor is selling.
+
+---
+
+## What this site is
+
+A tracking reference for **state-level AI disclosure obligations** in the United States. Seven states currently have something on the books worth tracking — California, Colorado, Illinois, Maine, New York, Texas, and Utah — and the set changes more often than most people expect: Colorado's first AI act was repealed a month before its own start date, California's two election-AI laws were barred by federal courts, Utah's original disclosure section was repealed and re-codified, and Maine's statute changed section numbers after enactment.
+
+That churn is the reason this site exists. When four authoritative sources give four different effective dates for the same Colorado law, the problem is not that information is unavailable — it is that nobody dates their claims or links their sources.
+
+---
+
+## How each page is built
+
+**Enrolled text first.** Every requirement, threshold, and penalty on this site is taken from the bill as passed or the codified statute — not from a press release, a summary article, or another site's paraphrase. Each page links its primary sources directly: the legislature's bill page, the codified section, the court order where one exists.
+
+**Dates are a chain, not a date.** Signed, effective, phased, delayed, repealed, enjoined. A law's "effective date" can move multiple times before it arrives (Colorado's moved twice, then the law was replaced outright), and a signed law can stop existing as enforceable law (California's AB 2839). Pages report the chain, not just the latest entry.
+
+**A verification date on every page.** Each page carries the date its legal claims were last checked against the official text. When a statute changes, the page changes and so does its date. We do not silently edit.
+
+**Dead laws stay, marked.** When a court enjoins a law or a legislature repeals one, the page stays up and says so — because thousands of articles, vendor policies, and compliance checklists still cite the dead version, and the person searching needs to know they are about to comply with a law that no longer binds anyone.
+
+**One question per page.** Pages are built around what a specific person needs to know — "who has to disclose in Texas," "whether California's AB 2839 still applies," "what Maine's chatbot rule requires" — rather than around a single omnibus overview.
+
+---
+
+## What this site is not
+
+- **Not a law firm, not lawyers, not legal advice.** Everything here is general information about what statutes say. Compliance decisions need a qualified attorney in the relevant jurisdiction.
+- **Not an exhaustive legal database.** We track disclosure and transparency obligations, not every AI-adjacent law in every state. When a state passes something we should be covering, that gap gets filled deliberately rather than by scraping.
+- **Not affiliated with any vendor, regulator, or trade group.** No sponsored content, no affiliate placements.
+
+---
+
+## Corrections policy
+
+If a page is wrong — a bad date, a mischaracterized provision, a missed amendment — it gets fixed, with the verification date updated. Corrections and gaps can be reported through the [GitHub repository](https://github.com/siyong-ai/aidisclosurelaw.com), where the page sources and full change history are public: every edit to every page is a visible commit, including who changed what and when.
+
+That last part is deliberate. A site that asks you to trust its dates should be able to show you its history.
+
+---
+
+## How updates happen
+
+Pages are reviewed when any of the following occur: a legislature amends or repeals a tracked statute; a court issues an order affecting enforceability; an agency proposes, adopts, or withdraws implementing rules; or a new effective date arrives. The [In effect page](/in-effect/) is the fastest way to see the current state of play across all seven states.
+
+---
+
+## Frequently asked questions
+
+**Who publishes AI Disclosure Law?**
+An independent publisher tracking US state AI disclosure law. We are not a law firm and are not affiliated with any regulator, vendor, or trade group. The site's sources and change history are public on GitHub.
+
+**Is this legal advice?**
+No. Every page is general information about what statutes say, verified against official text. For advice on your own situation, consult a qualified attorney.
+
+**How current is the information?**
+Every page states the date it was last verified against the official text. The site is updated when statutes are amended, dates move, rules are proposed or withdrawn, or courts bar enforcement.
+
+**How do I report an error?**
+Open an issue or pull request on the public GitHub repository linked above. Corrections update the page and its verification date.
+
+**Which states do you cover?**
+Seven with AI disclosure or transparency obligations worth tracking: California, Colorado, Illinois, Maine, New York, Texas, and Utah. Coverage expands as states legislate.
+
+---
+
+**Next:** [Which state AI disclosure laws are in effect right now](/in-effect/) · [Colorado: the law that was replaced a month before its start date](/colorado/) · [California: four narrow laws, no general rule](/california/)
+
+*Last verified November 9, 2026. This page is general information, not legal advice.*
+
+
 <!-- https://aidisclosurelaw.com/california/ -->
 # California AI Law: Four Narrow Laws, No General Rule
 
@@ -937,6 +1012,103 @@ No. Both are attorney-general-only statutes, each with a 60-day cure period.
 *Last verified November 8, 2026. General information, not legal advice.*
 
 
+<!-- https://aidisclosurelaw.com/illinois/ -->
+# Illinois AI Law: Two Statutes, One Missing Rulebook
+
+> **Short answer.** Illinois's AI law for the workplace is **HB 3773** (Public Act 103-0804), amending the Illinois Human Rights Act, in force since **January 1, 2026**. It creates **two separate violations**: using AI that has a discriminatory effect in employment decisions, and **failing to notify** people that AI was used — the second is absolute, no damage or discriminatory effect required. The rules defining what a compliant notice looks like were proposed **May 15, 2026**, withdrawn **June 2, 2026**, and have not been refiled. A second, older statute — **AIVIA** — separately governs AI analysis of recorded video interviews.
+
+If you searched "illinois ai law" looking for a general consumer AI statute, Illinois has not passed one. What it has is the most aggressive *employment* AI notice duty in the country, attached to a civil rights statute with no size threshold.
+
+---
+
+## Who Illinois AI law binds
+
+| You are… | What binds you |
+|---|---|
+| An employer with **1+ employees in Illinois** for 20+ weeks in the current or preceding calendar year | HB 3773 — both the discrimination violation and the notice violation |
+| An employer using AI to analyze recorded video interviews of Illinois applicants | AIVIA (820 ILCS 42) — notice, explanation, consent, and deletion duties |
+| A business using AI with **customers** (chatbots, support tooling) | Not this law. Illinois has no general consumer AI disclosure statute; see [Maine](/maine/chatbot-disclosure/) for the strictest chatbot rule |
+| A vendor selling HR tools to Illinois employers | Not directly liable under HB 3773, but your customers will demand warrant and indemnity terms — Illinois employers cannot contract away their own statutory exposure |
+
+There is **no revenue threshold, no headcount exemption, and no carve-out for employers headquartered elsewhere**. If you have an Illinois employee, the Act reaches the decision.
+
+---
+
+## The two violations, kept separate
+
+The operative language sits at **775 ILCS 5/2-102(L)**, inside the Human Rights Act's list of civil rights violations:
+
+- **Discriminatory use:** using AI that *has the effect* of discriminating on a protected basis in recruitment, hiring, promotion, renewal, training, discharge, discipline, tenure, or terms and conditions. Intent is irrelevant. Using **ZIP code as a proxy** for a protected class is its own violation — the only question is whether the variable was used.
+- **Failure to notify:** not telling people AI was used for those purposes. This one does **not** depend on any discriminatory effect. A perfectly calibrated model still violates the Act if nobody was told it was running.
+
+That second violation is what makes Illinois stricter than every other state: the notice duty is absolute, and it protects **employees and applicants**, not customers.
+
+---
+
+## The rules that never landed
+
+The Illinois Department of Human Rights (IDHR) proposed rules on **May 15, 2026** defining the notice, then **withdrew them on June 2, 2026** — eighteen days later. As of November 2026 they have not been refiled.
+
+The practical consequence: the duty is live, its definition is not, and the withdrawn draft (which contemplated an eight-element notice meeting both the statute and the dead draft's structure) is the best available design target for anyone who wants a notice that holds up either way. The full breakdown of both the statute and the dead draft is on the [HB 3773 page](/illinois/hb-3773/).
+
+---
+
+## AIVIA: the older Illinois AI law still on the books
+
+The **Artificial Intelligence Video Interview Act** (820 ILCS 42, effective January 1, 2020) was Illinois's first AI statute and remains in force. If you use AI to analyze recorded video interviews of Illinois applicants, you must:
+
+1. **Notify** each applicant before the interview that AI will be used to evaluate it,
+2. **explain** how the AI works and what characteristics it uses to evaluate applicants,
+3. obtain **consent** to the AI evaluation, and
+4. **delete** the interview video within 30 days of an applicant's request.
+
+AIVIA predates generative AI and reads narrow, but it applies to any AI analysis of recorded video — including tools added quietly to existing interview platforms.
+
+---
+
+## Penalties and enforcement
+
+| Item | Detail |
+|---|---|
+| Forum | IDHR charge process; administrative or circuit court |
+| Theory | A civil rights violation under the IHRA — not a consumer-protection violation |
+| Remedies | Actual damages, attorney's fees, injunctive and equitable relief, and the civil penalties the Act authorizes |
+| Enforcement climate | No IDHR rules in force, so notice adequacy will be tested case by case |
+
+---
+
+## What Illinois AI law does *not* do
+
+- **No general chatbot disclosure duty.** → [Maine §1500-DD](/maine/chatbot-disclosure/) has the strictest one, in force since September 2025.
+- **No rule for AI-generated humans in advertising.** → [New York GBL §296-b](/new-york/synthetic-performer/) covers ads with synthetic performers.
+- **No pre-deployment impact assessments.** Colorado's 2024 framework had them; it was repealed before it took effect. → [Colorado](/colorado/)
+
+---
+
+## Frequently asked questions
+
+**Is there an Illinois AI law?**
+Two, both workplace-focused: HB 3773 (in force January 1, 2026) for AI in employment decisions, and AIVIA (2020) for AI analysis of recorded video interviews. Illinois has no general consumer AI disclosure statute.
+
+**What does Illinois HB 3773 require?**
+Employers must notify employees and applicants when AI is used in covered employment decisions, and must not use AI that has a discriminatory effect — including using ZIP code as a proxy for a protected class.
+
+**Does Illinois require an AI disclosure notice?**
+Yes, in employment. The failure to notify is itself a civil rights violation, with no need to prove anyone was harmed. The IDHR rules that would have defined the notice format were withdrawn in June 2026.
+
+**Who enforces Illinois's AI law?**
+The Illinois Department of Human Rights through its charge process, with remedies up to circuit court.
+
+**Does HB 3773 apply to small employers?**
+Yes. The Human Rights Act's definition covers employers with one or more employees in Illinois for 20 or more weeks in the current or preceding calendar year.
+
+---
+
+**Next:** [HB 3773 in detail: the two violations, the withdrawn rules, and the eight-element notice](/illinois/hb-3773/) · [Which state AI disclosure laws are in effect right now](/in-effect/) · [Colorado vs Texas: who actually has a disclosure duty](/compare/colorado-vs-texas/)
+
+*Last verified November 9, 2026. This page is general information, not legal advice. Statutes change; confirm against the official text linked above and a qualified attorney in your state.*
+
+
 <!-- https://aidisclosurelaw.com/illinois/hb-3773/ -->
 # Illinois AI Law (HB 3773): The AI Notice Duty With No Rules Behind It
 
@@ -1210,6 +1382,111 @@ For scope, Colorado from January 1, 2027 — every deployer, every covered domai
 *Last verified November 8, 2026. General information, not legal advice. This table is updated as laws change; if you spot an error, the official source on each state page controls.*
 
 
+<!-- https://aidisclosurelaw.com/maine/ -->
+# Maine AI Law: No Threshold, No Intent, No Excuses
+
+> **Short answer.** Maine's AI law is **10 M.R.S. §1500-DD**, enacted as **LD 1727** (P.L. 2025, ch. 294) and in force since **September 24, 2025**. It bars using an AI chatbot — or "any other computer technology" — to engage in trade or commerce with a consumer in a way that **may mislead a reasonable consumer** into believing they are dealing with a **human being**, unless the consumer is notified **clearly and conspicuously** that they are not. No employee threshold, no revenue test, no intent element, and no exception for a bot that confesses only when asked. A violation **is** a violation of the Maine Unfair Trade Practices Act, enforceable by the Attorney General.
+
+If you searched "maine ai law," the odds are good you are actually looking for one of two rules: the chatbot disclosure law above, or the political synthetic-media disclosure that took effect July 29, 2026. They get cited interchangeably and they should not be.
+
+---
+
+## Who Maine AI law binds
+
+| You are… | What binds you |
+|---|---|
+| **Any business** — two-person shop or bank — with a chatbot, voice agent, or conversational widget serving Maine consumers | §1500-DD, on the same terms regardless of size |
+| A bot with a **human name, face, or typing indicator** ("Hi, I'm Alex!") | The paradigm case: the persona is the disclosure problem |
+| A **campaign or committee** running political ads with synthetic media of a candidate | 21-A §1014(5-C) — a different rule, with mandatory wording and a 500% penalty |
+| A **broadcaster or newspaper** carrying a political ad | Liable under §1014(5-C) only with actual knowledge the media is synthetic |
+| A business using AI for **internal decisions** (hiring, pricing) | Not this law — see [Illinois](/illinois/hb-3773/) for the employment notice duty, [Colorado](/colorado/) for decision tools |
+
+The definition reaches wider than "chatbot": any software that simulates human conversation through **textual or aural** communications — and the prohibition extends to "any other computer technology" beyond chatbots. Voice agents must **say it out loud** at the start.
+
+---
+
+## Three details that do the work
+
+**"May mislead" is not "does mislead."** The standard is the *capacity* to mislead a reasonable consumer, not proof that one was misled. An unnamed assistant with a human persona meets it.
+
+**No threshold of any kind.** No employee count, no revenue figure, no chat volume. Maine is the only state so far that skipped the size cutoff entirely.
+
+**No intent requirement.** You did not have to set out to deceive anyone. The design decision is the violation.
+
+And one citation trap: the section was **reallocated from §1500-Y** by the Revisor of Statutes. Policies and vendor questionnaires citing §1500-Y are citing a section that no longer exists under that number — the same failure mode as Utah's repealed §13-2-12.
+
+---
+
+## What "clear and conspicuous" means in practice
+
+The statute defines the failure, not the format: a consumer who could reasonably believe a human is on the other end. Test against these:
+
+- The notice appears **before the first exchange**, not at message four.
+- It is **visible without scrolling** — a footnote below the fold is not conspicuous.
+- It says **"not a human"**, not just "AI-powered," which describes the software rather than answering the question the consumer is actually asking.
+- It **survives the handoff** — human agent to bot is the most common failure point.
+- It follows the conversation **out of the widget**: SMS, email, WhatsApp, and voice need their own notice.
+
+Geo-targeting the disclosure to Maine visitors is the wrong answer twice over: visitor state is an unreliable inference, and the cost of disclosing to everyone is a line of text that does not measurably hurt conversion.
+
+---
+
+## Penalties
+
+| Item | Detail |
+|---|---|
+| Enforcer | Maine Attorney General |
+| Vehicle | Maine Unfair Trade Practices Act, 5 M.R.S. §205-A et seq. |
+| Civil penalty | Set by the UTPA's general provision; **no chatbot-specific fine** — Maine attached the duty to an existing statute |
+| Other relief | Injunctive relief, restitution, and the AG's costs |
+| Private right of action | Under the UTPA, not under §1500-DD itself |
+
+Being measured against decades of unfair-practices precedent cuts both ways: it is older and more predictable than a new AI test, and it imports a "reasonable consumer" standard your chatbot persona has to survive.
+
+---
+
+## The other Maine rule: synthetic media in political ads
+
+**21-A M.R.S. §1014(5-C)** (LD 517, P.L. 2025 ch. 593, in force **July 29, 2026**): a political communication that already requires a campaign-finance disclosure, and contains synthetic media of a candidate, must also carry:
+
+> THIS COMMUNICATION CONTAINS AUDIO, VIDEO AND/OR IMAGES THAT HAVE BEEN MANIPULATED OR ALTERED
+
+The penalty is the outlier: up to **500% of the expenditure** on the offending communication (other disclosure violations in the same section run at 100%). Satire, parody, and technical-clarity edits are excluded. This binds campaigns and committees, not ordinary businesses.
+
+---
+
+## What Maine AI law does *not* do
+
+- **No rule for AI-generated humans in advertising.** → [New York GBL §296-b](/new-york/synthetic-performer/) has that, since June 9, 2026.
+- **No employment AI notice duty.** → [Illinois HB 3773](/illinois/hb-3773/), in force now.
+- **No provenance or watermarking duties for AI providers.** → [California SB 942](/california/sb-942/).
+
+---
+
+## Frequently asked questions
+
+**Does Maine have an AI law?**
+Two, aimed at different people: 10 M.R.S. §1500-DD (chatbot disclosure, in force September 24, 2025, binding any business trading with Maine consumers) and 21-A §1014(5-C) (synthetic media in political ads, in force July 29, 2026, binding campaigns).
+
+**What does Maine's chatbot law require?**
+A clear and conspicuous notice, before the interaction, that the consumer is not engaging with a human — whenever a chatbot or other conversational technology could reasonably pass for one.
+
+**Does Maine's AI law apply to small businesses?**
+Yes. It has no employee count, revenue, or volume threshold — a two-person business with a website widget is covered on the same terms as a bank.
+
+**What is the penalty for a chatbot disclosure violation in Maine?**
+It is a violation of the Maine Unfair Trade Practices Act, enforced by the Attorney General with the UTPA's penalties, injunctions, restitution, and costs.
+
+**Why do some sources cite §1500-Y instead of §1500-DD?**
+The section was reallocated from §1500-Y by the Revisor of Statutes after enactment. §1500-DD is the operative citation; older guidance citing §1500-Y is out of date.
+
+---
+
+**Next:** [The chatbot rule in detail: the elements, the conspicuous-notice tests, the checklist](/maine/chatbot-disclosure/) · [Which state AI disclosure laws are in effect right now](/in-effect/) · [Utah's AI disclosure law: the citation trap that Maine shares](/utah/)
+
+*Last verified November 9, 2026. This page is general information, not legal advice. Statutes change; confirm against the official text linked above and a qualified attorney in your state.*
+
+
 <!-- https://aidisclosurelaw.com/maine/chatbot-disclosure/ -->
 # Maine's Chatbot Disclosure Law: No Threshold, No Intent, No Excuses
 
@@ -1362,6 +1639,94 @@ No. 21-A §1014(5-C) binds political communications that already require a campa
 *Last verified November 8, 2026. General information, not legal advice. Confirm against the current text of 10 M.R.S. §1500-DD on the Maine Legislature site — the reallocation means older citations point elsewhere.*
 
 
+<!-- https://aidisclosurelaw.com/new-york/ -->
+# New York AI Law: The First Synthetic Performer Disclosure Rule
+
+> **Short answer.** New York's AI advertising law — **S8420-A / A8887-B**, signed December 11, 2025 as Chapter 617, amending **General Business Law §296-b** — has been in force since **June 9, 2026**. If a visual or audiovisual advertisement distributed to a New York consumer features a **synthetic performer** (a digitally created human who is not any identifiable real person), whoever produced or created the ad must **conspicuously disclose** that fact, when they have **actual knowledge** of it. **$1,000** for a first violation, **$5,000** for each subsequent one, enforced by the Attorney General.
+
+If you searched "new york ai law" expecting a broad AI statute, note what New York actually did: it regulated one specific thing — **fake humans in ads** — and did it first, on a different legal theory from every deepfake law before it. The mere presence of a synthetic performer is the trigger; the ad does not have to be misleading.
+
+---
+
+## Who New York AI law binds
+
+| You are… | What §296-b does to you |
+|---|---|
+| An **advertiser** whose ads can reach a New York consumer | Duty to disclose synthetic performers in visual/audiovisual ads — and no digital campaign can reliably exclude New York |
+| An **agency or production company** that created the ad | Directly liable alongside the advertiser — the duty sits with whoever produced the work |
+| A **marketplace or e-commerce brand** with AI-generated models in listings | The real exposure: listing-level, creative-level, volume |
+| A **media outlet, platform, or billboard company** | **Exempt** — the distribution layer is deliberately spared |
+| Anyone using a **digital replica of a specific real person** | A different law: Civil Rights Law §50-f, the expanded post-mortem publicity right, in force since December 11, 2025 |
+
+The test is the **person, not the picture**. A real actor with an AI-replaced background: no duty. A product-only shot with an AI-generated set: no duty. An AI-generated human holding the product: **disclose**. Audio-only ads and translations of a real actor's voice are excluded, and there is an expressive-work exemption for films and games.
+
+---
+
+## Why e-commerce is the exposure
+
+A national brand shoot with an AI presenter is a one-off decision with legal review attached. A marketplace with 40,000 listings is a different problem, because the practice arrived quietly: AI lifestyle models replacing photography for cost, synthetic presenters in UGC-style video ads bought in volume, avatars narrating product tours, creative regenerated per market. Every one of those is an advertisement distributed to a New York audience by default.
+
+The audit question is not "did we use AI in this campaign" but "**is there a human in this asset, and is that human real**" — asked listing by listing, not campaign by campaign.
+
+**Actual knowledge** is in the statute and is not a loophole: vendor invoices that say "AI-generated model", prompt logs, and asset filenames establish it routinely. Where the standard genuinely helps is the unknowing case — an agency or stock library that delivers synthetic people unlabeled — and the fix there is contractual warranty and indemnity, not a compliance memo.
+
+---
+
+## The companion law: digital replicas of real people
+
+Signed the same day, **S8391 / A8882** expanded the **post-mortem right of publicity** under **Civil Rights Law §50-f**, effective immediately on December 11, 2025: heirs or executors must consent before a deceased person's name, image, likeness, or a vocal or visual **digital replica** is used commercially.
+
+Together the two laws cover both halves of the problem: the **identifiable** person (publicity rights, consent, estates) and the **unidentifiable** one (the synthetic performer disclosure). If your AI-generated person resembles a specific real individual, you have a §50-f problem, not a §296-b disclosure problem.
+
+---
+
+## Penalties
+
+| Item | Detail |
+|---|---|
+| Enforcer | New York Attorney General |
+| First violation | **$1,000** |
+| Each subsequent violation | **$5,000** |
+| Private right of action | Not created by this section |
+| Media outlets / platforms | Exempt from liability for running the ad |
+| Other law unaffected | Civil Rights Law §§50, 50-f, 51 preserved |
+
+The amounts are small relative to a national campaign — which is the wrong way to read them. The Attorney General picks test cases, and the second-order cost (re-shooting a catalogue, pulling live listings, restating agency agreements) is where the money is.
+
+---
+
+## What New York AI law does *not* do
+
+- **No chatbot disclosure rule.** → [Maine §1500-DD](/maine/chatbot-disclosure/) is the strictest in the country.
+- **No notice duty for AI-assisted employment decisions.** → [Illinois HB 3773](/illinois/hb-3773/) has that, in force since January 2026.
+- **No platform-level provenance requirements.** → [California SB 942](/california/sb-942/) regulates large generative AI providers; New York regulates the ad, not the model.
+
+---
+
+## Frequently asked questions
+
+**Is there a New York AI law?**
+For advertising, yes: General Business Law §296-b, in force June 9, 2026, requires conspicuous disclosure when an ad features an AI-generated human. New York has not passed a general AI disclosure statute for other contexts.
+
+**What is a synthetic performer?**
+A digital asset created or modified by generative AI or a software algorithm that creates the impression of a performance by a human performer who is not recognizable as any identifiable natural person. A digital replica of a specific real person is a right-of-publicity issue under §50-f instead.
+
+**Do I have to disclose AI-generated models in product listings?**
+If the listing is an advertisement reaching New York and features an AI-generated human, yes — and marketplaces are the main exposure precisely because listings are ads distributed at volume.
+
+**Are platforms liable for running a non-compliant ad?**
+No. Newspapers, broadcasters, streamers, and billboard companies are exempt; liability concentrates on the advertiser and the agency or production company that created the work.
+
+**What is the penalty?**
+$1,000 for a first violation and $5,000 for each subsequent violation, enforced by the New York Attorney General.
+
+---
+
+**Next:** [The synthetic performer rule in detail: the test, the exemptions, the audit checklist](/new-york/synthetic-performer/) · [Which state AI disclosure laws are in effect right now](/in-effect/) · [California SB 942: the platform-side transparency law](/california/sb-942/)
+
+*Last verified November 9, 2026. This page is general information, not legal advice. Statutes change; confirm against the official text linked above and a qualified attorney in your state.*
+
+
 <!-- https://aidisclosurelaw.com/new-york/synthetic-performer/ -->
 # New York Requires Ads to Disclose AI-Generated Humans
 
@@ -1507,6 +1872,94 @@ $1,000 for the first violation, $5,000 for each subsequent violation, enforced b
 **Related:** [Which state AI disclosure laws are in force](/in-effect/) · [Illinois HB 3773: the employer notice duty](/illinois/hb-3773/) · [Maine's chatbot disclosure rule](/maine/chatbot-disclosure/)
 
 *Last verified November 8, 2026. General information, not legal advice. Confirm against GBL §296-b as amended and the bill text of S8420-A before relying on an exemption.*
+
+
+<!-- https://aidisclosurelaw.com/texas/ -->
+# Texas AI Law: TRAIGA, in Force Since January 1, 2026
+
+> **Short answer.** Texas's AI law is **TRAIGA**, the Texas Responsible Artificial Intelligence Governance Act (**HB 149**), signed June 22, 2025 and in force since **January 1, 2026**. The affirmative **disclosure** duty applies to exactly two groups: **government entities** interacting with consumers, and **health care providers** using AI in connection with services or treatment. **Private companies have no general AI disclosure obligation** — what reaches them is a list of prohibitions, every one of which requires intent. Enforcement is exclusively the Attorney General's, after a 60-day cure period.
+
+If you searched "texas ai law" expecting a rule that makes every business label its AI, that rule does not exist. Guides telling every Texas company to add an AI disclosure to its website are describing a law that was never passed.
+
+---
+
+## Who Texas AI law binds, and how
+
+| You are… | What TRAIGA does to you |
+|---|---|
+| A **government entity** using AI to interact with consumers | Disclose — clear, conspicuous, plain language — **before or at the moment of interaction** |
+| A **health care provider** using AI in services or treatment | Disclose to the recipient or their personal representative **by the date service is first provided** (in emergencies, as soon as reasonably possible) |
+| A **private company** | No disclosure duty. You face the prohibitions instead |
+| An **insurer or federally insured financial institution** | Exempt, provided you comply with your existing regulatory regime |
+| A **city trying to pass its own AI ordinance** | Preempted — TRAIGA is the single statewide baseline |
+
+Note also who counts as a "consumer": a Texas resident acting in an **individual or household context**. An employer's AI-driven HR process is not a consumer interaction under TRAIGA.
+
+---
+
+## The prohibitions that do reach private companies
+
+Six prohibitions apply to "any person," and this is where Texas private-sector exposure actually lives:
+
+- intentionally manipulating behavior to incite self-harm, harm to others, or criminal activity,
+- social scoring by government,
+- biometric capture without consent (government),
+- impairing US or Texas constitutional rights,
+- **unlawful discrimination against a protected class — but intent must be shown; disparate impact alone is expressly not enough**,
+- CSAM, unlawful deepfakes, and explicit conversations impersonating minors.
+
+The intent requirement is the deliberate design choice that separates Texas from Colorado, and it is why TRAIGA passed while broader bills died. A model that produces a discriminatory *outcome* is not, by itself, a TRAIGA violation.
+
+---
+
+## Penalties
+
+| Violation type | Civil penalty |
+|---|---|
+| Curable, or breach of a statement submitted to the AG | **$10,000 – $12,000** per violation |
+| Uncurable | **$80,000 – $200,000** per violation |
+| Continued violation | **$2,000 – $40,000 per day** |
+
+Enforcement is exclusively the **Attorney General's**, who must give **60 days' notice and an opportunity to cure** first. There is **no private right of action**. Two dates worth tracking: the AG's online consumer complaint portal (the intake channel that will generate the first enforcement matters) was required to be live by **September 1, 2026**, and TRAIGA also created the Texas Artificial Intelligence Council and a regulatory sandbox.
+
+---
+
+## What Texas AI law does *not* do
+
+Worth checking against your compliance checklist, because several vendors now sell "TRAIGA disclosure" modules for a duty that does not exist:
+
+- **No duty for ordinary businesses to disclose AI use** to their customers. → The states that do impose broad disclosure duties: [Maine](/maine/chatbot-disclosure/) (chatbots) and [Colorado](/colorado/) (decision tools, from 2027).
+- **No chatbot-specific rule.** → [Maine §1500-DD](/maine/chatbot-disclosure/) is the strictest in the country.
+- **No pre-decision notice for AI-assisted employment decisions.** → [Illinois HB 3773](/illinois/hb-3773/) imposes exactly that, in force now.
+- **No advertising disclosure rule for AI-generated humans.** → [New York GBL §296-b](/new-york/synthetic-performer/) covers that, in force since June 9, 2026.
+
+---
+
+## Frequently asked questions
+
+**Does TRAIGA require private companies to disclose AI use?**
+No. The disclosure duty applies to government entities interacting with consumers and to health care providers. Private companies are subject to the prohibitions, not to a disclosure mandate.
+
+**When did the Texas AI law take effect?**
+January 1, 2026. TRAIGA (HB 149) was signed June 22, 2025.
+
+**What is the maximum penalty under Texas AI law?**
+$200,000 per uncurable violation, with continuing violations at $2,000 to $40,000 per day, enforced by the Attorney General after a 60-day cure period.
+
+**Can consumers sue under TRAIGA?**
+No. Enforcement is exclusively the Attorney General's.
+
+**Is disparate impact enough to violate TRAIGA?**
+No. The act expressly states that disparate impact alone is not sufficient — intent to discriminate must be shown.
+
+**Does Texas AI law override city ordinances?**
+Yes. TRAIGA preempts local government AI regulation, making it the single statewide baseline.
+
+---
+
+**Next:** [TRAIGA in detail: the disclosure duties, prohibitions and checklists](/texas/traiga/) · [Colorado vs Texas: who actually has a disclosure duty](/compare/colorado-vs-texas/) · [Which state AI disclosure laws are in effect right now](/in-effect/)
+
+*Last verified November 9, 2026. This page is general information, not legal advice. Statutes change; confirm against the official text linked above and a qualified attorney in your state.*
 
 
 <!-- https://aidisclosurelaw.com/texas/traiga/ -->

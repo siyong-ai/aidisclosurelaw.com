@@ -1,7 +1,7 @@
 ---
 slug: /california/ab-2013/
 title: "California AB 2013: Training Data Disclosure Requirements"
-meta_description: "AB 2013 requires developers of public generative AI to post a training data summary. Effective January 1, 2026, no stated penalty, and under appeal at the Ninth Circuit."
+meta_description: "AB 2013 requires developers of public generative AI to post a training data summary. Effective January 1, 2026; no stated penalty."
 h1: "California AB 2013: Training Data Disclosure Requirements"
 one_liner: "Since January 1, 2026, developers of publicly available generative AI systems must post a high-level summary of their training data on their website — sources, ownership, volume, whether it includes copyrighted or personal information, and whether synthetic data was used. The statute specifies no penalty and no enforcement agency."
 status: "In force, under appeal"

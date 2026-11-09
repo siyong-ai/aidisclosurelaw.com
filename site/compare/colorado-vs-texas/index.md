@@ -1,7 +1,7 @@
 ---
 slug: /compare/colorado-vs-texas/
 title: "Colorado vs Texas AI Law: Who Actually Has to Disclose"
-meta_description: "Colorado puts disclosure duties on every deployer of ADMT from 2027. Texas limits disclosure to government and health care. Side-by-side comparison of scope, timing, penalties and enforcement."
+meta_description: "Colorado puts disclosure duties on every deployer of ADMT from 2027; Texas limits them to government and health care. Scope, timing, penalties compared."
 h1: "Colorado vs Texas AI Law: Disclosure Obligations Compared"
 one_liner: "Colorado requires every developer and deployer of automated decision-making technology to give pre-use notice and post-decision explanations, starting January 1, 2027. Texas requires disclosure only from government agencies and health care providers, and has been in force since January 1, 2026. If you operate in both states, Colorado is the binding constraint."
 status: "Comparison"

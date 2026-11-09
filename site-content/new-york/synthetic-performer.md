@@ -1,7 +1,7 @@
 ---
 slug: /new-york/synthetic-performer/
 title: "New York's Synthetic Performer Ad Rule: S8420 Explained"
-meta_description: "Since June 9, 2026, any ad reaching a New York audience that shows an AI-generated human needs a conspicuous disclosure. $1,000 for a first violation, $5,000 after. What counts, what is exempt, and why e-commerce listings are the real exposure."
+meta_description: "Since June 9, 2026, ads reaching New York showing an AI-generated human need a conspicuous disclosure. $1,000 first, $5,000 after — e-commerce is the exposure."
 h1: "New York Requires Ads to Disclose AI-Generated Humans"
 one_liner: "Since June 9, 2026, a visual or audiovisual advertisement distributed to a New York audience that features an AI-generated human has to carry a conspicuous disclosure that the person is not real. It is the first state law of its kind, it reaches advertisers anywhere in the world whose ads reach New York, and the exposure is not the brand campaign — it is the product listing with an AI model holding the product."
 status: "In force since Jun 9, 2026"

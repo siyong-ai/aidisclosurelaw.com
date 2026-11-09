@@ -1,7 +1,7 @@
 ---
 slug: /utah/
 title: "Utah AI Disclosure Law: Code Chapter 77, Not §13-2-12"
-meta_description: "Utah's generative AI disclosure duty lives in Utah Code ch. 77 since May 7, 2025. Section 13-2-12 was repealed. Two triggers, one safe harbour, a $2,500-per-violation cap, and a hiring question nobody has answered."
+meta_description: "Utah's AI disclosure duty lives in Code ch. 77 since May 7, 2025 — §13-2-12 was repealed. Two triggers, one safe harbour, a $2,500 cap."
 h1: "Utah's AI Disclosure Law Now Lives in Code Chapter 77"
 one_liner: "If you are citing Utah Code §13-2-12 for the state's AI disclosure duty, you are citing a section that was repealed in 2025. The live rule is Title 13, Chapter 77, in force since May 7, 2025. It splits into a reactive duty (disclose when a consumer clearly asks) and a proactive one (regulated occupations, high-risk interactions), and it hands you a safe harbour that is easier to test than either."
 status: "In force since May 7, 2025"

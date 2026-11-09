@@ -1,7 +1,7 @@
 ---
 slug: /illinois/hb-3773/
 title: "Illinois AI Law (HB 3773): Notice Duty, No Rules Behind It"
-meta_description: "Illinois's AI employment law (HB 3773) has been in force since January 1, 2026. IDHR proposed the notice rules on May 15, 2026 and withdrew them 18 days later. What the statute requires today, what the dead draft would have required, and how to write a notice that holds up either way."
+meta_description: "In force since Jan 1, 2026: using AI in an Illinois employment decision without notice is itself a civil rights violation. IDHR's notice rules were withdrawn."
 h1: "Illinois AI Law (HB 3773): The AI Notice Duty With No Rules Behind It"
 one_liner: "Since January 1, 2026, Illinois has treated two things as separate civil rights violations: using AI in a way that discriminates in employment, and using AI in an employment decision without telling people. The notice duty does not depend on proving any discriminatory effect — you either told them or you did not. And the rules that were supposed to define what a compliant notice looks like were withdrawn on June 2, 2026 and have not been refiled."
 status: "In force since Jan 1, 2026"

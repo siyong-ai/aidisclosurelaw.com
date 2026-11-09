@@ -1,7 +1,7 @@
 ---
 slug: /california/sb-942/
 title: "California AI Transparency Act (SB 942): Who It Actually Covers"
-meta_description: "California SB 942 applies to generative AI providers with over 1 million monthly users, not to every business using AI. Detection tool and watermarking duties began August 2, 2026."
+meta_description: "SB 942 applies to generative AI providers with 1M+ monthly users — not to every business using AI. Detection and watermarking duties began August 2, 2026."
 h1: "California AI Transparency Act (SB 942 + AB 853): Who It Actually Covers"
 one_liner: "SB 942 requires generative AI providers with more than 1 million monthly users in California to embed provenance data in AI-generated images, video, and audio, and to offer a free public detection tool. The core duties took effect August 2, 2026 — and they do not apply to most businesses that merely use AI."
 status: "In force"

@@ -1,7 +1,7 @@
 ---
 slug: /texas/traiga/
 title: "Texas AI Law (TRAIGA, HB 149): Who Has to Disclose AI"
-meta_description: "Texas's AI law TRAIGA has been in force since January 1, 2026. Only government agencies and health care providers have a disclosure duty. Penalties run to $200,000 per uncurable violation."
+meta_description: "TRAIGA, in force since January 1, 2026. Only government agencies and health care providers owe disclosure. Penalties to $200,000 per violation."
 h1: "Texas AI Law (TRAIGA, HB 149): Who Actually Has to Disclose AI"
 one_liner: "Since January 1, 2026, Texas requires government agencies to disclose AI before or at the moment a consumer interacts with it, and health care providers to disclose by the date service is first provided. Private companies have no general AI disclosure duty under TRAIGA — they face its prohibitions instead."
 status: "In force"

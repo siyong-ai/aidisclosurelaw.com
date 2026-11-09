@@ -1,7 +1,7 @@
 ---
 slug: /maine/chatbot-disclosure/
 title: "Maine Chatbot Disclosure Law: 10 M.R.S. §1500-DD Explained"
-meta_description: "Maine requires a clear and conspicuous notice whenever a chatbot could make a reasonable consumer think they are talking to a human. No size threshold, no intent requirement, in force since September 24, 2025. The citation also changed: §1500-Y was reallocated."
+meta_description: "Maine requires clear notice whenever a chatbot could pass for human. No size threshold, no intent requirement. In force since September 24, 2025."
 h1: "Maine's Chatbot Disclosure Law: No Threshold, No Intent, No Excuses"
 one_liner: "10 M.R.S. §1500-DD has been in force since September 24, 2025 and is the strictest chatbot disclosure rule in the country: no company-size threshold, no intent requirement, no carve-out for a bot that tries hard. If a reasonable consumer could be misled into thinking they are talking to a person, you owe a clear and conspicuous notice — and the section number is not the one most articles still print."
 status: "In force since Sep 24, 2025"
