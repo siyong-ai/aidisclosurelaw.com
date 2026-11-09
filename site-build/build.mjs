@@ -1096,6 +1096,8 @@ if (fs.existsSync(ogDir)) {
 // so the file is part of the build rather than a manual upload.
 // Files in site-build/static/ land at the site root; VERIFY_MIRROR_DIRS get a copy too
 // for URL-prefix properties that are scoped to a subdirectory.
+// Properties scoped to a *file* path (e.g. /sitemap.xml/) cannot be served this way —
+// those need a rewrite in vercel.json pointing at the root copy instead.
 const VERIFY_MIRROR_DIRS = ['texas'];
 const staticDir = path.join(ROOT, 'site-build', 'static');
 if (fs.existsSync(staticDir)) {

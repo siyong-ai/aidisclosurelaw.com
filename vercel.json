@@ -53,5 +53,11 @@
     { "source": "/texas", "destination": "/texas/traiga/", "permanent": true },
     { "source": "/colorado/sb26189", "destination": "/colorado/sb-26-189/", "permanent": true },
     { "source": "/tracker", "destination": "/in-effect/", "permanent": true }
+  ],
+  "rewrites": [
+    {
+      "source": "/sitemap.xml/(.*)",
+      "destination": "/googleea20afb870681ab0.html"
+    }
   ]
 }
