@@ -1091,6 +1091,24 @@ if (fs.existsSync(ogDir)) {
   }
 }
 
+// site-verification files (Google Search Console "HTML file" method).
+// These must stay online permanently — verification is re-checked periodically,
+// so the file is part of the build rather than a manual upload.
+// Files in site-build/static/ land at the site root; VERIFY_MIRROR_DIRS get a copy too
+// for URL-prefix properties that are scoped to a subdirectory.
+const VERIFY_MIRROR_DIRS = ['texas'];
+const staticDir = path.join(ROOT, 'site-build', 'static');
+if (fs.existsSync(staticDir)) {
+  for (const f of fs.readdirSync(staticDir)) {
+    if (!/\.html?$/i.test(f)) continue;
+    fs.copyFileSync(path.join(staticDir, f), path.join(OUT, f));
+    for (const d of VERIFY_MIRROR_DIRS) {
+      const dir = path.join(OUT, d);
+      if (fs.existsSync(dir)) fs.copyFileSync(path.join(staticDir, f), path.join(dir, f));
+    }
+  }
+}
+
 // sitemap
 const urls = ['/', ...pages.map((p) => p.url)];
 const lastmodFor = (u) => {
