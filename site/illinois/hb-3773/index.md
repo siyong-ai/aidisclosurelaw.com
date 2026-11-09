@@ -1,13 +1,14 @@
 ---
 slug: /illinois/hb-3773/
-title: "Illinois HB 3773: The AI Notice Duty With No Rules Behind It"
-meta_description: "In force since January 1, 2026. IDHR proposed the notice rules on May 15, 2026 and withdrew them 18 days later. What the statute requires today, what the dead draft would have required, and how to write a notice that holds up either way."
-h1: "Illinois HB 3773: The AI Notice Duty With No Rules Behind It"
+title: "Illinois AI Law (HB 3773): Notice Duty, No Rules Behind It"
+meta_description: "Illinois's AI employment law (HB 3773) has been in force since January 1, 2026. IDHR proposed the notice rules on May 15, 2026 and withdrew them 18 days later. What the statute requires today, what the dead draft would have required, and how to write a notice that holds up either way."
+h1: "Illinois AI Law (HB 3773): The AI Notice Duty With No Rules Behind It"
 one_liner: "Since January 1, 2026, Illinois has treated two things as separate civil rights violations: using AI in a way that discriminates in employment, and using AI in an employment decision without telling people. The notice duty does not depend on proving any discriminatory effect — you either told them or you did not. And the rules that were supposed to define what a compliant notice looks like were withdrawn on June 2, 2026 and have not been refiled."
 status: "In force since Jan 1, 2026"
 last_verified: "2026-11-08"
-primary_keyword: "illinois hb 3773"
+primary_keyword: "illinois ai law"
 secondary_keywords:
+  - "illinois hb 3773"
   - "illinois ai notice requirement"
   - "illinois human rights act ai"
   - "775 ilcs 5/2-102(L)"
@@ -22,7 +23,7 @@ sources:
     url: "https://www2.illinois.gov/dhr/"
 ---
 
-# Illinois HB 3773: The AI Notice Duty With No Rules Behind It
+# Illinois AI Law (HB 3773): The AI Notice Duty With No Rules Behind It
 
 > **Short answer.** Signed August 9, 2024, in force since **January 1, 2026**. It creates two separate civil rights violations under the Illinois Human Rights Act: using AI in a covered employment decision **in a way that has a discriminatory effect**, and **failing to notify** people that you used AI for those purposes. The second one is absolute — a model with perfectly even outcomes still violates the Act if nobody was told it was running. The Illinois Department of Human Rights proposed rules defining the notice on **May 15, 2026** and withdrew them on **June 2, 2026**. As of November 2026 they have not been refiled, so the duty is live and its definition is not.
 

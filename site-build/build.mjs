@@ -27,7 +27,10 @@ const BASE = (process.env.SITE_BASE || 'https://aidisclosurelaw.com').replace(/\
    Override with OG_BASE if a deployment has to point somewhere else. */
 const OG_BASE = (process.env.OG_BASE || BASE).replace(/\/+$/, '');
 const SITE_NAME = 'AI Disclosure Law';
-const TODAY = '2026-11-08';
+const TODAY = '2026-11-09';
+/* Per-page verification date: each page carries its own last_verified stamp,
+   so adding a page does not silently re-date the other fourteen. */
+const pageDate = (fm) => (fm && fm.last_verified) || TODAY;
 
 /* Analytics. Google Tag Manager container; tags are configured in the GTM UI,
    so nothing here changes when a new tag is added. Set to '' to build without
@@ -474,6 +477,8 @@ pages.sort((a, b) => a.url.localeCompare(b.url));
 
 /* --------------------------------------------------------------- templates */
 
+const KNOWN_URLS = new Set(pages.map((p) => p.url));
+
 function breadcrumbs(url) {
   const segs = url.split('/').filter(Boolean);
   const items = [{ name: 'Home', url: '/' }];
@@ -481,7 +486,10 @@ function breadcrumbs(url) {
   segs.forEach((s, idx) => {
     acc += `/${s}`;
     const last = idx === segs.length - 1;
-    items.push({ name: label(s), url: last ? `${acc}/` : `${acc}/` });
+    // Intermediate crumbs only get emitted when a page actually exists there,
+    // otherwise the breadcrumb links to a 404 (e.g. /texas/ without a hub page).
+    if (!last && !KNOWN_URLS.has(`${acc}/`)) return;
+    items.push({ name: label(s), url: `${acc}/` });
   });
   return items;
 }
@@ -504,6 +512,7 @@ function crumbsHtml(url) {
 
 function jsonLd(page) {
   const { fm, url, faqs } = page;
+  const stamp = pageDate(fm);
   const graph = [];
 
   graph.push({
@@ -531,8 +540,8 @@ function jsonLd(page) {
     description: fm.meta_description || fm.one_liner,
     abstract: fm.one_liner,
     inLanguage: 'en',
-    datePublished: TODAY,
-    dateModified: TODAY,
+    datePublished: stamp,
+    dateModified: stamp,
     isAccessibleForFree: true,
     ...(fs.existsSync(ogFile(url))
       ? {
@@ -557,6 +566,7 @@ function jsonLd(page) {
   };
 
   const leg = LEGISLATION[url];
+  article.dateModified = stamp;
   if (leg) {
     article.about = {
       '@type': 'Legislation',
@@ -584,7 +594,7 @@ function jsonLd(page) {
     breadcrumb: { '@id': `${BASE}${url}#breadcrumb` },
     primaryImageOfPage: undefined,
     inLanguage: 'en',
-    dateModified: TODAY,
+    dateModified: stamp,
   });
 
   const crumbs = breadcrumbs(url).map((c, idx, arr) => ({
@@ -656,7 +666,7 @@ function sourcesHtml(page) {
       .join('') +
     '</ol>' +
     `<p class="cite"><button class="copy" data-copy="${esc(
-      `${SITE_NAME}. "${stripMd(page.fm.h1 || page.fm.title)}." ${BASE}${page.url} (last verified ${TODAY}).`
+      `${SITE_NAME}. "${stripMd(page.fm.h1 || page.fm.title)}." ${BASE}${page.url} (last verified ${pageDate(page.fm)}).`
     )}">Copy citation</button><button class="copy" data-share type="button">Share page</button></p></section>`
   );
 }
@@ -685,6 +695,7 @@ function pageShell(page) {
   const desc = fm.meta_description || fm.one_liner;
   const canonical = `${BASE}${url}`;
   const sc = statusClass(fm.status);
+  const stamp = pageDate(fm);
   const activeNav = (u) => (url === u || url.startsWith(u.replace(/\/$/, '') + '/') ? ' aria-current="page"' : '');
   const rt = Math.max(1, Math.round(words / 220));
 
@@ -712,7 +723,7 @@ function pageShell(page) {
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${canonical}">
 <meta property="og:locale" content="en_US">
-<meta property="article:modified_time" content="${TODAY}T00:00:00+00:00">
+<meta property="article:modified_time" content="${stamp}T00:00:00+00:00">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
@@ -754,7 +765,7 @@ ${jsonLd(page)}
     <div class="page-head">
       <div class="meta-row">
         <span class="pill ${sc}"><span class="dot ${sc}"></span>${esc(fm.status || 'Reference')}</span>
-        <span class="meta-item">Last verified <time datetime="${TODAY}">${new Date(TODAY).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time></span>
+        <span class="meta-item">Last verified <time datetime="${stamp}">${new Date(stamp + 'T00:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time></span>
         <span class="meta-item">${rt} min read</span>
       </div>
       <h1>${esc(fm.h1 || title)}</h1>
@@ -841,7 +852,7 @@ function homeHtml() {
     .join('');
 
   const rows = [
-    ['California', 'SB 942 · AB 2013 · SB 53 · AB 2355', 'In force', 'ok', '/california/sb-942/'],
+    ['California', 'SB 942 · AB 2013 · SB 53 · AB 2355', 'In force', 'ok', '/california/'],
     ['Texas', 'TRAIGA (HB 149)', 'In force', 'ok', '/texas/traiga/'],
     ['Illinois', 'HB 3773 · AIVIA', 'In force', 'ok', '/illinois/hb-3773/'],
     ['Utah', 'Code ch. 77 · HB 452', 'In force', 'ok', '/utah/'],
@@ -857,7 +868,7 @@ function homeHtml() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI Disclosure Law — Which State AI Disclosure Laws Are In Effect</title>
-<meta name="description" content="Dated, source-linked reference on US state AI disclosure and transparency law. What is in force, what starts January 1, 2027, and what a court has barred.">
+<meta name="description" content="AI disclosure law in the US, state by state: what is in force today, what starts January 1, 2027, and what a federal court has barred. Every page cites the enrolled bill and carries a verification date.">
 <link rel="canonical" href="${BASE}/">
 <meta name="robots" content="index,follow,max-snippet:-1">
 <meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)">
@@ -928,7 +939,7 @@ ${JSON.stringify(
 <main id="main">
   <section class="hero wrap">
     <p class="eyebrow">State AI disclosure &amp; transparency law</p>
-    <h1>Six states can enforce an AI disclosure duty today.<br><span class="hero-dim">Two California laws cannot be enforced at all.</span></h1>
+    <h1>AI disclosure law in the US states: six can enforce a duty today.<br><span class="hero-dim">Two California laws cannot be enforced at all.</span></h1>
     <p class="hero-lead">Every page here is checked against the enrolled bill text and stamped with a verification date. Most coverage of this area conflates the signing date with the effective date, and does not tell you when a court has struck a law down. This one does.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/in-effect/">See what is in effect now</a>
@@ -938,7 +949,7 @@ ${JSON.stringify(
       <div><dt>States tracked</dt><dd>8</dd></div>
       <div><dt>Statutes covered</dt><dd>24</dd></div>
       <div><dt>Barred by court</dt><dd>2</dd></div>
-      <div><dt>Last verified</dt><dd>Nov 8, 2026</dd></div>
+      <div><dt>Last verified</dt><dd>Nov 9, 2026</dd></div>
     </dl>
   </section>
 
@@ -1069,13 +1080,17 @@ if (fs.existsSync(ogDir)) {
 
 // sitemap
 const urls = ['/', ...pages.map((p) => p.url)];
+const lastmodFor = (u) => {
+  const p = pages.find((x) => x.url === u);
+  return p ? pageDate(p.fm) : TODAY;
+};
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map(
     (u) => `  <url>
     <loc>${BASE}${u}</loc>
-    <lastmod>${TODAY}</lastmod>
+    <lastmod>${lastmodFor(u)}</lastmod>
     <changefreq>${u === '/' || u === '/in-effect/' ? 'weekly' : 'monthly'}</changefreq>
     <priority>${u === '/' ? '1.0' : u === '/in-effect/' ? '0.9' : '0.8'}</priority>
   </url>`

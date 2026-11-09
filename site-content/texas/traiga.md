@@ -1,13 +1,14 @@
 ---
 slug: /texas/traiga/
-title: "Texas TRAIGA (HB 149): Who Actually Has to Disclose AI"
-meta_description: "TRAIGA has been in force since January 1, 2026. Only government agencies and health care providers have a disclosure duty. Penalties run to $200,000 per uncurable violation."
-h1: "Texas TRAIGA (HB 149): Who Actually Has to Disclose AI"
+title: "Texas AI Law (TRAIGA, HB 149): Who Has to Disclose AI"
+meta_description: "Texas's AI law TRAIGA has been in force since January 1, 2026. Only government agencies and health care providers have a disclosure duty. Penalties run to $200,000 per uncurable violation."
+h1: "Texas AI Law (TRAIGA, HB 149): Who Actually Has to Disclose AI"
 one_liner: "Since January 1, 2026, Texas requires government agencies to disclose AI before or at the moment a consumer interacts with it, and health care providers to disclose by the date service is first provided. Private companies have no general AI disclosure duty under TRAIGA — they face its prohibitions instead."
 status: "In force"
 last_verified: "2026-11-08"
-primary_keyword: "texas traiga"
+primary_keyword: "texas ai law"
 secondary_keywords:
+  - "texas traiga"
   - "texas hb 149"
   - "texas ai law disclosure"
   - "texas responsible artificial intelligence governance act"
@@ -20,7 +21,7 @@ sources:
     url: "https://www.legis.state.tx.us/BillLookup/BillSummary.aspx?Bill=HB149&LegSess=89R"
 ---
 
-# Texas TRAIGA (HB 149): Who Actually Has to Disclose AI
+# Texas AI Law (TRAIGA, HB 149): Who Actually Has to Disclose AI
 
 > **Short answer.** TRAIGA took effect **January 1, 2026**. The affirmative **disclosure** duties fall on two groups only: **government entities** using AI to interact with consumers, and **health care providers** using AI in connection with services or treatment. Private companies have **no general AI disclosure obligation** under TRAIGA. What reaches private companies is the prohibition list — behavioral manipulation, unlawful discrimination, CSAM and unlawful deepfakes, and infringement of constitutional rights.
 
