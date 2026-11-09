@@ -5,7 +5,7 @@ meta_description: "SB 26-189 replaced the Colorado AI Act. From January 1, 2027,
 h1: "Colorado SB 26-189: The Automated Decision-Making Technology Act"
 one_liner: "From January 1, 2027, if you use automated decision-making technology that materially influences a consequential decision about a Colorado resident, you must tell them before you use it and, within 30 days of an adverse outcome, explain what the technology did and how they can get a human to review it."
 status: "Signed, not yet in force"
-last_verified: "2026-11-08"
+last_verified: "2026-11-09"
 primary_keyword: "colorado sb 26-189"
 secondary_keywords:
   - "colorado admt law"
@@ -121,14 +121,17 @@ Neither carve-out is a blanket exemption. Check whether your specific federal or
 | Private right of action | **None** |
 | Liability allocation | Between developer and deployer **based on relative fault**; developer liability generally limited to intended or marketed uses |
 | Indemnification | Clauses shifting liability for Colorado anti-discrimination violations are **void as against public policy** |
+| Current status | **Enforcement stayed** in X. AI LLC v. Weiser (Apr. 27, 2026) — see below |
 
 That last row matters commercially. If your master services agreement has the vendor indemnifying you for discrimination claims arising from their model, that clause is unenforceable in Colorado for covered violations.
+
+**The enforcement stay.** xAI sued the Attorney General on April 9, 2026; the United States intervened as plaintiff-intervenor on April 24. On April 27, the court ordered the AG not to initiate enforcement — including investigations — under SB 24-205 or any legislation replacing it in that session, until 14 days after a ruling on xAI's preliminary-injunction motion. SB 26-189 is the in-session replacement, so the stay reaches it. xAI's PI motion is due within 28 days after final adoption of the implementing rules. The statute is valid and its date is unchanged; only enforcement is suspended.
 
 ---
 
 ## Is it in force?
 
-Not yet. Signed May 14, 2026. Duties apply from **January 1, 2027**. The Attorney General must adopt rules on the post-adverse-outcome disclosure and the human review process by that same date; informal comments closed July 13, 2026, and formal rulemaking began in late summer 2026.
+Not yet. Signed May 14, 2026. Duties apply from **January 1, 2027**. Rulemaking is nearly done: proposed rules were filed August 11, 2026, a revised interim draft followed October 6, and the rulemaking hearing was held October 26, 2026. Final rules were pending as of November 9, 2026. The draft rules include a presumption that a decision matching a tool's score, ranking, or recommendation was "materially influenced" by it — rebuttable, but read the final text before you lock your notice wording. Enforcement is currently stayed by federal court order; the duties themselves still start on schedule.
 
 ---
 
@@ -165,6 +168,6 @@ Not under this act. Enforcement is exclusively the Attorney General's, with a 60
 
 ---
 
-**Related:** [Colorado AI law: what is actually in effect](/colorado/) · [Colorado vs Texas](/compare/colorado-vs-texas/) · [Texas TRAIGA: who must disclose AI](/texas/traiga/)
+**Related:** [Colorado AI law: what is actually in effect](/colorado/) · [What happened to SB 24-205](/colorado/sb-24-205/) · [Colorado Chatbot Safety Act (HB 26-1263)](/colorado/hb-1263/) · [Colorado vs Texas](/compare/colorado-vs-texas/) · [Texas TRAIGA: who must disclose AI](/texas/traiga/)
 
-*Last verified November 8, 2026. General information, not legal advice. Confirm against the enrolled bill text and the Attorney General's adopted rules.*
+*Last verified November 9, 2026. General information, not legal advice. Confirm against the enrolled bill text and the Attorney General's adopted rules.*

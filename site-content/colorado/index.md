@@ -5,7 +5,7 @@ meta_description: "Colorado's original AI Act never took effect. SB 26-189 repla
 h1: "Colorado AI Law: What Is Actually in Effect in 2026"
 one_liner: "Colorado's original AI Act never took effect. SB 24-205 was repealed and replaced on May 14, 2026, a month before its own start date. The law that applies to you is the Automated Decision-Making Technology Act (SB 26-189), and its duties begin January 1, 2027."
 status: "Not yet in force"
-last_verified: "2026-11-08"
+last_verified: "2026-11-09"
 primary_keyword: "colorado ai law"
 secondary_keywords:
   - "colorado ai act effective date"
@@ -24,7 +24,7 @@ sources:
 
 # Colorado AI Law: What Is Actually in Effect in 2026
 
-> **Short answer.** Colorado's original AI Act (SB 24-205) **never took effect.** It was repealed and replaced on **May 14, 2026** — one month before its own delayed start date — by **SB 26-189**, the Automated Decision-Making Technology Act. That law keeps the short title "Colorado AI Act" but replaces the entire framework. Its duties start **January 1, 2027**.
+> **Short answer.** Colorado's original AI Act (SB 24-205) **never took effect.** It was repealed and replaced on **May 14, 2026** — one month before its own delayed start date — by **SB 26-189**, the Automated Decision-Making Technology Act. That law keeps the short title "Colorado AI Act" but replaces the entire framework. Its duties start **January 1, 2027**. One more thing almost no guide mentions: a federal court order currently **pauses the Attorney General's enforcement** of it.
 
 If you searched for the Colorado AI Act's effective date and found four different answers, this is why. The date changed twice, and then the law itself was replaced.
 
@@ -47,7 +47,7 @@ SB 26-189 removed:
 If a guide asks you to budget for an impact assessment under Colorado law, it is describing a dead statute. Compliance programs built on the 2024 framework need to be reoriented, not extended.
 
 **3. It treats the "Colorado AI Act" as one law.**
-There are two more pieces you need to track: **HB 26-1263**, the Chatbot Safety Act, which passed the legislature on May 11, 2026 and is moving through the same rulemaking, and the Colorado Privacy Act's own automated decision-making rules, which overlap with SB 26-189 in places.
+There are two more pieces you need to track: **HB 26-1263**, the [Chatbot Safety Act](/colorado/hb-1263/), signed May 29, 2026 with its own duties for operators of conversational AI, and the Colorado Privacy Act's own automated decision-making rules, which overlap with SB 26-189 in places. The full history of the dead 2024 law is on its own page: [what happened to SB 24-205](/colorado/sb-24-205/).
 
 ---
 
@@ -57,21 +57,26 @@ There are two more pieces you need to track: **HB 26-1263**, the Chatbot Safety 
 |---|---|---|
 | May 17, 2024 | SB 24-205 signed | First comprehensive state AI consumer protection law in the US. Effective February 1, 2026. |
 | August 28, 2025 | SB 25B-004 signed | Moved the effective date from February 1, 2026 to **June 30, 2026**. |
+| April 9, 2026 | xAI sues the AG | X. AI LLC v. Weiser (D. Colo.). The US intervenes April 24 — a first against a state AI law. |
+| April 27, 2026 | **Enforcement stayed** | Court order: no enforcement or investigation under SB 24-205 or its replacement until 14 days after a ruling on xAI's preliminary-injunction motion. |
 | May 14, 2026 | **SB 26-189 signed** | Repealed and reenacted SB 24-205 in full. New effective date: **January 1, 2027**. |
-| June 9, 2026 | AG publishes pre-rulemaking notice | Informal comment period on both SB 26-189 and HB 26-1263. |
-| July 13, 2026 | Informal comments close | Formal notice-and-comment rulemaking begins late summer 2026. |
-| January 1, 2027 | **Duties begin** | Disclosure and consumer-rights obligations apply. AG rules must be adopted by this date. |
+| May 29, 2026 | HB 26-1263 signed | The Chatbot Safety Act — separate duties, separate page. |
+| August 11, 2026 | AG files proposed rules | Combined rulemaking for SB 26-189 and HB 26-1263 (4 CCR 904-6). |
+| October 6, 2026 | Interim draft rules | Revised draft responding to comments; a second comment round opens. |
+| October 26, 2026 | **Rulemaking hearing** | Hearing held, written comments closed. Final rules pending as of November 9, 2026. |
+| January 1, 2027 | **Duties begin** | Disclosure and consumer-rights obligations apply. Final rules due by this date. |
 
 ---
 
 ## Is the Colorado AI Act in effect today?
 
-**No.** As of November 8, 2026, no Colorado AI disclosure obligation is enforceable. There are 54 days until the duties begin, and the Attorney General has not yet published final rules.
+**No.** As of November 9, 2026, no Colorado AI disclosure obligation is enforceable. There are 53 days until the duties begin, and the Attorney General has not yet published final rules.
 
-Two things are happening in the meantime that matter to you:
+Three things are happening in the meantime that matter to you:
 
-- **Rulemaking.** The AG must adopt rules implementing the post-adverse-outcome disclosure requirements and the human review process by January 1, 2027, and has discretionary rulemaking authority over the rest of the statute — including the power to define what "materially influence" means. That definition will decide whether your tool is covered.
-- **Chatbot rules.** HB 26-1263 adds age estimation, non-human disclosure, teen protections, suicide and self-harm response protocols, and an annual report to the AG. Its obligations are being written in the same rulemaking.
+- **Enforcement is paused — but the law stands.** On April 27, 2026, in X. AI LLC v. Weiser, a federal magistrate ordered the AG not to initiate enforcement — or even investigations — under SB 24-205 or anything replacing it, until 14 days after the court rules on xAI's preliminary-injunction motion. That motion is not due until 28 days after the final rules are adopted. The January 1, 2027 date is unchanged; treat this as timing risk, not immunity.
+- **Rulemaking is at the finish line.** Proposed rules came August 11, a revised interim draft October 6, and the rulemaking hearing was held October 26, 2026. The rules will define "materially influence" — the draft creates a presumption that a decision matching a tool's score or ranking was materially influenced, rebuttable by the deployer. Read the final rules before you lock notice wording.
+- **The Chatbot Safety Act is on the same clock, without the stay.** HB 26-1263's duties also begin January 1, 2027, but it is a separate act and the xAI stay does not reach it. Its enforcement can start on schedule. See [the Chatbot Safety Act page](/colorado/hb-1263/).
 
 ---
 
@@ -113,6 +118,9 @@ Liability is now allocated between developers and deployers **based on relative 
 **Is the Colorado AI Act in effect?**
 No. SB 26-189 was signed May 14, 2026 and takes effect January 1, 2027. The 2024 law it replaced never became operative.
 
+**Is enforcement on hold?**
+Yes, for now. A federal court order in X. AI LLC v. Weiser (April 27, 2026) bars the AG from initiating enforcement or investigations under SB 24-205 or its replacement until 14 days after a ruling on xAI's preliminary-injunction motion — which is not due until 28 days after the final rules are adopted. The law itself is valid and its January 1, 2027 date stands.
+
 **When did the Colorado AI Act take effect?**
 It did not. The original date was February 1, 2026, moved to June 30, 2026 in August 2025, and then replaced entirely before either date arrived. The operative date for the current law is January 1, 2027.
 
@@ -130,6 +138,6 @@ Civil penalties run under the Colorado Consumer Protection Act. The repealed fra
 
 ---
 
-**Next:** [Colorado SB 26-189 explained in detail](/colorado/sb-26-189/) · [Colorado vs Texas: who actually has a disclosure duty](/compare/colorado-vs-texas/) · [Which state AI disclosure laws are in effect right now](/in-effect/)
+**Next:** [Colorado SB 26-189 explained in detail](/colorado/sb-26-189/) · [Colorado Chatbot Safety Act (HB 26-1263)](/colorado/hb-1263/) · [What happened to SB 24-205](/colorado/sb-24-205/) · [Colorado vs Texas: who actually has a disclosure duty](/compare/colorado-vs-texas/) · [Which state AI disclosure laws are in effect right now](/in-effect/)
 
-*Last verified November 8, 2026. This page is general information, not legal advice. Statutes change; confirm against the official text linked above and a qualified attorney in your state.*
+*Last verified November 9, 2026. This page is general information, not legal advice. Statutes change; confirm against the official text linked above and a qualified attorney in your state.*

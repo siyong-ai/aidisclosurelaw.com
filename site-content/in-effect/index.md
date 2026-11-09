@@ -3,9 +3,9 @@ slug: /in-effect/
 title: "Which State AI Disclosure Laws Are in Effect Right Now"
 meta_description: "A dated table of every state AI disclosure and transparency law: in force, not yet in force, or barred by a court. Updated November 8, 2026."
 h1: "Which State AI Disclosure Laws Are in Effect Right Now"
-one_liner: "As of November 8, 2026, six states have AI disclosure or transparency duties that can be enforced today: California, Texas, Illinois, Utah, Maine, and New York. Colorado's duties start January 1, 2027. Two California election laws are barred by court order."
+one_liner: "As of November 9, 2026, six states have AI disclosure or transparency duties that can be enforced today: California, Texas, Illinois, Utah, Maine, and New York. Colorado's duties start January 1, 2027, with enforcement paused by a federal court order. Two California election laws are barred by court order."
 status: "Tracker"
-last_verified: "2026-11-08"
+last_verified: "2026-11-09"
 primary_keyword: "state ai disclosure laws in effect"
 secondary_keywords:
   - "which states require ai disclosure"
@@ -18,9 +18,9 @@ sources:
 
 # Which State AI Disclosure Laws Are in Effect Right Now
 
-> **Short answer.** Six states can enforce an AI disclosure or transparency duty against you today: **California, Texas, Illinois, Utah, Maine, and New York**. **Colorado** starts January 1, 2027. Two California election-AI laws — AB 2839 and AB 2655 — are barred by court order and cannot be enforced.
+> **Short answer.** Six states can enforce an AI disclosure or transparency duty against you today: **California, Texas, Illinois, Utah, Maine, and New York**. **Colorado** starts January 1, 2027 — its enforcement is paused by a federal court order, but the duties still take effect on schedule. Two California election-AI laws — AB 2839 and AB 2655 — are barred by court order and cannot be enforced.
 
-Last verified **November 8, 2026**. This table is the one thing to check before you read any other page on this site.
+Last verified **November 9, 2026**. This table is the one thing to check before you read any other page on this site.
 
 ---
 
@@ -91,7 +91,7 @@ It also does not cover the roughly 26 states with narrow **election deepfake** s
 Six states have enforceable disclosure or transparency duties as of November 2026. Colorado joins them on January 1, 2027. More than 26 additional states have narrow election-deepfake disclosure rules.
 
 **Is the Colorado AI Act in effect?**
-No. The 2024 law never became operative. The replacement, SB 26-189, starts January 1, 2027. → [Full explanation](/colorado/)
+No. The 2024 law never became operative. The replacement, SB 26-189, starts January 1, 2027 — and its enforcement is currently stayed in X. AI LLC v. Weiser. → [Full explanation](/colorado/)
 
 **Can I rely on California's AB 2839 or AB 2655?**
 No. Both are barred by court order. Use Elections Code §20010 and AB 2355 instead. → [What still applies](/california/ab-2839/)
@@ -106,4 +106,4 @@ For scope, Colorado from January 1, 2027 — every deployer, every covered domai
 
 **Start here:** [Illinois HB 3773](/illinois/hb-3773/) · [Colorado](/colorado/) · [California SB 942](/california/sb-942/) · [Texas TRAIGA](/texas/traiga/) · [Utah](/utah/) · [Maine](/maine/chatbot-disclosure/) · [New York](/new-york/synthetic-performer/)
 
-*Last verified November 8, 2026. General information, not legal advice. This table is updated as laws change; if you spot an error, the official source on each state page controls.*
+*Last verified November 9, 2026. General information, not legal advice. This table is updated as laws change; if you spot an error, the official source on each state page controls.*
